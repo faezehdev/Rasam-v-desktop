@@ -30,6 +30,7 @@ module.exports = {
       'nGray':'#A8B0BA',
       'blackT':'#161617',
       'darkGray':'#4C515A',
+      'liGray':'#A1A3A9',
       'lightGray':'#E9EAED',
      
       'f':'#ffff',
