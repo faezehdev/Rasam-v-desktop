@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "IRANYekan300";
+    src: url("../../_fonts/IRANYekanLight.eot");
+    src: url("../../_fonts/IRANYekanLight.eot?#iefix")
+        format("embedded-opentype"),
+      url("../../_fonts/IRANYekanLight.woff") format("woff"),
+      url("../../_fonts/IRANYekanLight.woff2") format("woff2"),
+      url("../../_fonts/IRANYekanLight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+@font-face {
+    font-family: "IRANYekan400";
+    src: url("../../_fonts/IRANYekanRegular.eot");
+    src: url("../../_fonts/IRANYekanRegular.eot?#iefix")
+        format("embedded-opentype"),
+      url("../../_fonts/IRANYekanRegular.woff") format("woff"),
+      url("../../_fonts/IRANYekanRegular.woff2") format("woff2"),
+      url("../../_fonts/IRANYekanRegular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+@font-face {
+    font-family: "IRANYekan500";
+    src: url("../../_fonts/iranyekanwebmediumfanum.eot");
+    src: url("../../_fonts/iranyekanwebmediumfanum.eot?#iefix")
+        format("embedded-opentype"),
+      url("../../_fonts/iranyekanwebmediumfanum.woff") format("woff"),
+      url("../../_fonts/iranyekanwebmediumfanum.woff2") format("woff2"),
+      url("../../_fonts/iranyekanwebmediumfanum.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+@font-face {
+    font-family: "IRANYekan600";
+    src: url("../../_fonts/IRANYekanBold.eot");
+    src: url("../../_fonts/IRANYekanBold.eot?#iefix")
+        format("embedded-opentype"),
+      url("../../_fonts/IRANYekanBold.woff") format("woff"),
+      url("../../_fonts/IRANYekanBold.woff2") format("woff2"),
+      url("../../_fonts/IRANYekanBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
