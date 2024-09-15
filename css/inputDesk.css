@@ -40,14 +40,71 @@
     font-display: swap;
   }
 @font-face {
-    font-family: "IRANYekan600";
+    font-family: "IRANYekan700";
     src: url("../../_fonts/IRANYekanBold.eot");
     src: url("../../_fonts/IRANYekanBold.eot?#iefix")
         format("embedded-opentype"),
       url("../../_fonts/IRANYekanBold.woff") format("woff"),
       url("../../_fonts/IRANYekanBold.woff2") format("woff2"),
       url("../../_fonts/IRANYekanBold.ttf") format("truetype");
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
+  }
+
+  *{
+    font-family: "IRANYekan400";
+  }
+  
+h1 {
+    font-size: 24px;
+    font-family: "IRANSansWeb700";
+    line-height: 26px;
+}
+h2{
+      font-size: 20px;
+      font-family: "IRANSansWeb700";
+      line-height: 26px;
+
+  }
+  h3 {
+    font-size: 18px;
+    font-family: "IRANSansWeb500";
+    line-height: 25px;
+  }
+  h4,
+  h5 {
+    font-size: 16px;
+    font-family: "IRANSansWeb400";
+    line-height: 24px;
+  }
+  h6 {
+    font-size: 14px;
+    font-family: "IRANSansWeb300";
+    line-height: 22px;
+  }
+  a {
+    font-size: 14px;
+    font-family: "IRANSansWeb500";
+    line-height: 24px;
+  }
+
+  .gallerySliderPagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+  }
+  .gallerySliderPagination .swiper-pagination-bullet{
+    width: 4.2px;
+    height: 13.83px;
+    border-radius: 30px;
+    margin: 0!important;
+    opacity: 1;
+    background-color: #6D6E73;
+    transition: 0.8s;
+  }
+  .gallerySliderPagination .swiper-pagination-bullet-active{
+    height: 23.11px;
+    background-color: #F9920B;
   }
