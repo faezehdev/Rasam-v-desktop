@@ -29,10 +29,12 @@ module.exports = {
       'main':'#F9920B',
       'nGray':'#A8B0BA',
       'blackT':'#161617',
+      'midGray':'#6D6E73',
       'darkGray':'#4C515A',
       'liGray':'#A1A3A9',
       'lightGray':'#E9EAED',
      
+      'white':'#ffff',
       'f':'#ffff',
     
         
@@ -42,13 +44,13 @@ module.exports = {
       'IRANYekan400': ['IRANYekan400', 'IRANYekan400'],
       'IRANYekan500': ['IRANYekan500', 'IRANYekan500'],
       'IRANYekan700': ['IRANYekan700', 'IRANYekan700'],
+      'AnjomanMax500': ['AnjomanMax500', 'AnjomanMax500'],
     
 
     },
     extend: {
       spacing: {
         '1.5': '1.5em',
-        '2.5': '2.5em',
         
       },
       lineHeight: {
@@ -57,6 +59,7 @@ module.exports = {
         '23':'23px',
         '25.4':'25.04px',
         '57.97':'57.97px',
+        '48.36': '48.36px',
         '17.96': '17.96px',
         '21.91': '21.91px',
         '32.03':'32.03px',

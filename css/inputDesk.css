@@ -51,6 +51,16 @@
     font-style: normal;
     font-display: swap;
   }
+@font-face {
+    font-family: "AnjomanMax500";
+    src:
+      url("../../_fonts/AnjomanMaxFN-Medium.woff") format("woff"),
+      url("../../_fonts/AnjomanMaxFN-Medium.woff2") format("woff2"),
+      url("../../_fonts/AnjomanMaxFN-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
 
   *{
     font-family: "IRANYekan400";
@@ -108,3 +118,30 @@ h2{
     height: 23.11px;
     background-color: #F9920B;
   }
+
+  .activeFilterBtn p{
+    color: #F9920B;
+  }
+
+
+  .projectBox .title {
+    background-image: linear-gradient(to right , black , black);
+    background-position:100% 100% ;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    -webkit-transition: 0.3s , background-size 0.5s;
+    transition: all 0.3s , background-size 0.5s;
+}
+
+.projectBox:hover .title{
+
+  background-size: 100% 2px;
+}
+.projectBox:hover .title h3{
+
+  transform: translateY(-100%);
+}
+.projectBox:hover .title span{
+
+ bottom: 0;
+}

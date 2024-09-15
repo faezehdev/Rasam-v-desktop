@@ -657,8 +657,16 @@ video {
   inset: 0px;
 }
 
+.-bottom-full {
+  bottom: -100%;
+}
+
 .bottom-0 {
   bottom: 0px;
+}
+
+.bottom-full {
+  bottom: 100%;
 }
 
 .end-1 {
@@ -671,6 +679,10 @@ video {
 
 .right-0 {
   right: 0px;
+}
+
+.right-\[5\%\] {
+  right: 5%;
 }
 
 .top-0 {
@@ -754,6 +766,10 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
 .mb-7 {
   margin-bottom: 1.75rem;
 }
@@ -764,6 +780,10 @@ video {
 
 .mr-5 {
   margin-right: 1.25rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-14 {
@@ -788,6 +808,10 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-7 {
@@ -1273,6 +1297,10 @@ video {
   grid-auto-flow: column dense;
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1465,6 +1493,11 @@ video {
 .gap-x-20 {
   -moz-column-gap: 5rem;
        column-gap: 5rem;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1916,6 +1949,15 @@ video {
   border-bottom-color: rgb(249 146 11 / var(--tw-border-opacity));
 }
 
+.border-b-midGray {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(109 110 115 / var(--tw-border-opacity));
+}
+
+.border-b-white {
+  border-bottom-color: #ffff;
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2142,6 +2184,10 @@ video {
   vertical-align: super;
 }
 
+.font-AnjomanMax500 {
+  font-family: AnjomanMax500, AnjomanMax500;
+}
+
 .font-IRANYekan400 {
   font-family: IRANYekan400, IRANYekan400;
 }
@@ -2157,6 +2203,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-\[28px\] {
@@ -2245,6 +2296,10 @@ video {
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
+.leading-48\.36 {
+  line-height: 48.36px;
+}
+
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
 }
@@ -2264,9 +2319,18 @@ video {
   color: rgb(233 234 237 / var(--tw-text-opacity));
 }
 
+.text-midGray {
+  --tw-text-opacity: 1;
+  color: rgb(109 110 115 / var(--tw-text-opacity));
+}
+
 .text-nGray {
   --tw-text-opacity: 1;
   color: rgb(168 176 186 / var(--tw-text-opacity));
+}
+
+.text-white {
+  color: #ffff;
 }
 
 .underline {
@@ -2499,6 +2563,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.brightness-50 {
+  --tw-brightness: brightness(.5);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .drop-shadow {
   --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2571,6 +2640,10 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .duration-700 {
@@ -2711,6 +2784,21 @@ video {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "AnjomanMax500";
+
+  src:
+      url("../../_fonts/AnjomanMaxFN-Medium.woff") format("woff"),
+      url("../../_fonts/AnjomanMaxFN-Medium.woff2") format("woff2"),
+      url("../../_fonts/AnjomanMaxFN-Medium.ttf") format("truetype");
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
 *{
   font-family: "IRANYekan400";
 }
@@ -2773,6 +2861,30 @@ a {
 .gallerySliderPagination .swiper-pagination-bullet-active{
   height: 23.11px;
   background-color: #F9920B;
+}
+
+.activeFilterBtn p{
+  color: #F9920B;
+}
+
+.projectBox .title {
+  background-image: linear-gradient(to right , black , black);
+  background-position:100% 100% ;
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  transition: all 0.3s , background-size 0.5s;
+}
+
+.projectBox:hover .title{
+  background-size: 100% 2px;
+}
+
+.projectBox:hover .title h3{
+  transform: translateY(-100%);
+}
+
+.projectBox:hover .title span{
+  bottom: 0;
 }
 
 @media (min-width: 480px) {
@@ -2838,6 +2950,10 @@ a {
 
 .hover\:focus\:text-center:focus:hover {
   text-align: center;
+}
+
+.group:hover .group-hover\:rounded-bl-\[72px\] {
+  border-bottom-left-radius: 72px;
 }
 
 @media (min-width: 480px) {
