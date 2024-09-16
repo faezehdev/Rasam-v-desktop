@@ -26,41 +26,23 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
-      'b1':'#DADADA',
-      'b2':'#A9A9A9',
-      'b3':'#464646',
-      'b4':'#212223',
-      'b6': '#6B6B6B',
-      'b7':'#F6F8F8',
-      'b8': '#F26737',
-      'b9': '#1E1E1E',
-      'b10': '#D9D9D9',
-      'b11': '#FBFBFF',
-      'b12': '#BCBDBD',
-      'b13': '#F9CF66',
-      'b14': '#F6F8F8',
-      'white': '#FFFFFF',
-      'gray-500':'#64748B',
-      'f':'#ffff',
-      'orange':'#F37021',
-      'orange1':'#E96C20',
-      'gray2':'#ECECEC',
-      'gray3':'#464646',
-      'yellow1':'#FFEC87'
+      'darkGray':'#4C515A',
+      'black':'#00000',
+      'darkGray2':'#26272B'
+     
         
     },
     fontFamily: {
+      'IranYekan300': ['IranYekan300', 'IranYekan300'],
+      'IranYekan400': ['IranYekan400', 'IranYekan400'],
+      'IranYekan500': ['IranYekan500', 'IranYekan500'],
+      'IranYekan700': ['IranYekan700', 'IranYekan700'],
+      'IranYekan900': ['IranYekan900', 'IranYekan900'],
       'IRANSansWeb300': ['IRANSansWeb300', 'IRANSansWeb300'],
       'IRANSansWeb400': ['IRANSansWeb400', 'IRANSansWeb400'],
       'IRANSansWeb500': ['IRANSansWeb500', 'IRANSansWeb500'],
       'IRANSansWeb700': ['IRANSansWeb700', 'IRANSansWeb700'],
       'IRANSansWeb900': ['IRANSansWeb900', 'IRANSansWeb900'],
-      'Roboto200':[' Roboto200'],
-      'Roboto300':[' Roboto300'],
-      'Roboto400':[' Roboto400'],
-      'Roboto800':[' Roboto800'],
-      'Roboto500':[' Roboto500'],
-
     },
     extend: {
       spacing: {
@@ -80,7 +62,7 @@ module.exports = {
         '56.35':'56.35px',
         '25.04':'25.04px',
         '37.97':'37.97px',
-        '37.57':'37.57px',
+        '34.55':'37.57px',
         '31.03':'31.03px',
         '28.17':'28.17px',
         '18.78':'18.78px',
@@ -89,6 +71,7 @@ module.exports = {
          '46.96':'46.96px',
          '16.41':'16.41px',
          '14.06':'14.06px',
+         '30':'30px',
        
 
       },
