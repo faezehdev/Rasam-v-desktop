@@ -27,8 +27,12 @@ module.exports = {
     },
     colors: {
       'darkGray':'#4C515A',
-      'black':'#00000',
-      'darkGray2':'#26272B'
+      'black':'#000000',
+      'darkGray2':'#26272B',
+      'Gray':'#A8B0BA',
+      'Orange':'#f9920b',
+      'White':'#ffff',
+      'black1':'#161617',
      
         
     },
@@ -72,6 +76,7 @@ module.exports = {
          '16.41':'16.41px',
          '14.06':'14.06px',
          '30':'30px',
+         '31.09':'31.09px',
        
 
       },
