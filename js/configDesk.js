@@ -49,9 +49,14 @@ OpBtn.addEventListener('click',()=>{
             }, 1000);
     }
 })
-// let pFooter = document.querySelectorAll('footer .Address p')
-// pFooter.forEach(p=>{
-//     if(p.innerHTML == ''){
-//         p.style.display = 'none'
-//     }
-// })
+// Enable Scroll
+
+const lenis = new Lenis()
+
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
