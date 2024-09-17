@@ -58,18 +58,15 @@ module.exports = {
       'IRANSansWeb700': ['IRANSansWeb700', 'IRANSansWeb700'],
       'IRANSansWeb900': ['IRANSansWeb900', 'IRANSansWeb900'],
     
-    
-        
-    },
-    fontFamily: {
       'IRANYekan300': ['IRANYekan300', 'IRANYekan300'],
       'IRANYekan400': ['IRANYekan400', 'IRANYekan400'],
       'IRANYekan500': ['IRANYekan500', 'IRANYekan500'],
       'IRANYekan700': ['IRANYekan700', 'IRANYekan700'],
       'AnjomanMax500': ['AnjomanMax500', 'AnjomanMax500'],
     
-
+        
     },
+  
     extend: {
       spacing: {
         '1.5': '1.5em',
