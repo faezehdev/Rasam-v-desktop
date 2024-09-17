@@ -1,0 +1,93 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" > <member request="cat" type="tree" name="projectFilter" parentid="210007" size="363x474"></member> </basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210007"> <member name="projectList" type="list" size="363x474"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+     لیست پروژه‌ها
+    </title>
+
+    <meta name="description" content="لیست پروژه‌های پژواک رسام سیستم" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+<body>
+    <div class="projectList">
+        <section dir="rtl" class="section1 flex pt-40 w-90p mx-auto justify-between items-end">
+            <div class="title">
+                <h1 class="font-IRANYekan400 text-[28px] text-nGray pb-2 border-b mb-2 border-b-main w-fit">
+                    لیست پروژه‌ها
+                </h1>
+                <h2 class="font-IRANYekan700 text-[28px] text-blackT">
+                    Projects List
+                </h2>
+            </div>
+            <div class="filters">
+                <ul class="flex gap-x-5 items-center pb-2 border-b border-b-midGray">
+                    <basis core="print" datamembername="db.projectFilter">
+                    
+                        <face filter="catid=210007">
+                            
+                            <li class="filterBtn cursor-pointer" data-project="/load-project.inc?catid=@catid&refresh=true">
+                                <p class="font-AnjomanMax500 text-midGray hover:text-main duration-700 text-lg">
+                                    همه
+                                </p>
+                            </li>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.projectFilter">
+                    
+                        <face filter="catid<>210007">
+                            
+                            <li class="filterBtn cursor-pointer" data-project="/load-project.inc?catid=@catid&refresh=true">
+                                <p class="font-AnjomanMax500 text-midGray hover:text-main duration-700 text-lg">
+                                    @title
+                                </p>
+                            </li>
+                        </face>
+                    </basis>
+                  
+                
+                </ul>
+            </div>
+        </section>
+
+        <div class="projectsList gap-8 grid grid-cols-3 pt-12 pb-28 w-90p mx-auto" dir="rtl">
+            <basis core="print" datamembername="db.projectList">
+              
+                <else-layout>
+                    <div class="para font-IRANYekan500 text-base text-blackT" dir="rtl">
+                        <p>
+                            متاسفانه در این دسته‌بندی پروژه‌ای موجود نیست.
+                        </p>
+                    </div>
+                </else-layout>
+                <face>
+                    <div class="projectBox group">
+                        <a href="/@link">
+                            <div class="imgS">
+                                <img class="group-hover:rounded-bl-[72px] duration-700 w-full" src="/@00363X00474prp" alt="@title" title="@title"> 
+                            </div>
+                            <div class="title overflow-hidden relative mt-6">
+        
+                                <h3 class="font-IRANYekan400 text-[28px] leading-48.36 text-blackT duration-500">
+                                    @title
+                                </h3>
+                                <span class="font-IRANYekan400 text-[28px] leading-48.36 text-blackT duration-500 absolute -bottom-full">
+                                    
+                                    @title
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </face>
+            </basis>
+        </div>
+    </div>
+   <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/projectList.js"></script>
+</body>
+</html>

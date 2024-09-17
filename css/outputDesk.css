@@ -1626,6 +1626,10 @@ video {
   justify-items: stretch;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .gap-x-14 {
   -moz-column-gap: 3.5rem;
        column-gap: 3.5rem;
@@ -2359,20 +2363,32 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
 .pb-28 {
   padding-bottom: 7rem;
+}
+
+.pb-\[120px\] {
+  padding-bottom: 120px;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .pt-3 {
   padding-top: 0.75rem;
 }
 
-.pt-7 {
-  padding-top: 1.75rem;
+.pt-40 {
+  padding-top: 10rem;
 }
 
-.pb-\[120px\] {
-  padding-bottom: 120px;
+.pt-7 {
+  padding-top: 1.75rem;
 }
 
 .text-left {
@@ -2988,12 +3004,12 @@ video {
 @font-face {
   font-family: "IRANYekan300";
 
-  src: url("../../_fonts/IRANYekanLight.eot");
+  src: url("../_fonts/IRANYekanLight.eot");
 
-  src: url("../../_fonts/IRANYekanLight.eot?#iefix") format("embedded-opentype"),
-    url("../../_fonts/IRANYekanLight.woff") format("woff"),
-    url("../../_fonts/IRANYekanLight.woff2") format("woff2"),
-    url("../../_fonts/IRANYekanLight.ttf") format("truetype");
+  src: url("../_fonts/IRANYekanLight.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANYekanLight.woff") format("woff"),
+    url("../_fonts/IRANYekanLight.woff2") format("woff2"),
+    url("../_fonts/IRANYekanLight.ttf") format("truetype");
 
   font-weight: 300;
 
@@ -3005,13 +3021,13 @@ video {
 @font-face {
   font-family: "IRANYekan400";
 
-  src: url("../../_fonts/IRANYekanRegular.eot");
+  src: url("../_fonts/iranyekanwebregular.eot");
 
-  src: url("../../_fonts/IRANYekanRegular.eot?#iefix")
+  src: url("../_fonts/iranyekanwebregular.eot?#iefix")
       format("embedded-opentype"),
-    url("../../_fonts/IRANYekanRegular.woff") format("woff"),
-    url("../../_fonts/IRANYekanRegular.woff2") format("woff2"),
-    url("../../_fonts/IRANYekanRegular.ttf") format("truetype");
+    url("../_fonts/iranyekanwebregular.woff") format("woff"),
+    url("../_fonts/iranyekanwebregular.woff2") format("woff2"),
+    url("../_fonts/iranyekanwebregular.ttf") format("truetype");
 
   font-weight: 400;
 
@@ -3023,13 +3039,13 @@ video {
 @font-face {
   font-family: "IRANYekan500";
 
-  src: url("../../_fonts/iranyekanwebmediumfanum.eot");
+  src: url("../_fonts/iranyekanwebmediumfanum.eot");
 
-  src: url("../../_fonts/iranyekanwebmediumfanum.eot?#iefix")
+  src: url("../_fonts/iranyekanwebmediumfanum.eot?#iefix")
       format("embedded-opentype"),
-    url("../../_fonts/iranyekanwebmediumfanum.woff") format("woff"),
-    url("../../_fonts/iranyekanwebmediumfanum.woff2") format("woff2"),
-    url("../../_fonts/iranyekanwebmediumfanum.ttf") format("truetype");
+    url("../_fonts/iranyekanwebmediumfanum.woff") format("woff"),
+    url("../_fonts/iranyekanwebmediumfanum.woff2") format("woff2"),
+    url("../_fonts/iranyekanwebmediumfanum.ttf") format("truetype");
 
   font-weight: 500;
 
@@ -3041,12 +3057,12 @@ video {
 @font-face {
   font-family: "IRANYekan700";
 
-  src: url("../../_fonts/IRANYekanBold.eot");
+  src: url("../_fonts/IRANYekanBold.eot");
 
-  src: url("../../_fonts/IRANYekanBold.eot?#iefix") format("embedded-opentype"),
-    url("../../_fonts/IRANYekanBold.woff") format("woff"),
-    url("../../_fonts/IRANYekanBold.woff2") format("woff2"),
-    url("../../_fonts/IRANYekanBold.ttf") format("truetype");
+  src: url("../_fonts/IRANYekanBold.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANYekanBold.woff") format("woff"),
+    url("../_fonts/IRANYekanBold.woff2") format("woff2"),
+    url("../_fonts/IRANYekanBold.ttf") format("truetype");
 
   font-weight: 700;
 
@@ -3058,9 +3074,9 @@ video {
 @font-face {
   font-family: "AnjomanMax500";
 
-  src: url("../../_fonts/AnjomanMaxFN-Medium.woff") format("woff"),
-    url("../../_fonts/AnjomanMaxFN-Medium.woff2") format("woff2"),
-    url("../../_fonts/AnjomanMaxFN-Medium.ttf") format("truetype");
+  src: url("../_fonts/AnjomanMaxFN-Medium.woff") format("woff"),
+    url("../_fonts/AnjomanMaxFN-Medium.woff2") format("woff2"),
+    url("../_fonts/AnjomanMaxFN-Medium.ttf") format("truetype");
 
   font-weight: 500;
 
@@ -3228,10 +3244,6 @@ a {
 
 .last\:mb-0:last-child {
   margin-bottom: 0px;
-}
-
-.even\:flex:nth-child(even) {
-  display: flex;
 }
 
 .even\:flex-col-reverse:nth-child(even) {

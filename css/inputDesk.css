@@ -4,55 +4,55 @@
 
 @font-face {
   font-family: "IRANYekan300";
-  src: url("../../_fonts/IRANYekanLight.eot");
-  src: url("../../_fonts/IRANYekanLight.eot?#iefix") format("embedded-opentype"),
-    url("../../_fonts/IRANYekanLight.woff") format("woff"),
-    url("../../_fonts/IRANYekanLight.woff2") format("woff2"),
-    url("../../_fonts/IRANYekanLight.ttf") format("truetype");
+  src: url("../_fonts/IRANYekanLight.eot");
+  src: url("../_fonts/IRANYekanLight.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANYekanLight.woff") format("woff"),
+    url("../_fonts/IRANYekanLight.woff2") format("woff2"),
+    url("../_fonts/IRANYekanLight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "IRANYekan400";
-  src: url("../../_fonts/IRANYekanRegular.eot");
-  src: url("../../_fonts/IRANYekanRegular.eot?#iefix")
+  src: url("../_fonts/iranyekanwebregular.eot");
+  src: url("../_fonts/iranyekanwebregular.eot?#iefix")
       format("embedded-opentype"),
-    url("../../_fonts/IRANYekanRegular.woff") format("woff"),
-    url("../../_fonts/IRANYekanRegular.woff2") format("woff2"),
-    url("../../_fonts/IRANYekanRegular.ttf") format("truetype");
+    url("../_fonts/iranyekanwebregular.woff") format("woff"),
+    url("../_fonts/iranyekanwebregular.woff2") format("woff2"),
+    url("../_fonts/iranyekanwebregular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "IRANYekan500";
-  src: url("../../_fonts/iranyekanwebmediumfanum.eot");
-  src: url("../../_fonts/iranyekanwebmediumfanum.eot?#iefix")
+  src: url("../_fonts/iranyekanwebmediumfanum.eot");
+  src: url("../_fonts/iranyekanwebmediumfanum.eot?#iefix")
       format("embedded-opentype"),
-    url("../../_fonts/iranyekanwebmediumfanum.woff") format("woff"),
-    url("../../_fonts/iranyekanwebmediumfanum.woff2") format("woff2"),
-    url("../../_fonts/iranyekanwebmediumfanum.ttf") format("truetype");
+    url("../_fonts/iranyekanwebmediumfanum.woff") format("woff"),
+    url("../_fonts/iranyekanwebmediumfanum.woff2") format("woff2"),
+    url("../_fonts/iranyekanwebmediumfanum.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "IRANYekan700";
-  src: url("../../_fonts/IRANYekanBold.eot");
-  src: url("../../_fonts/IRANYekanBold.eot?#iefix") format("embedded-opentype"),
-    url("../../_fonts/IRANYekanBold.woff") format("woff"),
-    url("../../_fonts/IRANYekanBold.woff2") format("woff2"),
-    url("../../_fonts/IRANYekanBold.ttf") format("truetype");
+  src: url("../_fonts/IRANYekanBold.eot");
+  src: url("../_fonts/IRANYekanBold.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANYekanBold.woff") format("woff"),
+    url("../_fonts/IRANYekanBold.woff2") format("woff2"),
+    url("../_fonts/IRANYekanBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AnjomanMax500";
-  src: url("../../_fonts/AnjomanMaxFN-Medium.woff") format("woff"),
-    url("../../_fonts/AnjomanMaxFN-Medium.woff2") format("woff2"),
-    url("../../_fonts/AnjomanMaxFN-Medium.ttf") format("truetype");
+  src: url("../_fonts/AnjomanMaxFN-Medium.woff") format("woff"),
+    url("../_fonts/AnjomanMaxFN-Medium.woff2") format("woff2"),
+    url("../_fonts/AnjomanMaxFN-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
