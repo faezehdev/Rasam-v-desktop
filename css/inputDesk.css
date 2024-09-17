@@ -96,7 +96,8 @@
 
 
 
-.ProductCat-C header{
+.ProductCat-C header,
+.Product-List-C header{
     background-color: #4C515A;
 
 }
@@ -261,4 +262,23 @@ a {
 .play {
   opacity: 0;
   display: none;
+}
+.Product-List-C .CatP:hover .IMG img,
+.Product-List-C .CatP:hover .Title h2{
+
+  filter: drop-shadow(2.47px 2.47px 12.36px #00000040);
+  -webkit-filter: drop-shadow(2.47px 2.47px 12.36px #00000040);
+}
+.collapse{
+  
+  visibility: unset !important;
+
+}
+
+html{
+  font-size: unset !important;
+}
+.subtoggle .Drop-Item,
+.parentSub .Drop-Item{
+  padding-right: 1em;
 }
