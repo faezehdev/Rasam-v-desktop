@@ -1,129 +1,166 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1">
+  <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2360762"> <member name="service" type="view"/> </basis>	
+  <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2360762"> <member name="serviceGallery" type="list" format="4"/> </basis>	
+  <basis core="dbsource" name="db" source="basiscore" lid="2" mid="1" usedforid="2360762"> <member name="enservice" type="view"/> </basis>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/outputDesk.css" />
-  </head>
-  <body>
-    <div class="serviceShow">
-      <section class="section1">
-        <div class="imgS">
-          <img
-            class="w-full"
-            src="images/Rectangle 6941.png"
-            alt="@name"
-            title="@name"
-          />
-        </div>
-      </section>
-      <section class="section2 bg-lightGray">
-        <div
-          class="inner py-16 flex items-center w-90p mx-auto justify-between gap-x-16"
-          dir="rtl"
-        >
-          <div class="rSide">
-            <div class="title mb-7">
-              <h1
-                class="font-IRANYekan400 text-[28px] text-nGray pb-2 border-b mb-2 border-b-main w-fit"
-              >
-                تجهیز سالن کنفرانس
-              </h1>
-              <h2 class="font-IRANYekan700 text-[28px]">
-                Conference Hall Equipment
-              </h2>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <basis core="print" datamembername="db.seolist">
+    <face>
+      <title>[##cms.seo.title|db.seolist.title##]</title>
+      <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+    </face>
+  </basis>
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css" />
+</head>
+
+<body>
+  <div class="serviceShow">
+    <basis core="print" datamembername="db.serviceGallery">
+        <layout>
+          <section class="section1">
+            <div class="imgS">
+              @child
             </div>
-            <ul class="list-disc mr-4">
-              <li class="font-IRANYekan400 text-base mb-3">
-                <p>سیستم‌های کنفرانس روکار و توکار (FlushMount)</p>
-              </li>
-            </ul>
+          </section>
+        </layout>
+        <face filter="ord=1">
+          <img class="w-full" src="/@largeIMG" alt="@name" title="@name" />
+            
+        </face>
+    </basis>
+    <section class="section2 bg-lightGray">
+      <div class="inner py-16 flex items-center w-90p mx-auto justify-between gap-x-16" dir="rtl">
+        <div class="rSide">
+          <div class="title mb-7">
+            <basis core="print" datamembername="db.service">
+    
+                <face filter="TypeID=150">
+                  <h1 class="font-IRANYekan400 text-[28px] text-nGray pb-2 border-b mb-2 border-b-main w-fit">
+                   @Answer
+                  </h1>
+                    
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.enservice">
+        
+                <face filter="TypeID=150">
+                  <h2 class="font-IRANYekan700 text-[28px]">
+                   @Answer
+                  </h2>
+                    
+                </face>
+            </basis>
           </div>
-          <div class="lSide">
-            <img
-              class="rounded-bl-[72px]"
-              src="images/Rectangle 6914.png"
-              alt="@name"
-              title="@name"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="section3 py-16" dir="rtl">
-        <div class="para w-90p mx-auto font-IRANYekan400 text-base">
-          <p>
-            توضیحی در خصوص خدمت در اینجا نوشته می شود. اگر شما یک طراح هستین و
-            یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با
-            نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی:
-            Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر
-            کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب
-            و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده
-            می‌کنند. طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو
-            برو هستند که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید
-            درستی به کار فرما نمیدهد.
-          </p>
-        </div>
-      </section>
-      <section class="section4 pb-28">
-        <div class="title4 bg-lightGray py-4" dir="rtl">
-
-            <h3 class="w-90p mx-auto font-IRANYekan500 text-2xl">
-                گالری تصاویر
-            </h3>
-        </div>
-        <div class="sliderSection px-[241px] mt-7">
-            <div class="swiper gallerySlider mx-auto pb-16">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="imgS">
-                        <img class="hover:rounded-bl-[72px] duration-700 " src="images/Rectangle 6948.png" alt="@name" title="@name">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="imgS">
-                        <img class="hover:rounded-bl-[72px] duration-700 " src="images/Rectangle 6948.png" alt="@name" title="@name">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="imgS">
-                        <img class="hover:rounded-bl-[72px] duration-700 " src="images/Rectangle 6948.png" alt="@name" title="@name">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="imgS">
-                        <img class="hover:rounded-bl-[72px] duration-700 " src="images/Rectangle 6948.png" alt="@name" title="@name">
-                    </div>
-                  </div>
-                
+          <basis core="print" datamembername="db.service">
+              <layout>
+                <div class="para mr-4 font-IRANYekan400 text-base mb-3">
+               
+                  @child
                 </div>
-                <!-- If we need pagination -->
-
-                <div class="galleryBtnss flex items-center gap-x-20 justify-center absolute bottom-0 left-0 right-0">
-                    <div class="prevArrowGallery cursor-pointer">
-                        <svg class="rotate-180" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.48926 16L16.4893 8L8.48926 0L7.06426 1.4L12.6643 7H0.489258V9H12.6643L7.06426 14.6L8.48926 16Z" fill="#161617"/>
-                            </svg>
-                            
-                    </div>
-                    <div class="swiper-pagination bottom-0 left-0 right-0 top-0 gallerySliderPagination relative inset-0 w-fit" style="width: fit-content;left: 0;right: 0;top: 0;bottom: 0;"></div>
-                    <div class="nextArrowGallery cursor-pointer">
-                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.48926 16L16.4893 8L8.48926 0L7.06426 1.4L12.6643 7H0.489258V9H12.6643L7.06426 14.6L8.48926 16Z" fill="#161617"/>
-                            </svg>
-                            
-                    </div>
-                </div>
-              
-              
+              </layout>
+    
+              <face filter="TypeID=129">
+                  @largetext
+              </face>
+          </basis>
+          
+        </div>
+        <basis core="print" datamembername="db.serviceGallery">
+            <layout>
+              <div class="lSide">
+                @child
               </div>
-        </div>
-      </section>
-    </div>
-    <script src="js/swiper-bundle11.0.5.min.js"></script>
-    <script src="js/serviceShow.js"></script>
-  </body>
+            </layout>
+            <face filter="ord=2">
+              <img class="rounded-bl-[72px]" src="/@largeIMG" alt="@name" title="@name" />
+                
+            </face>
+        </basis>
+      </div>
+    </section>
+    <basis core="print" datamembername="db.service">
+        <layout>
+          
+            <section class="section3 py-16" dir="rtl">
+              <div class="para w-90p mx-auto font-IRANYekan400 text-base">
+                @child
+              </div>
+            </section>
+        </layout>
+  
+        <face filter="TypeID=250">
+            @largetext
+        </face>
+    </basis>
+    <basis core="print" datamembername="db.serviceGallery">
+        <layout>
+            
+            <section class="section4 pb-28">
+              <div class="title4 bg-lightGray py-4" dir="rtl">
+        
+                <h3 class="w-90p mx-auto font-IRANYekan500 text-2xl">
+                  گالری تصاویر
+                </h3>
+              </div>
+              <div class="sliderSection px-[241px] mt-7">
+                <div class="swiper gallerySlider mx-auto pb-16">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                 
+             @child
+        
+                  </div>
+                  <!-- If we need pagination -->
+        
+                  <div class="galleryBtnss flex items-center gap-x-20 justify-center absolute bottom-0 left-0 right-0">
+                    <div class="prevArrowGallery cursor-pointer">
+                      <svg class="rotate-180" width="17" height="16" viewBox="0 0 17 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8.48926 16L16.4893 8L8.48926 0L7.06426 1.4L12.6643 7H0.489258V9H12.6643L7.06426 14.6L8.48926 16Z"
+                          fill="#161617" />
+                      </svg>
+        
+                    </div>
+                    <div class="swiper-pagination bottom-0 left-0 right-0 top-0 gallerySliderPagination relative inset-0 w-fit"
+                      style="width: fit-content;left: 0;right: 0;top: 0;bottom: 0;"></div>
+                    <div class="nextArrowGallery cursor-pointer">
+                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8.48926 16L16.4893 8L8.48926 0L7.06426 1.4L12.6643 7H0.489258V9H12.6643L7.06426 14.6L8.48926 16Z"
+                          fill="#161617" />
+                      </svg>
+        
+                    </div>
+                  </div>
+        
+        
+                </div>
+              </div>
+            </section>
+        </layout>
+        <face filter="ord=1000">
+          <div class="swiper-slide">
+            <div class="imgS">
+              <img class="hover:rounded-bl-[72px] duration-700 " src="/@largeIMG" alt="@name"
+                title="@name">
+            </div>
+          </div>
+        </face>
+    </basis>
+  </div>
+
+  <basis core="call" file="script.inc" />
+  <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+  <script src="[##cms.cms.cdn##]/js/serviceShow.js"></script>
+</body>
+
 </html>

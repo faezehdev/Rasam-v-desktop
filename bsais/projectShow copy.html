@@ -1,46 +1,29 @@
-
-   <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="1418474">
-     <member name="image-def-pro" type="list" postsql="select * from [db.image-def-pro] where ord=1"  />
-     </basis>	
-     <basis core="dbsource" source="basiscore" mid="19" name="db" lid="1" usedforid="1418474">
-        <member name="productinfo" type="list"></member>
-    </basis>
-   <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="1418474">
-     <member name="projectGallery" type="list" /> </basis>	
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="1418474"> 
-    <member name="project" type="view" /> </basis>
-
-    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="1418474">
-        <member name="table2id" type="list" format="3,4" postsql="select * from [db.table2id] where ord=1 " />
-    </basis>
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+   </basis>
 <!DOCTYPE html>
 <html lang="fa">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/m-style.css">
-
 </head>
 
 <body>
     <div class="projectShow">
         <section class="section1">
-            <div class="Product-Tags-C BG" id="image[##db.table2id.Table2ID##]">
-                <div class="imgS">
-                    <img class="w-full" src="[##db.image-def-pro.largeIMG##]" alt="[##db.image-def-pro.name##]" title="[##db.image-def-pro.name##]">
-                </div>
-            <basis core="print" datamembername="db.projectGallery">
-                <face filter="ord=1">
-                    <span class="rrr@Table2ID">
-                        <img src="[##db.image-def-pro.largeIMG##]" alt="" style="display: none;">
-                    </span>
-                </face>
-            </basis>
-            </div>
+
         </section>
         <section class="section2 bg-lightGray">
             <div class="flex gap-x-14 w-90p mx-auto pt-7 pb-14" dir="rtl">
@@ -383,176 +366,10 @@
     <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
     <script src="[##cms.cms.cdn##]/_js/playVideo.js"></script>
     <script src="[##cms.cms.cdn##]/js/project.js"></script>
-    <script>
-        window.addEventListener("load", event => {
-            <basis core="repeater" name="rep" datamembername="db.image-def-pro">
 
-                <basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
-                    <member name="listt" type="list" request="taglist" />
-                </basis>
-
-                <basis core="print" datamembername="rep.current">
-                    <face>
-                        var  naturalWidth = document.getElementById("image@Table2ID").getBoundingClientRect().width
-                        var naturalHeight = document.getElementById("image@Table2ID").getBoundingClientRect().height
-                        var image = $('#image@Table2ID');
-                        var xRatio = naturalWidth / image.width();
-                        var yRatio = naturalHeight / image.height();
-                        var width = naturalWidth;
-                        var height = height;
-                    </face>
-                </basis>
-                <basis core="print" datamembername="db.listt">
-                    <layout>
-                        var settings=[@child]
-                    </layout>
-                    <face  >
-                        {{
-                            "id": "@id",
-                            "xCoordinates": "@xCoordinates",
-                            "yCoordinates": "@yCoordinates",
-                            "mediaid": "@mediaid",
-                            "usedforid": "@usedforid",
-                            "link": "@link",
-                            "description": "@description"
-                        }},
-                    </face>
-                    <else-layout>
-                        var settings='null'
-                    </else-layout>
-                </basis>
-
-                <basis core="print" datamembername="rep.current">
-                    <face>
-                        var   iddd=@Table2ID;
-                        tagList(settings,width, height, xRatio, yRatio,iddd);
-                    </face>
-
-                </basis>
-            </basis>
-            function tagList(settings, width, height, xRatio, yRatio, iddd) {
-                console.log('tagg');
-
-                for (i = 0; i < (settings.length); i++) {
-                    $(".rrr" + iddd).append(`
-                    
-                    <div class="Tag Tag-1 info  tag-item tag${settings[i].id}" data-id=${settings[i].usedforid}>
-                     <span class="Circle pulsating-circle">
-                        <span class="Circle-Inner">
-
-                        </span>
-                     </span>
-                             <div class="Pop-tag" data-id=${settings[i].usedforid}>
-                        <div class="pop">
-
-                            <div class="Box">
-                                <div class="IMG load-product${settings[i].usedforid}">
-            
-                             </div>
-                             </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    `);
-                    xCoordinates = parseInt(settings[i].xCoordinates) / xRatio;
-                    yCoordinates = parseInt(settings[i].yCoordinates) / yRatio;
-                    var iconWidth = parseInt($('.tag' + settings[i].id).find('.tag-item').width());
-                    var iconHeight = $('.tag' + settings[i].id).find('.tag-item ').height();
-                    var left = xCoordinates;
-                    var top = yCoordinates;
-                    $(".tag" + settings[i].id).css({
-                        "position": "absolute",
-                        "left": left + "px",
-                        "top": top + "px",
-                        "z-index": "214748"
-                    });
-
-                }
-
-            }
-            let iss = false
-            $('.tag-item').on('click', function () {
-                var width = $(".width-94").width() + 400;
-                var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
-                if (rt < width) {
-                    if (!iss) {
-                        var id = $(this).attr("data-id");
-
-                        $(this).css("z-index", "214748361")
-                        $(".load-product" + id).show();
-                        $(this).children('.Pop-tag').addClass("expand");
-                        $(".load-product" + id).addClass("load-producty");
-                        $(".load-product" + id).css({ "right": "33px", "left": "unset" });
-                        $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
-                        iss = true
-                    }
-                    else {
-                        var id = $(this).attr("data-id");
-
-                        $(this).css("z-index", "214748361")
-                        $(".load-product" + id).show();
-                        $(this).children('.Pop-tag').iss = true
-                        $(".load-product" + id).removeClass("expand");
-                        $(".load-product" + id).css({ "right": "33px", "left": "unset" });
-                        $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
-                        iss = false
-                    }
-
-                }
-                else {
-                    if (!iss) {
-                        var id = $(this).attr("data-id");
-
-                        $(this).css("z-index", "214748361")
-                        $(".load-product" + id).show();
-                        $(this).children('.Pop-tag').addClass("expand");
-                        $(".load-product" + id).addClass("load-producty");
-                        $(".load-product" + id).css({ "right": "33px", "left": "unset" });
-                        $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
-                        iss = true
-                    }
-                    else {
-                        var id = $(this).attr("data-id");
-                        $(this).css("z-index", "214748361")
-                        $(".load-product" + id).show();
-                        $(this).children('.Pop-tag').removeClass("expand");
-
-                        $(".load-product" + id).addClass("load-product")
-                        $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
-                        iss = false
-                    }
-
-
-                }
-            });
-
-        })
-
-        let currents = document.querySelectorAll('.NewsBlogs-Container .Desc p')
-        currents.forEach((current) => {
-            let result = current.innerText.split('/');
-            let resultt = result[0];
-
-            if (current.innerText.includes('ریشه')) {
-                let resultt = result[1];
-                current.innerHTML = resultt
-                console.log(result[1]);
-            }
-            else {
-                let resultt = result[0];
-                current.innerHTML = resultt
-            }
-
-        })
-
-
-
-    </script>
-
-
-
- 
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
 </body>
 
 </html>
