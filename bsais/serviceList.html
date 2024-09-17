@@ -1,34 +1,48 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209967"> <member name="serviceList" type="list" size="747x598"/> </basis>	
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/outputDesk.css" />
+    <title>لیست خدمات</title>
+    <meta name="description" content="لیست خدمات پژواک رسام سیستم" />
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css" />
 </head>
 
 <body>
     <div class="servceList">
-        <div class="title mt-40 w-90p mx-auto" dir="rtl">
+        <div class="title pt-40 w-90p mx-auto" dir="rtl">
             <h1 class="font-IRANYekan400 text-[28px] text-nGray pb-2 border-b mb-2 border-b-main w-fit">
                 خدمات ما
             </h1>
             <h2 class="font-IRANYekan700 text-[28px] text-blackT">Our Services</h2>
         </div>
-        <div class="innerList mb-32 flex w-90p mx-auto mt-14 justify-between gap-x-16">
+        <div class="innerList pb-32 flex w-90p mx-auto mt-14 justify-between gap-x-16">
             <div class="lSide w-[70%] overflow-hidden">
-                <div class="imgS">
-                    <img class="rounded-bl-[72px]" src="images/Rectangle 16.png" alt="@name" title="@name">
-                </div>
+                <basis core="print" datamembername="db.serviceList">
+                    <face filter="RowNumber=1">
+                        <div class="imgS">
+                            <img class="rounded-bl-[72px]" src="/@00747X00598prp" alt="@title" title="@title">
+                        </div>
+                        
+                    </face>
+                </basis>
             </div>
             <div class="rSide w-[30%]" dir="rtl">
                 <ul class="flex flex-col justify-between">
-                    <li class="servLi cursor-pointer font-IRANYekan500 text-lg text-liGray w-fit mb-20 last:mb-0">
-                        <a class="font-IRANYekan500 duration-700  hover:text-main text-lg text-liGray" href="" title="@title">
-                            تجهیز سالن کنفرانس
-                        </a>
-                    </li>
+                    <basis core="print" datamembername="db.serviceList">
+                        <face>
+                            <li class="servLi cursor-pointer font-IRANYekan500 text-lg text-liGray w-fit mb-20 last:mb-0">
+                                <a class="font-IRANYekan500 duration-700  hover:text-main text-lg text-liGray" href="/@link" title="@title">
+                                   @title
+                                </a>
+                            </li>
+                            
+                        </face>
+                    </basis>
                 
                 </ul>
             </div>
@@ -36,7 +50,16 @@
         </div>
     </div>
 
+<basis core="call" file="script.inc" />
 
+<script> 
+const lenis = new Lenis()
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
+</script>
 </body>
 
 </html>
