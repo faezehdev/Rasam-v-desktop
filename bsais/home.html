@@ -33,7 +33,7 @@
             <basis core="print" datamembername="db.image-Def">
                 <face filter="ord=1">
                     
-                  <div class="imgS">
+                  <div class="imgS w-full">
                     <img class="w-full" src="/@largeIMG" alt="@name" title="@name">
                   </div>
                   <div class="title1 absolute right-[5%]">
@@ -195,9 +195,9 @@
             
             </layout>
             <face filter="parentid=209963">
-                  <div class="catBox border-l border-l-white hover:border-l-0 group relative overflow-hidden">
+                  <div class="catBox border-l border-l-white  group relative overflow-hidden">
                               <div class="imgS">
-                                  <img src="/@image" alt="@title" title="@title">
+                                  <img class="w-full" src="/@image" alt="@title" title="@title">
                               </div>
                               <div class="overlay overflow-hidden group-hover:bg-main/[0.75] duration-700 group-hover:border group-hover:border-white absolute w-full h-full inset-0 p-6 flex flex-col justify-end rounded-bl-[72px]">
                                   <h4 class="font-IRANYekan500 text-xl text-white">
@@ -246,7 +246,7 @@
                 <basis core="print" datamembername="db.image-Business">
                     <layout>
                       <div class="sliderSection">
-                          <div class="swiper CategoriesSlider px-[5%]">
+                          <div class="swiper CategoriesSlider pb-16 px-[5%]">
                               <!-- Additional required wrapper -->
                               <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -264,8 +264,8 @@
             
                     <face>
                          <div class="swiper-slide flex items-center justify-center h-auto">
-                                  <div class="imgS">
-                                      <img src="/@largeIMG" alt="@name" title="@name">
+                                  <div class="imgS" style="width: fit-content;">
+                                      <img src="/@largeIMG" alt="@name" title="@name" style="max-height: 200px;">
                                   </div>
                                 </div>
                     </face>
@@ -298,11 +298,11 @@
 
                 <div class="innerList flex justify-between gap-x-16">
                     <div class="rSide w-[30%]" dir="rtl">
-                        <ul class="flex flex-col justify-between">
+                        <ul class="flex flex-col h-full justify-between">
                           <basis core="print" datamembername="db.list-services">
                   
                               <face>
-                                <li class="servLi cursor-pointer font-IRANYekan500 text-lg text-liGray w-fit mb-20 last:mb-0">
+                                <li class="servLi cursor-pointer font-IRANYekan500 text-lg text-liGray w-fit">
                                     <a class="font-IRANYekan500 duration-700  hover:text-main text-lg text-liGray" href="/@link" title="@title">
                                       @title
                                     </a>
@@ -318,7 +318,7 @@
                       <basis core="print" datamembername="db.list-services">
                   
                           <face filter="RowNumber=1">
-                            <div class="imgS">
+                            <div class="imgS flex" style="justify-content: end;">
                                 <img class="rounded-bl-[72px]" src="/@00747X00598prp" alt="@name" title="@name">
                             </div>
                               
@@ -368,7 +368,7 @@
                 <face filter="ord=1000">
                       <div class="swiper-slide h-auto flex items-center justify-center group">
                             <div class="imgS">
-                                <img class="opacity-50 group-hover:opacity-100 duration-500" src="/@largeIMG" alt="@name" title="@name">
+                                <img class="opacity-50 group-hover:opacity-100 duration-500" src="/@largeIMG" alt="@name" title="@name" style="max-height: 93px;">
                             </div>
                           </div>
                 </face>
@@ -395,7 +395,7 @@
                 <face filter="ord=1000">
                        <div class="swiper-slide h-auto flex items-center justify-center group">
                           <div class="imgS">
-                              <img class="opacity-50 group-hover:opacity-100 duration-500" src="/@largeIMG" alt="@name" title="@name">
+                              <img style="max-height: 93px;" class="opacity-50 group-hover:opacity-100 duration-500" src="/@largeIMG" alt="@name" title="@name">
                           </div>
                         </div>
                 </face>
@@ -420,7 +420,7 @@
                 <face filter="ord=1000">
                           <div class="swiper-slide h-auto flex items-center justify-center group">
                             <div class="imgS">
-                                <img class="opacity-50 group-hover:opacity-100 duration-500" src="/@largeIMG" alt="@name" title="@name">
+                                <img style="max-height: 93px;" class="opacity-50 group-hover:opacity-100 duration-500" src="/@largeIMG" alt="@name" title="@name">
                             </div>
                           </div>
                 </face>

@@ -22,6 +22,7 @@ ScrollTrigger.create({
       // And if we need scrollbar
       scrollbar: {
         el: ".CategoriesScrollbar",
+        draggable: true,
       },
     });
 
@@ -32,6 +33,7 @@ ScrollTrigger.create({
       speed: 7000,
       freeMode: true,
       centeredSlides: true,
+      allowTouchMove:false, 
       autoplay: {
         delay: 0,
         //  pauseOnMouseEnter:true,

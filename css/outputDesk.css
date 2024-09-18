@@ -3314,6 +3314,7 @@ a {
 
 .CategoriesScrollbar .swiper-scrollbar-drag {
   background-color: #f9920b;
+  cursor: pointer;
 }
 
 .home .section6 .swiper-pagination-bullet {
