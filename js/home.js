@@ -1,6 +1,10 @@
-let parallaxLeft = gsap.timeline();
+
+
+$(".home").imagesLoaded(function () {
+
+  let parallaxLeft = gsap.timeline();
 parallaxLeft.to(".projCatContainer", {
-  x: "60vw",
+  x: "30vw",
 });
 ScrollTrigger.create({
   animation: parallaxLeft,
@@ -9,8 +13,6 @@ ScrollTrigger.create({
   end: "bottom -200vw",
   scrub: 1,
 });
-
-$(".home").imagesLoaded(function () {
   setTimeout(() => {
     const CategoriesSlider = new Swiper(".CategoriesSlider", {
       // Optional parameters
@@ -65,12 +67,3 @@ $(".home").imagesLoaded(function () {
 });
 
 
-const lenis = new Lenis()
-  
-  
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)

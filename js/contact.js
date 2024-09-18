@@ -21,12 +21,3 @@ var map = L.map("map", {
  markerContact = L.marker([yLatContact, xLatcontact], { icon: greenIconContact });
 markerContact.addTo(map);
 
-const lenis = new Lenis()
-  
-  
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
