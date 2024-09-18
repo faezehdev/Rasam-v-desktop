@@ -44,6 +44,7 @@ module.exports = {
      
       'white':'#ffff',
       'f':'#ffff',
+      'black2':'#121213',
         
     },
     fontFamily: {
@@ -104,6 +105,7 @@ module.exports = {
          '20.73':'20.73px',
          '41.45':'41.45px',
          '24.18':'24.18px',
+         '27.64':'27.64px',
        
 
       },
