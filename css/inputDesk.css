@@ -98,7 +98,8 @@
 
 .ProductCat-C header,
 .Product-List-C header,
-.ProductShow header{
+.ProductShow header,
+.articleList-C header{
     background-color: #4C515A;
 
 }

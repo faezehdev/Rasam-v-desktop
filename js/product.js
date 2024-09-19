@@ -9,30 +9,9 @@ FullScreenBtn.addEventListener('click',()=>{
 DownloadBtn.addEventListener('click',()=>{
     downloadIMG()
 })
-ZoomBtn.addEventListener('click',()=>{
-    zoom()
-})
+
  //fullscreen image
      // zoom
-     function zoom(){
-        let currWidth = ProIMG.clientWidth;
-        let currHeight = ProIMG.clientHeight;
-        ProIMG.style.width = (currWidth + 100) + "px";
-        ProIMG.style.height = (currHeight + 100) + "px";
-      }
-      function zoomout(){
-        let currWidth = ProIMG.clientWidth;
-        let currHeight = ProIMG.clientHeight; 
-        ProIMG.style.width = (currWidth - 100) + "px";
-        ProIMG.style.height = (currHeight -100) + "px";
-        console.log('naturalwidth',ProIMG.naturalWidth);
-        console.log('width',ProIMG.style.width);
-  
-        if(ProIMG.style.width < ProIMG.naturalWidth+'px'){
-            ProIMG.style.width = ProIMG.naturalWidth+'px' 
-            ProIMG.style.height = ProIMG.naturalHeight+'px' 
-        }
-      }
       function fullscreen(){
       //fullscreen image
       let fullIMG =ProIMG
@@ -235,7 +214,6 @@ gallerySlides.forEach(slide=>{
 })
 let GIMG 
 let FullScreenBtn2 = document.querySelector('.Section-2 .fullScreen')
-let ZoomBtn2 = document.querySelector('.Section-2 .zoom')
 let DownloadBtn2 = document.querySelector('.Section-2 .download')
 
 FullScreenBtn2.addEventListener('click',()=>{
@@ -252,13 +230,6 @@ DownloadBtn2.addEventListener('click',()=>{
     let fullIMG =GIMG
     let imgSRC = fullIMG.getAttribute('src')
     DownloadBtn2.setAttribute('href',`http://oph110.undertest.ir${imgSRC}`)
-})
-ZoomBtn2.addEventListener('click',()=>{
-    GIMG =document.querySelector('.Section-2 .swiper-slide-active img')
-    let currWidth = GIMG.clientWidth;
-        let currHeight = GIMG.clientHeight;
-        GIMG.style.width = (currWidth + 100) + "px";
-        GIMG.style.height = (currHeight + 100) + "px";
 })
 document.querySelector('.Section-2 .Share').addEventListener('click',()=>{
     document.querySelector('.Section-2 .ShareBox').classList.toggle('Open')
