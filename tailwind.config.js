@@ -58,7 +58,8 @@ module.exports = {
       'IRANSansWeb500': ['IRANSansWeb500', 'IRANSansWeb500'],
       'IRANSansWeb700': ['IRANSansWeb700', 'IRANSansWeb700'],
       'IRANSansWeb900': ['IRANSansWeb900', 'IRANSansWeb900'],
-    
+      'AnjomanMax400': ['AnjomanMax400', 'AnjomanMax400'],
+      'AnjomanMax600': ['AnjomanMax600', 'AnjomanMax600'],
     
         
     },

@@ -71,6 +71,24 @@
     font-style: normal;
     font-display: swap;
   }
+  @font-face {
+    font-family: "AnjomanMax";
+    src:
+      url("../_fonts/AnjomanMax-Medium.woff") format("woff"),
+      url("../_fonts/AnjomanMax-Medium.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "AnjomanMax";
+    src:
+      url("../_fonts/AnjomanMax-Black.woff") format("woff"),
+      url("../_fonts/AnjomanMax-Black.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
   body {
     transition: 0.3s ease-out;
     overflow-x: hidden;
@@ -100,7 +118,9 @@
 .Product-List-C header,
 .ProductShow header,
 .articleList-C header,
-.articleShow header{
+.articleShow header,
+.Search-Container header,
+.page header{
     background-color: #4C515A;
 
 }
@@ -399,7 +419,7 @@ order: 1;
 .swiper-Blogs .swiper-slide:nth-child(even) .artImg{
       order: 1;
   }
-  .aboutUS-C .Box{
+  .aboutUS-C .Section-5  .Box{
     box-shadow: 4px 4px 20px 0px #00000040;
 
   }
@@ -434,4 +454,78 @@ order: 1;
 }
 .Section-6 .paginations .swiper-pagination-bullet{
   width: 2px;
+}
+.InputBox input{
+background-color: transparent;
+border: none;
+outline: none;
+border-bottom: 1px solid #fff;
+font-size: 16px;
+font-weight: 400;
+line-height: 25.1px;
+color: #A1A3A9;
+padding-bottom: .5em;
+}
+.InputBox input::placeholder{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.1px;
+  color: #A1A3A9;
+}
+.InputBoxes input{
+  width: 60%;
+  background-color: transparent;
+border: 1px solid #161617;
+padding: 1.5em 0;
+outline: none;
+padding-right: .8em;
+font-size: 16px;
+font-weight: 400;
+line-height: 25.1px;
+color: #A1A3A9;
+font-family: 'AnjomanMax';
+}
+.InputBoxes input::placeholder{
+  font-size: 16px;
+font-weight: 400;
+line-height: 25.1px;
+color: #A1A3A9;
+padding-bottom: .5em;
+font-family: 'AnjomanMax';
+}
+.Search-Container .InputBoxes .searchIcon{
+  left: 22%;
+  top: 30%;
+
+}
+.Search-Container .Search-C::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: auto;
+  background-image:url('../images/pattern3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.Search-Container .sec{
+  position: relative;
+}
+.Search-Container .sec::before{
+  content: '';
+  width: 90%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #161617;
+  right: 0;
+  margin: auto;
+}
+.page404-C {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 49.5%);
+
 }

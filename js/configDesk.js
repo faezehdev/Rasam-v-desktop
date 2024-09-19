@@ -60,3 +60,20 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
+let header = document.querySelector('header')
+lenis.on('scroll',(args)=>{
+    console.log(args);
+    if(args.scroll == 0){
+        header.classList.remove('GoBottom')
+    }
+    else{
+        header.classList.add('GoBottom')
+    }
+    
+})
+let searchIcon = document.querySelector('header .searchIcon')
+let input = document.querySelector('.InputBox')
+searchIcon.addEventListener('click',()=>{
+    input.classList.toggle('OpenS')
+    searchIcon.classList.toggle('OpenS')
+})

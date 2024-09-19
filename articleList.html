@@ -10,7 +10,7 @@
 </head>
 <body>
     <main class="articleList-C overflow-hidden">
-        <header class="DesktopHeader group z-[9999] flex w-full fixed top-0  [&.GoBottom]:bg-[#FFFFFF80]
+        <header class="DesktopHeader [&.GoBottom]:bg-[#4C515A] group z-[9999] flex w-full fixed top-0 
         left-0 justify-center items-center py-8 duration-[.5s]"  dir="rtl">
         <div class="Co w-[90%] mr-auto ml-auto grid grid-cols-[1fr,1fr] justify-center items-center">
           
@@ -24,8 +24,12 @@
                             
                       </div>
                     </span>
-                    <span class="Item w-auto flex justify-start items-center">
-                        <div class="searchIcon w-auto flex justify-start items-center">
+                    <span class="Item w-max flex justify-start items-center">
+                        <div class="InputBox [&.OpenS]:w-[300px] opacity-0 duration-200 w-0 [&.OpenS]:opacity-[1]">
+                            <input type="text" class="w-full
+                            InputBox bg-transparent " placeholder="عبارت مورد نظر را جست و جو کنید">
+                        </div>
+                        <div class="searchIcon duration-200 [&.OpenS]:translate-x-[1em] hover:cursor-pointer w-auto flex justify-start items-center">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.4692 24.1973C20.8149 24.1973 21.1606 24.0986 21.4569 23.9011C22.2964 23.3578 22.5186 22.222 21.9754 21.3825L18.0248 15.4072L17.1606 15.9751L21.1112 21.9504C21.3334 22.2961 21.2346 22.7653 20.889 23.0122C20.7161 23.1356 20.5186 23.1603 20.3211 23.1109C20.1235 23.0615 19.9507 22.9628 19.8272 22.7899L15.8766 16.8146L15.0124 17.3825L18.963 23.3578C19.2346 23.7529 19.6297 24.0492 20.1235 24.1233C20.2223 24.1727 20.3457 24.1973 20.4692 24.1973Z" fill="white"/>
                                 <path d="M12.8641 18.0493C14.2468 18.0493 15.6048 17.6543 16.7653 16.8641C18.3455 15.8271 19.432 14.2222 19.827 12.3456C20.1974 10.4938 19.8517 8.59253 18.79 6.98759C16.6171 3.70364 12.1974 2.81475 8.93814 4.9629C5.65419 7.13574 4.7653 11.5555 6.91344 14.8148C7.95048 16.395 9.55542 17.4814 11.432 17.8765C11.9011 17.9999 12.3702 18.0493 12.8641 18.0493ZM12.8394 4.86413C14.8147 4.86413 16.7406 5.8271 17.9258 7.58018C18.8147 8.93821 19.1357 10.5431 18.8147 12.1481C18.4937 13.7283 17.5554 15.111 16.2221 15.9999C14.8641 16.8888 13.2591 17.2098 11.6542 16.8888C10.0739 16.5678 8.69122 15.6296 7.80233 14.2962C5.95048 11.5061 6.7406 7.72833 9.53073 5.87648C10.5184 5.18512 11.6789 4.86413 12.8394 4.86413Z" fill="#F9920B"/>
@@ -33,6 +37,7 @@
                                 </svg>
                                 
                         </div>
+                      
                     </span>
                 </div>
             </div>
