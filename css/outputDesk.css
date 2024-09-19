@@ -2952,6 +2952,7 @@ video {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .pb-\[\.3em\] {
   padding-bottom: .3em;
 }
@@ -2962,6 +2963,14 @@ video {
 .pb-32 {
   padding-bottom: 8rem;
 >>>>>>> f08fa640921e99b112130b0ee46429da6271be26
+=======
+.pb-32 {
+  padding-bottom: 8rem;
+}
+
+.pb-\[\.3em\] {
+  padding-bottom: .3em;
+>>>>>>> 6d706f8eb25f0aff5d2b892f2a81821a5bc0d88a
 }
 
 .pb-\[120px\] {
