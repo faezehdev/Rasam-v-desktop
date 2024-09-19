@@ -362,7 +362,7 @@ a{
 content: unset;
   }
   .paginations .swiper-pagination-bullet{
-    width: 4px !important;
+    width: 4px;
     background-color: #6D6E73;
     height: 13px ;
     border-radius: 2px !important;
@@ -399,3 +399,39 @@ order: 1;
 .swiper-Blogs .swiper-slide:nth-child(even) .artImg{
       order: 1;
   }
+  .aboutUS-C .Box{
+    box-shadow: 4px 4px 20px 0px #00000040;
+
+  }
+  .aboutUS-C .swiper-gallery .swiper-slide .IMG{
+    transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+.aboutUS-C .swiper-gallery .swiper-slide-active .IMG{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+.Section-6 .Gallerys{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Section-6 .paginations .swiper-pagination-bullet{
+  width: 2px;
+}

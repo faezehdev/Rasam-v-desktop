@@ -886,8 +886,16 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-\[1\.2em\] {
+  margin-bottom: 1.2em;
+}
+
 .mb-\[2em\] {
   margin-bottom: 2em;
+}
+
+.mb-\[3em\] {
+  margin-bottom: 3em;
 }
 
 .mb-\[4em\] {
@@ -1008,10 +1016,6 @@ video {
 
 .mt-\[8em\] {
   margin-top: 8em;
-}
-
-.mb-\[\] {
-  margin-bottom: ;
 }
 
 .box-border {
@@ -1945,10 +1949,6 @@ video {
   gap: 6.5em;
 }
 
-.gap-\[5em\] {
-  gap: 5em;
-}
-
 .gap-x-14 {
   -moz-column-gap: 3.5rem;
        column-gap: 3.5rem;
@@ -2539,6 +2539,10 @@ video {
   background-color: rgb(76 81 90 / var(--tw-bg-opacity));
 }
 
+.bg-f {
+  background-color: #ffff;
+}
+
 .bg-liGray {
   --tw-bg-opacity: 1;
   background-color: rgb(161 163 169 / var(--tw-bg-opacity));
@@ -2710,6 +2714,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.px-\[\.5em\] {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
 .px-\[\.8em\] {
   padding-left: .8em;
   padding-right: .8em;
@@ -2765,9 +2774,19 @@ video {
   padding-bottom: 1em;
 }
 
+.py-\[2em\] {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
 .py-\[3em\] {
   padding-top: 3em;
   padding-bottom: 3em;
+}
+
+.py-\[4em\] {
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .pb-1 {
@@ -2840,6 +2859,10 @@ video {
 
 .pt-\[2em\] {
   padding-top: 2em;
+}
+
+.pt-\[4em\] {
+  padding-top: 4em;
 }
 
 .text-left {
@@ -4077,7 +4100,7 @@ a{
 }
 
 .paginations .swiper-pagination-bullet{
-  width: 4px !important;
+  width: 4px;
   background-color: #6D6E73;
   height: 13px ;
   border-radius: 2px !important;
@@ -4118,6 +4141,46 @@ a{
 
 .swiper-Blogs .swiper-slide:nth-child(even) .artImg{
   order: 1;
+}
+
+.aboutUS-C .Box{
+  box-shadow: 4px 4px 20px 0px #00000040;
+}
+
+.aboutUS-C .swiper-gallery .swiper-slide .IMG{
+  transform: scale(.9);
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  -ms-transform: scale(.9);
+  -o-transform: scale(.9);
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+
+.aboutUS-C .swiper-gallery .swiper-slide-active .IMG{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+
+.Section-6 .Gallerys{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Section-6 .paginations .swiper-pagination-bullet{
+  width: 2px;
 }
 
 @media (min-width: 480px) {
