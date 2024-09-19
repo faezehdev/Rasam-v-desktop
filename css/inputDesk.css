@@ -262,6 +262,7 @@ a {
 
 .CategoriesScrollbar .swiper-scrollbar-drag {
   background-color: #f9920b;
+  cursor: pointer;
 }
 
 .home .section6 .swiper-pagination-bullet {
@@ -273,6 +274,7 @@ a {
   background-color: #161617;
   transition: 0.8s;
 }
+
 .home .section6 .swiper-pagination-bullet-active {
   height: 25px;
   width: 3px;
