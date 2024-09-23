@@ -1,0 +1,405 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/>
+</basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="blog" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]">
+    <member name="image-blog" type="list" format="4"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="list-blog" type="list" propertyid="7244,7249,7248" size="344x322" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member type="list" name="related-product" size="240x240" blgid="221"/> 
+</basis>	
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member type="list" name="related-project" size="363x444" blgid="1611"/> 
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##db.title.Answer##]</title>
+    <meta name="description" content="[##db.title.Answer##]">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+<body>
+    <main class="articleShow overflow-hidden">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="articleShows w-full flex flex-col mt-[6em]">
+            <div class="Section-1 Titles w-full mx-auto flex flex-col bg-lightGray py-[3em]">
+                <div class="Top w-[90%] mx-auto flex justify-between items-start">
+                    <div class="Title-1 w-auto ml-auto flex justify-start items-center
+                    pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+                    before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+                        <h1 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+                            [##db.title.Answer##]
+                        </h1>
+                    </div>
+                    <div class="Det-sec w-[50%]  flex justify-end items-center gap-[6.5em]">
+                        <div class="Author w-auto flex justify-center items-center gap-3">
+                            <span class="Img">
+                                <svg width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.6782 12.6755H29.1234C27.7244 12.6755 26.3258 12.6755 24.9276 12.6755C23.37 12.6673 22.1621 11.7711 20.8835 10.8213C19.8598 10.0616 18.8047 9.27747 17.5158 8.91806C17.737 8.52131 17.9732 8.13623 18.2037 7.76049C18.792 6.80129 19.4012 5.80709 19.7301 4.67052L19.7405 4.63201C20.0879 2.75679 18.6982 1.24798 17.1602 0.720543C15.4474 0.13709 13.8515 0.734546 13.0884 2.23752C12.485 3.19905 11.9303 4.22126 11.3917 5.20496C10.5741 6.6951 9.73103 8.24359 8.71654 9.59603C7.87923 10.1515 7.01992 10.7046 6.18957 11.2402C5.73791 11.528 5.28895 11.8178 4.8427 12.1095C2.97005 13.3115 2.20802 15.3384 1.47147 17.2976C1.19005 18.0479 0.922532 18.7574 0.597106 19.4249L0.586683 19.4494C0.0307959 20.8088 0.375909 22.1484 1.51316 23.033C1.59322 23.0948 1.67847 23.1494 1.76794 23.1963C1.75405 24.0353 1.75752 25.0914 1.75984 26.0237C1.75984 26.3481 1.75984 26.6585 1.75984 26.9456C1.75984 27.7029 1.83396 28.1837 2.21381 28.4054C2.32441 28.4692 2.45002 28.5019 2.57746 28.4999C2.91678 28.4999 3.29548 28.3015 3.66375 28.0892C4.45358 27.6306 7.53528 25.795 7.56539 25.7764L7.6314 25.7379L8.17802 25.0272C8.60883 25.7203 9.16704 26.1684 9.81789 26.3341C10.5278 26.5162 11.2956 26.3446 12.0507 25.8394C13.1578 26.6469 14.3055 26.6095 15.386 25.7297C15.4438 25.7318 15.5009 25.7432 15.5551 25.7635C16.7657 26.3693 18.1005 26.6803 19.4521 26.6714C23.2044 26.6714 27.0191 26.6714 30.71 26.6714H31.6712C32.7008 26.6714 32.9984 26.3726 32.9996 25.3434C32.9996 21.5634 32.9996 17.7838 32.9996 14.0046C32.9996 12.9486 32.7274 12.6767 31.6782 12.6755ZM12.1237 7.59129C12.9656 6.13849 13.8342 4.63551 14.6715 3.15704C15.071 2.4569 15.6258 2.15934 16.155 2.34954L16.1759 2.35655C17.0259 2.60976 17.6408 3.05669 17.8632 3.57246C18.0184 3.93887 17.986 4.34729 17.7636 4.78955C16.9819 6.13849 16.2013 7.52477 15.4474 8.86322C14.1666 11.1328 12.844 13.4772 11.4751 15.7235L8.30194 14.3232C9.53879 12.057 10.8521 9.78857 12.1237 7.59129ZM2.26129 21.1076C2.18479 20.974 2.14231 20.8234 2.13766 20.6693C2.13301 20.5151 2.16634 20.3622 2.23466 20.2242C2.5126 19.5696 2.75928 18.8998 2.99784 18.2545C3.32327 17.377 3.65796 16.4691 4.06909 15.6021C4.63076 14.3617 5.85488 13.5682 7.04308 12.8015C6.77209 13.3523 6.50457 13.8611 6.07376 14.1295C3.71587 14.9008 3.65912 16.692 3.83631 18.3478L3.41592 19.1028C3.03259 19.7913 2.66547 20.4541 2.26129 21.1076ZM3.63827 25.9782V23.8416L5.47618 24.9082L3.63827 25.9782ZM6.9736 23.6444L3.93938 21.8824L5.14033 19.7901L8.4606 21.0492L6.9736 23.6444ZM11.1173 23.949V23.9723C11.0571 24.3014 10.7351 24.5849 10.4456 24.5733C10.0101 24.5313 9.86653 24.3236 9.78778 24.1707C9.55616 23.6864 9.71598 22.7564 10.1503 21.9372C11.1057 22.474 11.3744 22.8988 11.1173 23.949ZM13.3871 24.5091C13.1977 24.3914 13.0551 24.2106 12.9841 23.998L13.723 24.5663C13.6077 24.5896 13.488 24.5688 13.3871 24.5079V24.5091ZM24.7029 24.7518C22.8083 24.8463 20.8001 24.7518 18.8534 24.662L17.8632 24.6165C16.5673 24.5243 15.4601 23.6222 14.4827 22.8253C12.5139 21.2231 10.1039 19.4657 7.15774 18.5917L7.1091 18.58C6.52078 18.4844 5.99616 18.1775 5.73907 17.7795C5.65122 17.6429 5.59338 17.4889 5.56941 17.3279C5.54544 17.1669 5.5559 17.0026 5.60009 16.846C5.75528 16.4178 5.98806 16.1459 6.30653 16.0292C7.30134 15.6441 9.08597 16.6126 10.5255 17.3875C11.3929 17.8542 12.1468 18.2615 12.7409 18.4143C13.7832 18.8146 14.8823 19.0806 15.9454 19.3397C16.2129 19.405 16.4781 19.4692 16.7445 19.5369C17.1996 19.6863 17.6269 19.5976 17.8898 19.2965C18.0077 19.1598 18.0827 18.991 18.1054 18.8113C18.1281 18.6316 18.0974 18.4492 18.0172 18.2872C17.8354 17.9126 17.4382 17.7037 16.9425 17.7235C15.6169 17.5762 14.3273 17.1955 13.1324 16.5986L13.8458 15.3524C14.6136 14.0093 15.3698 12.686 16.1318 11.3557C16.338 10.9952 16.5522 10.6229 16.6495 10.5891C16.7468 10.5552 17.2436 10.8014 17.4776 10.9216L17.4949 10.931C18.4075 11.3441 19.2193 11.917 20.0045 12.4713C21.3746 13.4398 22.784 14.4375 24.7029 14.532V24.7518ZM31.1431 24.7845H26.5941V14.5682H31.1431V24.7845Z" fill="#6D6E73"/>
+                                    </svg>
+                                    
+                            </span>
+                            <basis core="print" datamembername="db.blog">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="prpID=7248">
+                                    <span class="Text font-IRANYekan400 font-normal text-lg leading-31.09 text-black1">
+                                      @Answer
+                                    </span>
+                                </face>
+                            </basis>
+                       
+                        </div>
+                        <div class="Dates w-auto flex justify-center items-center gap-3">
+                            <span class="Img">
+                                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M27.7082 4.06301H22.3598V0.5H20.416V4.06301H8.75067V0.5H6.80458V4.06301H1.45845C1.26596 4.06344 1.07551 4.1032 0.898346 4.17994C0.721183 4.25668 0.560902 4.36885 0.426972 4.50982C0.152889 4.79957 -0.000185916 5.18648 1.69463e-07 5.58903V26.9625C-0.000185916 27.3651 0.152889 27.752 0.426972 28.0417C0.55995 28.1848 0.719805 28.2991 0.897012 28.3778C1.07422 28.4565 1.26516 28.4981 1.45845 28.5H27.7082C27.9012 28.4983 28.0919 28.4568 28.2688 28.3781C28.4456 28.2993 28.6051 28.1849 28.7374 28.0417C29.0122 27.7522 29.166 27.3654 29.1667 26.9625V5.58903C29.166 5.1862 29.0122 4.79934 28.7374 4.50982C28.6041 4.36871 28.4442 4.25643 28.2674 4.17966C28.0906 4.1029 27.9004 4.06323 27.7082 4.06301ZM27.2206 26.4538H1.94385V6.09771H6.80458V8.64108H8.75067V6.09771H20.416V8.64108H22.3598V6.09771H27.2206V26.4538Z" fill="#6D6E73"/>
+                                    <path d="M5.84277 12.2041H7.78662V14.248H5.84277V12.2041ZM11.1889 12.2041H13.1238V14.248H11.1799L11.1889 12.2041ZM16.0496 12.2041H17.9778V14.248H16.0407L16.0496 12.2041ZM21.398 12.2041H23.3419V14.248H21.389L21.398 12.2041ZM5.84277 16.7845H7.78662V18.8306H5.84277V16.7845ZM11.1889 16.7845H13.1238V18.8306H11.1799L11.1889 16.7845ZM16.0496 16.7845H17.9778V18.8306H16.0407L16.0496 16.7845ZM21.398 16.7845H23.3419V18.8306H21.389L21.398 16.7845ZM5.84277 21.3648H7.78662V23.3995H5.84277V21.3648ZM11.1889 21.3648H13.1238V23.3995H11.1799L11.1889 21.3648ZM16.0496 21.3648H17.9778V23.3995H16.0407L16.0496 21.3648ZM21.398 21.3648H23.3419V23.3995H21.389L21.398 21.3648Z" fill="#6D6E73"/>
+                                    </svg>
+                                    
+                            </span>
+                            <basis core="print" datamembername="db.blog">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="prpID=7249">
+                            <span class="Text font-IRANYekan400 font-normal text-lg leading-31.09 text-black1">
+                                @Answer
+                            </span>
+                                </face>
+                            </basis>
+                        </div>
+                    </div>
+                </div>
+                <div class="Bottom w-[90%] mx-auto flex justify-between items-center">
+                    <div class="Title-2 w-auto ml-auto flex justify-start items-center">
+                        <h2 class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+                          
+                        </h2>
+                    </div>
+               <div class="Shares w-[50%] flex justify-end items-center gap-3">
+                <div class="Text font-IRANYekan400 font-normal text-lg leading-31.09 text-black1">
+                    اشتراک گذاری
+                </div>
+                <div class="ShareBox w-auto flex duration-150 
+                gap-3 mx-[.8em]" data-link="[##db.list-blog.link##]">
+                   <span class="item linkdin w-auto flex
+                    justify-start items-center">
+                       <a href="">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M19.8669 3.375C20.7509 3.375 21.5988 3.72619 22.2239 4.35131C22.849 4.97643 23.2002 5.82428 23.2002 6.70833V20.0417C23.2002 20.9257 22.849 21.7736 22.2239 22.3987C21.5988 23.0238 20.7509 23.375 19.8669 23.375H6.53353C5.64947 23.375 4.80163 23.0238 4.17651 22.3987C3.55138 21.7736 3.2002 20.9257 3.2002 20.0417V6.70833C3.2002 5.82428 3.55138 4.97643 4.17651 4.35131C4.80163 3.72619 5.64947 3.375 6.53353 3.375H19.8669ZM19.8669 5.59722H6.53353C6.23884 5.59722 5.95623 5.71429 5.74785 5.92266C5.53948 6.13103 5.42242 6.41365 5.42242 6.70833V20.0417C5.42242 20.3364 5.53948 20.619 5.74785 20.8273C5.95623 21.0357 6.23884 21.1528 6.53353 21.1528H19.8669C20.1615 21.1528 20.4442 21.0357 20.6525 20.8273C20.8609 20.619 20.978 20.3364 20.978 20.0417V6.70833C20.978 6.41365 20.8609 6.13103 20.6525 5.92266C20.4442 5.71429 20.1615 5.59722 19.8669 5.59722ZM8.75575 11.1528C9.0279 11.1528 9.29057 11.2527 9.49394 11.4336C9.69731 11.6144 9.82724 11.8636 9.85908 12.1339L9.86686 12.2639V17.8194C9.86655 18.1026 9.75811 18.375 9.5637 18.581C9.36929 18.7869 9.10358 18.9108 8.82087 18.9274C8.53816 18.944 8.25977 18.852 8.0426 18.6703C7.82543 18.4885 7.68587 18.2307 7.65242 17.9494L7.64464 17.8194V12.2639C7.64464 11.9692 7.7617 11.6866 7.97008 11.4782C8.17845 11.2698 8.46107 11.1528 8.75575 11.1528ZM12.0891 10.0417C12.3493 10.0416 12.6013 10.1329 12.8011 10.2996C13.0009 10.4663 13.1358 10.6979 13.1824 10.9539C13.4062 10.8246 13.6374 10.7085 13.8746 10.6061C14.6158 10.2894 15.7258 10.115 16.728 10.4294C17.2535 10.5961 17.7813 10.9072 18.1724 11.4372C18.5224 11.9094 18.7113 12.4839 18.7491 13.1294L18.7558 13.375V17.8194C18.7554 18.1026 18.647 18.375 18.4526 18.581C18.2582 18.7869 17.9925 18.9108 17.7098 18.9274C17.427 18.944 17.1487 18.852 16.9315 18.6703C16.7143 18.4885 16.5748 18.2307 16.5413 17.9494L16.5335 17.8194V13.375C16.5335 13.0083 16.4446 12.8372 16.3869 12.7583C16.3038 12.6553 16.1896 12.582 16.0613 12.5494C15.6746 12.4272 15.118 12.4917 14.748 12.6494C14.1924 12.8872 13.6835 13.2606 13.3369 13.6061L13.2002 13.7528V17.8194C13.1999 18.1026 13.0914 18.375 12.897 18.581C12.7026 18.7869 12.4369 18.9108 12.1542 18.9274C11.8715 18.944 11.5931 18.852 11.3759 18.6703C11.1588 18.4885 11.0192 18.2307 10.9858 17.9494L10.978 17.8194V11.1528C10.978 10.8581 11.095 10.5755 11.3034 10.3671C11.5118 10.1587 11.7944 10.0417 12.0891 10.0417ZM8.75575 7.81944C9.05044 7.81944 9.33305 7.93651 9.54143 8.14488C9.7498 8.35326 9.86686 8.63587 9.86686 8.93056C9.86686 9.22524 9.7498 9.50786 9.54143 9.71623C9.33305 9.9246 9.05044 10.0417 8.75575 10.0417C8.46107 10.0417 8.17845 9.9246 7.97008 9.71623C7.7617 9.50786 7.64464 9.22524 7.64464 8.93056C7.64464 8.63587 7.7617 8.35326 7.97008 8.14488C8.17845 7.93651 8.46107 7.81944 8.75575 7.81944Z" fill="#6D6E73"/>
+                               </svg>
+                               
+                       </a>
+                   </span>
+                   <span class="item whatsapp w-auto 
+                   flex justify-start items-center">
+                       <a href="">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M12.8125 3C7.30596 3 2.82329 7.47838 2.82129 12.9844C2.82029 14.7444 3.28132 16.4626 4.15541 17.9766L2.7998 23L8.03274 21.7637C9.49188 22.5597 11.1345 22.9775 12.8066 22.9785H12.8105C18.3161 22.9785 22.7968 18.4991 22.7998 12.9941C22.8018 10.3251 21.7638 7.81573 19.8776 5.92773C17.9915 4.04073 15.4848 3.001 12.8125 3ZM12.8105 5C14.9468 5.001 16.9543 5.8338 18.4634 7.3418C19.9726 8.8518 20.8016 10.8582 20.7996 12.9922C20.7976 17.3962 17.215 20.9785 12.8086 20.9785C11.4755 20.9775 10.1549 20.6428 8.99182 20.0078L8.31792 19.6406L7.57371 19.8164L5.60477 20.2812L6.08528 18.4961L6.3021 17.6953L5.888 16.9766C5.18993 15.7686 4.82049 14.3874 4.82149 12.9844C4.82349 8.58238 8.40712 5 12.8105 5ZM9.277 8.375C9.10998 8.375 8.83994 8.4375 8.61092 8.6875C8.3819 8.9365 7.73583 9.53958 7.73583 10.7676C7.73583 11.9956 8.63045 13.1826 8.75546 13.3496C8.87948 13.5156 10.4823 16.1152 13.0196 17.1152C15.1278 17.9462 15.5559 17.7822 16.014 17.7402C16.472 17.6992 17.4917 17.1377 17.6997 16.5547C17.9077 15.9717 17.9082 15.4702 17.8462 15.3672C17.7842 15.2632 17.6177 15.2012 17.3676 15.0762C17.1186 14.9512 15.8914 14.3486 15.6624 14.2656C15.4334 14.1826 15.2658 14.1406 15.0998 14.3906C14.9338 14.6406 14.4567 15.2012 14.3107 15.3672C14.1647 15.5342 14.0196 15.5566 13.7696 15.4316C13.5196 15.3056 12.7157 15.0414 11.7616 14.1914C11.0195 13.5304 10.5188 12.7148 10.3728 12.4648C10.2278 12.2158 10.3591 12.0791 10.4841 11.9551C10.5962 11.8431 10.7322 11.6636 10.8572 11.5176C10.9812 11.3716 11.0242 11.2676 11.1073 11.1016C11.1903 10.9356 11.1478 10.7891 11.0858 10.6641C11.0238 10.5391 10.5382 9.3065 10.3162 8.8125C10.1291 8.3975 9.93162 8.38786 9.75361 8.38086C9.60859 8.37486 9.44302 8.375 9.277 8.375Z" fill="#6D6E73"/>
+                               </svg>
+                               
+                       </a>
+                   </span>
+                   <span class="item instagram 
+                   w-auto flex justify-start items-center">
+                       <a href="">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M8.42274 3C5.35941 3 2.86719 5.49222 2.86719 8.55556V17.4444C2.86719 20.5078 5.35941 23 8.42274 23H17.3116C20.375 23 22.8672 20.5078 22.8672 17.4444V8.55556C22.8672 5.49222 20.375 3 17.3116 3H8.42274ZM8.42274 5.22222H17.3116C19.1494 5.22222 20.645 6.71778 20.645 8.55556V17.4444C20.645 19.2822 19.1494 20.7778 17.3116 20.7778H8.42274C6.58497 20.7778 5.08941 19.2822 5.08941 17.4444V8.55556C5.08941 6.71778 6.58497 5.22222 8.42274 5.22222ZM18.4227 6.33333C18.1281 6.33333 17.8454 6.4504 17.6371 6.65877C17.4287 6.86714 17.3116 7.14976 17.3116 7.44444C17.3116 7.73913 17.4287 8.02174 17.6371 8.23012C17.8454 8.43849 18.1281 8.55556 18.4227 8.55556C18.7174 8.55556 19 8.43849 19.2084 8.23012C19.4168 8.02174 19.5339 7.73913 19.5339 7.44444C19.5339 7.14976 19.4168 6.86714 19.2084 6.65877C19 6.4504 18.7174 6.33333 18.4227 6.33333ZM12.8672 7.44444C9.80385 7.44444 7.31163 9.93667 7.31163 13C7.31163 16.0633 9.80385 18.5556 12.8672 18.5556C15.9305 18.5556 18.4227 16.0633 18.4227 13C18.4227 9.93667 15.9305 7.44444 12.8672 7.44444ZM12.8672 9.66667C14.705 9.66667 16.2005 11.1622 16.2005 13C16.2005 14.8378 14.705 16.3333 12.8672 16.3333C11.0294 16.3333 9.53385 14.8378 9.53385 13C9.53385 11.1622 11.0294 9.66667 12.8672 9.66667Z" fill="#6D6E73"/>
+                               </svg>
+                                
+                       </a>
+                   </span>
+                   <span class="item aparat w-auto 
+                    flex justify-start items-center">
+                       <a href="">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M11.6308 3.58424L9.78952 3.10436C9.39624 2.99962 8.98617 2.97339 8.58275 3.02716C8.17933 3.08094 7.79046 3.21366 7.43839 3.41775C7.08632 3.62183 6.77793 3.89328 6.53088 4.21657C6.28382 4.53985 6.10293 4.90864 5.99856 5.30185L5.53896 7.03702C7.05459 5.15147 9.23391 3.91626 11.6308 3.58424Z" fill="#6D6E73"/>
+                               <path d="M3.55441 14.5073L3.10359 16.2073C2.89286 17.0008 3.00609 17.8455 3.41837 18.5556C3.83065 19.2656 4.50823 19.7829 5.30206 19.9937L7.05849 20.4619C5.18301 18.988 3.9319 16.8619 3.55441 14.5073Z" fill="#6D6E73"/>
+                               <path d="M20.6965 5.99837L18.7264 5.4746C19.7219 6.24003 20.5554 7.19547 21.1785 8.28547C21.8017 9.37546 22.202 10.5783 22.3563 11.8242L22.8979 9.77595C23.1059 8.98327 22.991 8.14049 22.5783 7.43238C22.1656 6.72426 21.4889 6.20857 20.6965 5.99837Z" fill="#6D6E73"/>
+                               <path d="M14.3241 22.3872L16.2122 22.8964C17.0061 23.107 17.8511 22.9938 18.5615 22.5817C19.2719 22.1696 19.7894 21.4923 20.0003 20.6989L20.533 18.6974C19.0309 20.6973 16.7994 22.0234 14.3241 22.3872Z" fill="#6D6E73"/>
+                               <path d="M13.0009 4.32763C11.2852 4.32705 9.60796 4.83505 8.18117 5.78737C6.75438 6.73969 5.64217 8.09355 4.98522 9.67774C4.32827 11.2619 4.15608 13.0053 4.49043 14.6873C4.82478 16.3693 5.65066 17.9144 6.8636 19.1272C8.07654 20.34 9.62206 21.1661 11.3047 21.5008C12.9873 21.8356 14.7315 21.6641 16.3166 21.008C17.9017 20.3518 19.2566 19.2406 20.2098 17.8147C21.163 16.3889 21.6718 14.7125 21.6718 12.9976C21.6718 10.6987 20.7584 8.49391 19.1323 6.86805C17.5063 5.24219 15.3008 4.32841 13.0009 4.32763ZM8.08874 8.65239C8.18148 8.17171 8.41473 7.72931 8.75899 7.38112C9.10324 7.03293 9.54305 6.79458 10.0228 6.6962C10.5026 6.59783 11.0008 6.64385 11.4544 6.82844C11.908 7.01303 12.2966 7.32791 12.5712 7.73327C12.8458 8.13863 12.994 8.61626 12.997 9.10579C13.0001 9.59532 12.8578 10.0748 12.5883 10.4835C12.3188 10.8922 11.9341 11.2119 11.4828 11.4021C11.0315 11.5923 10.534 11.6446 10.053 11.5521C9.73351 11.4908 9.42923 11.367 9.15757 11.1881C8.88592 11.0091 8.6522 10.7784 8.46979 10.5091C8.28737 10.2398 8.15983 9.93721 8.09445 9.61863C8.02907 9.30005 8.02713 8.97172 8.08874 8.65239ZM11.6923 16.1432C11.5989 16.6237 11.3651 17.0657 11.0204 17.4134C10.6758 17.7611 10.2357 17.9989 9.75584 18.0966C9.27599 18.1944 8.77793 18.1478 8.3246 17.9626C7.87127 17.7775 7.48302 17.4622 7.20893 17.0566C6.93484 16.6509 6.78721 16.1732 6.78471 15.6837C6.78221 15.1942 6.92494 14.715 7.19487 14.3066C7.46479 13.8981 7.8498 13.5789 8.30121 13.3891C8.75262 13.1994 9.25019 13.1477 9.731 13.2405C10.0505 13.3022 10.3548 13.4263 10.6263 13.6056C10.8979 13.7849 11.1314 14.0159 11.3136 14.2855C11.4957 14.5551 11.6229 14.8579 11.6879 15.1767C11.7529 15.4954 11.7544 15.8238 11.6923 16.1432ZM12.7433 14.1388C12.5298 14.0975 12.3334 13.994 12.1787 13.8413C12.0241 13.6885 11.9181 13.4934 11.8743 13.2806C11.8304 13.0677 11.8506 12.8467 11.9323 12.6453C12.014 12.4439 12.1535 12.2712 12.3332 12.1489C12.513 12.0267 12.7249 11.9604 12.9423 11.9585C13.1597 11.9565 13.3729 12.0189 13.5548 12.1379C13.7368 12.2568 13.8794 12.427 13.9647 12.6268C14.05 12.8267 14.0742 13.0474 14.0343 13.261C14.0076 13.4036 13.9529 13.5394 13.8735 13.6608C13.7941 13.7822 13.6914 13.8867 13.5714 13.9683C13.4515 14.0499 13.3165 14.107 13.1744 14.1362C13.0323 14.1655 12.8857 14.1664 12.7433 14.1388ZM17.9101 17.337C17.8174 17.8177 17.5841 18.2601 17.2399 18.6083C16.8956 18.9565 16.4558 19.1948 15.976 19.2932C15.4963 19.3916 14.9981 19.3456 14.5445 19.161C14.0909 18.9764 13.7022 18.6615 13.4277 18.2562C13.1531 17.8508 13.0049 17.3732 13.0018 16.8836C12.9988 16.3941 13.141 15.9147 13.4105 15.5059C13.6801 15.0972 14.0648 14.7775 14.5161 14.5873C14.9673 14.3971 15.4649 14.3449 15.9458 14.4373C16.2653 14.4987 16.5696 14.6224 16.8413 14.8013C17.1129 14.9803 17.3466 15.211 17.5291 15.4803C17.7115 15.7496 17.839 16.0522 17.9044 16.3708C17.9698 16.6894 17.9717 17.0177 17.9101 17.337ZM16.2708 12.7489C15.7899 12.6562 15.3473 12.4231 14.9989 12.079C14.6506 11.7349 14.4121 11.2952 14.3137 10.8157C14.2153 10.3361 14.2613 9.83819 14.446 9.38479C14.6307 8.93139 14.9457 8.5429 15.3512 8.26844C15.7568 7.99397 16.2346 7.84586 16.7244 7.84281C17.2141 7.83977 17.6938 7.98194 18.1027 8.25134C18.5116 8.52075 18.8314 8.90529 19.0217 9.35636C19.212 9.80743 19.2643 10.3048 19.1718 10.7855C19.1107 11.1051 18.9872 11.4096 18.8083 11.6815C18.6294 11.9533 18.3986 12.1873 18.1292 12.3699C17.8597 12.5525 17.5569 12.6803 17.238 12.7458C16.9191 12.8113 16.5905 12.8134 16.2708 12.7518V12.7489Z" fill="#6D6E73"/>
+                               </svg>
+                               
+                       </a>
+                   </span>
+                   <span class="item pinterest w-auto 
+                   flex justify-start items-center">
+                       <a href="">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.90476 13C4.90476 8.52912 8.52912 4.90476 13 4.90476C17.4709 4.90476 21.0952 8.52912 21.0952 13C21.0952 17.4709 17.4709 21.0952 13 21.0952C12.0206 21.0952 11.0818 20.9213 10.2128 20.6027C10.7602 19.1294 11.2967 17.6521 11.8111 16.1671C12.3581 16.557 13.0636 16.8095 13.9524 16.8095C15.7952 16.8095 17.738 15.595 18.2196 13.1868C18.8243 10.1633 16.4027 7.28571 13 7.28571C11.5688 7.28571 10.1608 7.86067 9.1076 8.77374C8.05222 9.68868 7.28571 11.0065 7.28571 12.5238C7.28571 13.2615 7.50851 14.0836 8.03951 14.6245C8.40673 14.9923 9.01988 14.9936 9.38772 14.6258C9.75256 14.261 9.75951 13.6737 9.40856 13.3005C8.66014 12.3665 9.64621 10.8277 10.3553 10.213C11.0913 9.57491 12.0643 9.19048 13 9.19048C15.3116 9.19048 16.6995 11.0748 16.3518 12.8132C16.0633 14.2555 14.9667 14.9048 13.9524 14.9048C13.1734 14.9048 12.7539 14.5759 12.4856 14.1505C12.6321 13.6892 12.7575 13.2703 12.8464 12.9298C13.0296 12.2272 13.1403 11.3811 12.5085 10.8547C12.0389 10.4633 11.4845 10.5501 11.1455 10.7196C10.5156 11.0346 10.1429 11.7713 10.1429 12.5238C10.1429 12.9442 10.2083 13.5955 10.4445 14.2681C9.83642 16.1029 9.17694 17.921 8.50404 19.733C6.33376 18.2809 4.90476 15.8073 4.90476 13ZM13 3C7.47715 3 3 7.47715 3 13C3 18.5229 7.47715 23 13 23C18.5229 23 23 18.5229 23 13C23 7.47715 18.5229 3 13 3Z" fill="#6D6E73"/>
+                               </svg>
+                               
+                       </a>
+                   </span>
+                </div>
+               </div>
+                </div>
+            </div>
+            <div class="Section-2 Text w-[90%] mx-auto py-[3em] flex flex-col justify-center items-start">
+                <basis core="print" datamembername="db.blog">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="TypeID=129">
+                        <p class="font-IRANYekan400 font-normal text-lg leading-31.03 text-black text-right">
+                            @largetext 
+                        
+                        </p>
+                    </face>
+                </basis>
+             
+            </div>
+            <div class="Section-3 w-full flex flex-col justify-start items-start">
+                <basis core="print" datamembername="db.text">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="RowNumber=1">
+                <div class="Title-Top w-full flex justify-start items-center h-[77px] bg-lightGray mt-[2em]">
+                    <h3 class="font-IRANYekan500 font-medium text-2xl leading-41.45 text-black1 mr-[5%]">
+                        @text 
+                    </h3>
+                </div>
+                    </face>
+                </basis>
+                <div class="contentss w-full flex justify-center items-start mt-[5em]">
+                    <div class="Right  w-[45%] mr-auto flex flex-col justify-start items-start ">
+                        <basis core="print" datamembername="db.text">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=1">
+                        <p class="font-IRANYekan400 text-base font-normal leading-30 text-black1 text-right">
+                           @largetext 
+                        </p>
+                            </face>
+                        </basis>
+                    
+                    </div>
+                    <div class="Left w-[45%] ml-auto flex justify-end items-center ">
+                        <basis core="print" datamembername="db.image-blog">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=1">
+                                <div class="IMG  w-auto flex justify-end items-center relative">
+                                    <img src="@largeIMG" alt="[##db.list-blog.title##]" title="[##db.list-blog.title##]" class="w-full">
+                                </div>
+                            </face>
+                        </basis>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="Section-4 w-full flex flex-col justify-start items-start">
+                <basis core="print" datamembername="db.text">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="RowNumber=2">
+                <div class="Title-Top w-full flex justify-start items-center h-[77px] bg-lightGray mt-[2em]">
+                    <h4 class="font-IRANYekan500 font-medium text-2xl leading-41.45 text-black1 mr-[5%]">
+                       @text
+                    </h4>
+                </div>
+                    </face>
+                </basis>
+                <div class="contentss w-full flex justify-center items-center ">
+                    <div class=" Text w-[90%] mx-auto py-[3em] flex flex-col justify-center items-start">
+                        <basis core="print" datamembername="db.text">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber in (2,3,4,5,6)">
+                        <p class="font-IRANYekan400 text-base font-normal leading-30 text-black1 text-right">
+                            @largetext 
+                         </p>
+                            </face>
+                        </basis>
+                      
+                    </div>
+                 
+                </div>
+            </div>
+            <div class="Section-5 w-full flex flex-col justify-start items-start">
+                <div class="Title-Top w-full flex justify-start items-center h-[77px] bg-lightGray mt-[2em]">
+                    <h5 class="font-IRANYekan500 font-medium text-2xl leading-41.45 text-black1 mr-[5%]">
+                        گالری تصاویر
+                    </h5>
+                </div>
+                <div class="Gallerys w-full flex flex-col justify-start items-start">
+                      <div class="Gallery-Container w-full flex justify-center items-center flex-col mt-[5em]">
+                  
+                        <div class="swiper-gallery w-full mx-auto flex overflow-hidden">
+
+                            <div class="swiper-wrapper w-full">
+                                <basis core="print" datamembername="db.image-blog">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="ord=1000">
+                                        <div class="swiper-slide w-full flex justify-center items-center relative">
+                                            <div class="IMG w-full flex justify-center items-center">
+                                                <img src="@largeIMG" alt="[##db.list-blog.title##]" title="[##db.list-blog.title##]"  class="w-auto object-contain">
+                                            </div>
+                                         </div>
+                                  
+                                    </face>
+                                </basis>
+                          
+                            </div>
+                        </div>
+                        <div class="paginations w-full flex justify-center items-center gap-[3em] mt-[3em]">
+                            <div class="swiper-button-prev !w-[10px] flex justify-center items-center static before:!contents-[''] after:!contents-['']">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.48895 16L16.489 8L8.48895 0L7.06395 1.4L12.664 7H0.488953V9H12.664L7.06395 14.6L8.48895 16Z" fill="#161617"/>
+                                    </svg>
+                                    
+                                    
+                            </div>
+                            <div class="pagination w-[100px] translate-y-[.4em] flex justify-center items-center gap-3 relative">
+                                <div class="swiper-pagination w-full flex flex-row justify-center items-center"></div>
+                            </div>
+                            <div class="swiper-button-next !w-[10px] flex justify-center items-center static before:!contents-[''] after:!contents-['']">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.51111 16L0.511108 8L8.51111 0L9.93611 1.4L4.33611 7H16.5111V9H4.33611L9.93611 14.6L8.51111 16Z" fill="#161617"/>
+                                    </svg>
+                              
+                            </div>
+    
+                        </div>
+                       </div>
+                </div>
+            </div>
+
+            <basis core="print" datamembername="db.related-product">
+                <layout>
+                    <div class="Related-Products-C w-full flex flex-col mt-[5em]">
+                        <div class="Titles w-auto flex flex-col mb-[4em]">
+                            <div class="Title-1 w-auto flex justify-start items-center mx-[5%]
+                            pb-[.5em] relative efore:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
+                            before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+                               <h4 class="font-IRANYekan400 font-normal text-[28px] leading-[48.36px] text-Gray">
+                                محصولات مرتبط
+                               </h4>
+                            </div>
+                            <div class="Title-2 w-auto flex justify-start items-center mx-[5%]">
+                               <h4 class="font-IRANYekan700 font-bold leading-[48.36px] text-[28px] text-black2">
+                                Related Products
+                               </h4>
+                            </div>
+                          </div>
+                          <div class="flex w-90p mx-auto">
+                            <div class="swiper-products w-full flex overflow-hidden">
+                                <div class="swiper-wrapper w-full">
+                    @child
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </layout>
+                <face>
+                    <div class="swiper-slide w-full flex">
+                        <div class="Product w-full  flex flex-col bg-lightGray group duration-[.4s] pb-[2em]
+                        hover:rounded-bl-[72px] px-[.8em] py-[.8em]">
+                        <a href="@link"  alt="@title " title="@title" class="w-full flex flex-col">
+                           <div class="IMG w-full flex justify-center items-center">
+                               <img src="@00240X00240prp" alt="@title " title="@title" class="w-auto object-contain">
+                           </div>
+                           <div class="Title w-full before:contents-[''] before:w-0 before:h-[1px] before:bg-black1 
+                           before:absolute before:right-0 before:bottom-0 duration-[.4s] group-hover:before:w-full before:duration-[.4s]
+                            flex justify-center items-center relative">
+                               <h3 class="font-IRANYekan500 font-medium  mx-0 my-0
+                               text-xl leading-34.55 text-black1 text-center">
+                                @title
+                               </h3>
+                           </div>
+                           <div class="Text w-full flex justify-center items-center flex-col">
+                               <!-- <p class="font-IRANYekan400 font-normal text-base leading-30 text-midGray">
+                                   توضیحات این محصول که باید اینجا نوشته شود.
+                               </p> -->
+                           </div>
+                        </a>
+                         
+                       </div>
+                    </div>
+                </face>
+            </basis>
+       <basis core="print" datamembername="db.related-project">
+           <layout>
+            <div class="Related-Projects-C w-full flex flex-col mt-[5em] mb-[5em]">
+                <div class="Titles w-auto flex flex-col mb-[4em]">
+                    <div class="Title-1 w-auto flex justify-start items-center mx-[5%]
+                    pb-[.5em] relative efore:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
+                    before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+                       <h4 class="font-IRANYekan400 font-normal text-[28px] leading-[48.36px] text-Gray">
+                          پروژه‌های مرتبط
+                       </h4>
+                    </div>
+                    <div class="Title-2 w-auto flex justify-start items-center mx-[5%]">
+                       <h4 class="font-IRANYekan700 font-bold leading-[48.36px] text-[28px] text-black2">
+                          Related Projects
+                       </h4>
+                    </div>
+                  </div>
+                  <div class="flex w-90p mx-auto">
+                    <div class="swiper-projects w-full flex overflow-hidden">
+                        <div class="swiper-wrapper w-full">
+               @child
+                        </div>
+                    </div>
+                  </div>
+
+            </div>
+           </layout>
+           <face>
+            <div class="swiper-slide w-full flex">
+                <div class="projectBox group">
+                    <a href="@link" alt="@title" title="@title">
+                        <div class="imgS">
+                            <img class="group-hover:rounded-bl-[72px] w-full duration-700"
+                             src="@00363X00444prp" alt="@title" title="@title"> 
+                        </div>
+                        <div class="title overflow-hidden relative mt-6">
+    
+                            <h3 class="font-IRANYekan400 text-[28px] leading-48.36 text-blackT duration-500">
+                                @title
+                            </h3>
+                            <span class="font-IRANYekan400 text-[28px] leading-48.36 text-blackT duration-500 absolute -bottom-full">
+                                
+                              @title
+                            </span>
+                        </div>
+                    </a>
+                </div>
+              </div>
+           </face>
+       </basis>
+       <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+        </div>
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+    <script src="[##cms.cms.cdn##]/js/article.js"></script>
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
+</body>
+</html>

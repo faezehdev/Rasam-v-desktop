@@ -1,0 +1,302 @@
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" >
+    <member request="cat" type="tree" name="productCatt" parentid="209963"  /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="filter" parentid="[##cms.query.catid##]" size="240x240" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]"> 
+    <member name="list-product" size="240x240" type="list"/> 
+</basis>	
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20"  parentid="[##cms.query.catid##]">
+    <member request="cat" type="tree" name="filter1"  size="283x283" postsql="select * from [db.filter1] where catid not in (60919,209963)"></member>
+   </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+	<member request="navcatid" type="tree" name="nav1" parentid="209964" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+	<member request="navcatid" type="tree" name="nav2" parentid="[##cms.query.catid##]" postsql="select * from [db.nav2]
+    where parentcatid not in (60919,209963)" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> محصولات</title>
+    <meta name="description" content=" محصولات">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <main class="Product-List-C overflow-hidden">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="Productlist-Container w-full flex flex-col mt-[5em]">
+            <div class="Top-S w-full flex flex-col bg-lightGray  pt-[2em] pb-[4em]">
+                <div class="Navigation w-[90%] mx-auto flex justify-start items-center gap-[1em]">
+                    <span class="navItem w-auto flex justify-center">
+                        <basis core="print" datamembername="db.nav2">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=1">
+                                <a href="@link" alt="@title" title="@title"
+                                 class="font-IRANYekan500 font-medium text-xs leading-20.73 text-Gray">
+                                 محصولات @title
+
+                                  </a>
+                            </face>
+                        </basis>
+                     
+                    </span>
+                    <span class="navItem translate-y-[3px] font-IRANYekan500 font-medium text-xs leading-20.73 text-Gray" >
+                    /
+                    </span>
+                    <basis core="print" datamembername="db.nav2">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=2">
+                    <span class="navItem">
+                        <a href="@link" alt="@title" title="@title" class="font-IRANYekan500 font-medium text-xs leading-20.73 text-Gray">
+                            @title
+                        </a>
+                    </span>
+                        </face>
+                    </basis>
+                    <!-- <span class="navItem">
+                        <a href="#" class="font-IRANYekan500 font-medium text-xs leading-20.73 text-Gray">
+                            لیفت پروژکتور
+                        </a>
+                    </span>
+                    <span class="navItem font-IRANYekan500 font-medium text-xs leading-20.73 text-Gray" >
+                        /
+                        </span>
+                    <span class="navItem">
+                         <a href="#" class="font-IRANYekan500 font-medium text-xs leading-20.73 text-midGray">
+                                لیفت پروژکتور نوع ۱
+                         </a>
+                    </span> -->
+                </div>
+                <div class="ProductCat-S w-[90%] mx-auto flex justify-start items-center flex-col mt-[5em] ">
+                    <div class="Title w-auto ml-auto flex before:contents-[''] before:absolute 
+                    before: right-0 before:bottom-0 before:w-full before:h-[1px] before:bg-Orange
+                     justify-start items-center pb-[.5em] relative">
+                        <h1 class="font-IRANYekan500 font-medium text-2xl leading-41.45 text-midGray">
+                            دسته‌بندی کلی محصولات
+                        </h1>
+                    </div>
+                    <div class="ProCats w-[80%] grid grid-cols-[1fr,1fr,1fr] mt-[2em]
+                    justify-center items-center place-content-center place-items-center">
+                    <basis core="print" datamembername="basisName.productCatt">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="parentid in (209963)">
+                            <div class="CatP w-full flex  hover:opacity-[1] border-l border-l-White
+                            activeMenu opacity-[.4] [&.activeMenu]:opacity-[1] group
+                            h-[197px] justify-center items-center duration-75">
+                                <a href="@link" alt="@title" title="@title" class="w-full flex flex-col h-full">
+                                    <div class="IMG w-full bg-lightGray flex justify-center items-center h-[75%]">
+                                        <img src="images/@catid.png" alt="@title" title="@title" >
+                                    </div>
+                                    <div class="Title w-auto mx-auto flex justify-start items-center py-[.5em]  h-[25%]">
+                                        <h2 class=" duration-75
+                                         font-IRANYekan500 font-medium text-xl leading-34.55 text-black1">
+                                          @title
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </face>
+                    </basis>
+                     
+                   
+                    </div>
+                </div>
+            </div>
+            <div class="Bottom-S w-[90%] mx-auto flex mt-[3em] gap-4 mb-[2em]">
+                <div class="Filter-S w-[30%] flex justify-start items-start">
+                  <div class="Menus w-full flex flex-col justify-start items-start" id="accordion">
+                    <div class="Menu-Item w-full flex justify-start items-start flex-col group hover:cursor-pointer">
+                        <div data-bs-toggle="collapse" 
+                        data-bs-target="#collapseOne" 
+                        aria-expanded="true"  data-parent="#accordion"
+                        aria-controls="collapseOne"
+                         class="Text w-full flex justify-between items-center 
+                        py-[1em] bg-lightGray toggle">
+                            <span class="TXT w-auto mr-[1em] font-IRANYekan400 
+                            font-normal text-sm text-black leading-24.18">
+                                برندها
+                            </span>
+                            <span class="Icon w-auto ml-[1em]">
+                                <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.4656 6.46565H7.53435V0.534351C7.53435 0.21374 7.32061 0 7 0C6.67939 0 6.46565 0.21374 6.46565 0.534351V6.46565H0.534351C0.21374 6.46565 0 6.67939 0 7C0 7.32061 0.21374 7.53435 0.534351 7.53435H6.46565V13.4656C6.46565 13.7863 6.67939 14 7 14C7.32061 14 7.53435 13.7863 7.53435 13.4656V7.53435H13.4656C13.7863 7.53435 14 7.32061 14 7C14 6.67939 13.7863 6.46565 13.4656 6.46565Z" fill="#A1A3A9"/>
+                                </svg>  
+                                
+                                <svg class="out opacity-0 [&.show]:!opacity-[1] duration-[.5s]" width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L14 1" stroke="#A1A3A9" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </span>
+                        </div>
+
+
+
+                            <div class="parent w-full flex justify-start" id="collapseOne" >
+                                <div class="DropDowns w-full justify-start  duration-[.5s] scale-0 [&.Open]:!scale-[1] !flex
+                                items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
+                                <basis core="print" datamembername="db.filter">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face>
+                                        <div class="Drop-Item w-full flex
+                                         justify-between items-center group hover:bg-white duration-[.5s]
+                                        py-[1em] bg-lightGray" data-catid="@catid">
+                                            <span class="TXT w-auto mr-[1em] font-IRANYekan300 duration-[.5s]
+                                            font-light text-sm leading-24.18 text-liGray">
+                                           @title
+                                            </span>
+                                            <span class="Icon w-[59px] h-[25px] ml-[1em]">
+                                             <img src="@image" alt="@title" title="@title" class="w-full h-full object-cover">                                 
+                                            </span>
+                                        </div>
+                                    </face>
+                                </basis>
+                          
+                            
+                               </div>
+                            </div>
+                        
+                    </div>
+                    <div class="Menu-Item w-full flex justify-start items-start flex-col group hover:cursor-pointer">
+                        <div data-bs-toggle="collapse" 
+                        data-bs-target="#collapseTwo" 
+                        aria-expanded="true"  data-parent="#accordion"
+                        aria-controls="collapseTwo"
+                         class="Text w-full flex justify-between items-center 
+                        py-[1em] bg-lightGray toggle">
+                            <span class="TXT w-auto mr-[1em] font-IRANYekan400 
+                            font-normal text-sm text-black leading-24.18">
+                              دسته بندی ها
+                            </span>
+                            <span class="Icon w-auto ml-[1em]">
+                                <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.4656 6.46565H7.53435V0.534351C7.53435 0.21374 7.32061 0 7 0C6.67939 0 6.46565 0.21374 6.46565 0.534351V6.46565H0.534351C0.21374 6.46565 0 6.67939 0 7C0 7.32061 0.21374 7.53435 0.534351 7.53435H6.46565V13.4656C6.46565 13.7863 6.67939 14 7 14C7.32061 14 7.53435 13.7863 7.53435 13.4656V7.53435H13.4656C13.7863 7.53435 14 7.32061 14 7C14 6.67939 13.7863 6.46565 13.4656 6.46565Z" fill="#A1A3A9"/>
+                                </svg>  
+                                
+                                <svg class="out opacity-0 [&.show]:!opacity-[1] duration-[.5s]" width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L14 1" stroke="#A1A3A9" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </span>
+                        </div>
+                        <div class="parent w-full flex justify-start" id="collapseTwo" >
+                            <div class="DropDowns w-full justify-start  duration-[.5s] scale-0 [&.Open]:!scale-[1] !flex
+                            items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
+                            <basis core="tree" datamembername="db.filter1" idcol="catid" parentidcol="parentid" nullvalue="209963">
+
+                             
+                                <face level="1">
+                                   
+                               <div class="Drop-Item w-full flex justify-between items-center group
+                               hover:bg-white duration-[.5s] subtoggle
+                               py-[1em] bg-lightGray" data-bs-toggle="collapse" 
+                               data-bs-target="#Subcollapse@RowNumber" 
+                               aria-expanded="true"  data-parent="#accordion"
+                               aria-controls="Subcollapse@RowNumber" data-catid="@catid">
+                                   <span class="TXT w-auto mr-[1em] font-IRANYekan300
+                                 duration-[.5s]
+                                   font-light text-sm leading-24.18 text-liGray">
+                                  @title
+                                   </span>
+                                   <span class="Icon w-auto ml-[1em]">
+                                    <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.4656 6.46565H7.53435V0.534351C7.53435 0.21374 7.32061 0 7 0C6.67939 0 6.46565 0.21374 6.46565 0.534351V6.46565H0.534351C0.21374 6.46565 0 6.67939 0 7C0 7.32061 0.21374 7.53435 0.534351 7.53435H6.46565V13.4656C6.46565 13.7863 6.67939 14 7 14C7.32061 14 7.53435 13.7863 7.53435 13.4656V7.53435H13.4656C13.7863 7.53435 14 7.32061 14 7C14 6.67939 13.7863 6.46565 13.4656 6.46565Z" fill="#A1A3A9"/>
+                                    </svg>  
+                                    
+                                    <svg class="out opacity-0 [&.show]:!opacity-[1] duration-[.5s]" width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L14 1" stroke="#A1A3A9" stroke-linecap="round"/>
+                                        </svg>
+                                        
+                                </span>
+                               </div>
+                              
+                               <div class="parent w-full flex justify-start" id="Subcollapse@RowNumber" >
+                                <div class="DropDowns w-full justify-start duration-[.5s] scale-0 [&.Open]:!scale-[1] !flex
+                                items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
+                               @child
+                                </div>
+                               </div>
+                             
+
+                                </face>
+                                <face level="2">
+                                    <div class="Drop-Item w-full flex 
+                                    justify-between items-center group hover:bg-white duration-[.5s]
+                                    py-[1em] bg-lightGray" data-catid="@catid">
+                                        <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
+                                        font-light text-sm leading-24.18 text-liGray">
+                                     @title
+                                        </span>
+                                        <span class="Icon w-auto ml-[1em]">
+                                         <img src="/images/Frame 629637.png" alt="">                                 
+                                        </span>
+                                    </div>
+                                </face>
+                            </basis>
+                            
+
+
+                           </div>
+                        </div>
+
+                           
+                    </div>
+                  </div>
+                </div>
+                <div class="ProductLists w-[70%] grid grid-cols-[1fr,1fr,1fr] gap-[1.8em]
+                 justify-start items-start">
+                 <basis core="print" datamembername="db.list-product">
+                     <layout>
+                         @child
+                     </layout>
+                     <face>
+                        <div class="Product w-full  flex flex-col bg-lightGray group duration-[.4s] pb-[2em]
+                        hover:rounded-bl-[72px] px-[.8em] py-[.8em]">
+                        <a href="@link"  alt="@title " title="@title" class="w-full flex flex-col">
+                           <div class="IMG w-full flex justify-center items-center">
+                               <img src="@00240X00240prp" alt="@title " title="@title" class="w-auto object-contain">
+                           </div>
+                           <div class="Title w-full before:contents-[''] before:w-0 before:h-[1px] before:bg-black1 
+                           before:absolute before:right-0 before:bottom-0 duration-[.4s] group-hover:before:w-full before:duration-[.4s]
+                            flex justify-center items-center relative">
+                               <h3 class="font-IRANYekan500 font-medium  mx-0 my-0
+                               text-xl leading-34.55 text-black1 text-center">
+                                @title
+                               </h3>
+                           </div>
+                           <div class="Text w-full flex justify-center items-center flex-col">
+                               <!-- <p class="font-IRANYekan400 font-normal text-base leading-30 text-midGray">
+                                   توضیحات این محصول که باید اینجا نوشته شود.
+                               </p> -->
+                           </div>
+                        </a>
+                         
+                       </div>
+                     </face>
+                 </basis>
+                 
+          
+                </div>
+            </div>
+            <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+        </div>
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/productList.js"></script>
+
+</body>
+</html>

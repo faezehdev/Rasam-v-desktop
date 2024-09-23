@@ -1,0 +1,205 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209963" q="[##cms.query.q##]"> 
+    <member name="list-product" type="list" size="240x240"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209988" q="[##cms.query.q##]"> 
+    <member name="list-blog" type="list"  size="344x322" propertyid="7244,7249,7248"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210007" q="[##cms.query.q##]">
+     <member name="projectList" type="list" size="363x474"/>
+</basis>
+<basis core="group" if="'[##db.list-product.RowNumber##]' = '' and
+'[##db.list-blog.RowNumber##]' = '' and 
+'[##db.projectList.RowNumber##]' = ''"> 
+<div class="Section-1 w-[54%] flex flex-col mx-auto mb-[1.5em] mt-[2.5em]">
+<div class="Titles w-[90%] mx-auto flex flex-col mb-[3em]">
+    <div class="Title-1 w-auto ml-auto flex justify-start items-center
+    pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+    before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+        <h1 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+            نتایج جست و جو
+        </h1>
+    </div>
+    <div class="Title-2 w-auto ml-auto flex justify-start items-center">
+        <h2 class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+            Search Results
+        </h2>
+</div>
+</div>
+<div class="NoRes w-[90%] mx-auto flex flex-col gap-4">
+<p class="font-AnjomanMax600 font-semibold text-2xl leading-[37.66px] text-black1">
+    جست و جو نتیجه‌ای در پی نداشت!
+</p>
+<p class="font-AnjomanMax400 text-xl font-normal leading-[31.38px] text-black1">
+املای کلمه‌ی مورد نظر را بررسی کرده و مجددا برای جست و جو اقدام کنید.
+</p>
+</div>
+</div>
+</basis>     
+<basis core="print" datamembername="db.list-product">
+<layout>
+<div class="Section-2 sec w-[54%] flex flex-col mx-auto mb-[1.5em] mt-[2.5em]">
+    <div class="Titles w-[90%] mx-auto flex flex-col mb-[3em]">
+        <div class="Title-1 w-auto ml-auto flex justify-start items-center
+        pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+        before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+            <h2 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+                محصولات
+            </h2>
+        </div>
+        <div class="Title-2 w-auto ml-auto flex justify-start items-center">
+            <h2 class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+                Products
+            </h2>
+    </div>
+</div>
+<div class="products flex w-[90%] mx-auto mb-[2em]" >
+    <div class="swiper-products w-full flex overflow-hidden">
+        <div class="swiper-wrapper w-full">
+           
+ @child
+            
+        </div>
+    </div>
+</div>
+</div>
+</layout>
+<face>
+<div class="swiper-slide w-full flex">
+    <div class="Product w-full  flex flex-col bg-lightGray group duration-[.4s] pb-[2em]
+    hover:rounded-bl-[72px] px-[.8em] py-[.8em]">
+    <a href="@link"  alt="@title " title="@title" class="w-full flex flex-col">
+       <div class="IMG w-full flex justify-center items-center">
+           <img src="@00240X00240prp" alt="@title " title="@title" class="w-auto object-contain">
+       </div>
+       <div class="Title w-full before:contents-[''] before:w-0 before:h-[1px] before:bg-black1 
+       before:absolute before:right-0 before:bottom-0 duration-[.4s] group-hover:before:w-full before:duration-[.4s]
+        flex justify-center items-center relative">
+           <h3 class="font-IRANYekan500 font-medium  mx-0 my-0
+           text-xl leading-34.55 text-black1 text-center">
+            @title
+           </h3>
+       </div>
+       <div class="Text w-full flex justify-center items-center flex-col">
+           <!-- <p class="font-IRANYekan400 font-normal text-base leading-30 text-midGray">
+               توضیحات این محصول که باید اینجا نوشته شود.
+           </p> -->
+       </div>
+    </a>
+     
+   </div>
+</div>
+</face>
+</basis>         
+<basis core="print" datamembername="db.list-blog">
+<layout>
+<div class="Section-3 sec w-[54%] flex flex-col mx-auto mb-[1.5em] mt-[2.5em]">
+    <div class="Titles w-[90%] mx-auto flex flex-col mb-[3em]">
+        <div class="Title-1 w-auto ml-auto flex justify-start items-center
+        pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+        before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+            <h3 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+                مقاله‌ها
+            </h3>
+        </div>
+        <div class="Title-2 w-auto ml-auto flex justify-start items-center">
+            <h3 class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+                Articles
+            </h3>
+    </div>
+</div>
+<div class="articles flex w-[90%] mx-auto mb-[2em]" >
+
+    <div class="swiper-Blogs w-full flex overflow-hidden">
+        <div class="swiper-wrapper w-full">
+  @child
+        </div>
+    </div>
+</div>
+</div>
+</layout>
+<face>
+<div class="swiper-slide w-full flex">
+    <div class="articleBox group gap-y-7 flex flex-col even:flex-col-reverse">
+        <div class="artInfo">
+
+            <a href="@link" title="@title" alt="@title">
+
+                <h5 class="font-IRANYekan500 mb-4 text-xl text-blackT">
+                    @title
+                </h5>
+            </a>
+            <div class="para mb-4 font-IRANYekan400 text-base text-midGray">
+                <p>
+                @prp_7244
+                </p>
+            </div>
+            <a class="flex items-center gap-x-4" href="" title="@title">
+                <span>
+                    مشاهده بیشتر
+                </span>
+
+                <svg class="rotate-180" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.48926 16L16.4893 8L8.48926 0L7.06426 1.4L12.6643 7H0.489258V9H12.6643L7.06426 14.6L8.48926 16Z" fill="#161617"/>
+                    </svg>
+                    
+            </a>
+        </div>
+        <a href="@link" title="@title" alt="@title" class="artImg">
+            <div class="imgS overflow-hidden group-hover:rounded-bl-[72px] duration-700">
+                <img class="w-full group-hover:scale-110 duration-700" 
+                src="@00344X00322prp	" alt="@title" title="@title">
+            </div>
+        </a>
+    </div>
+</div>
+</face>
+</basis>
+<basis core="print" datamembername="db.projectList">
+<layout>
+<div class="Section-3 sec w-[54%] flex flex-col mx-auto mb-[1.5em] mt-[2.5em]">
+<div class="Titles w-[90%] mx-auto flex flex-col mb-[3em]">
+    <div class="Title-1 w-auto ml-auto flex justify-start items-center
+    pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+    before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+        <h4 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+            پروژه‌ها
+        </h4>
+    </div>
+    <div class="Title-2 w-auto ml-auto flex justify-start items-center">
+        <h4 class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+            Projects
+        </h4>
+</div>
+</div>
+<div class="projects flex w-[90%] mx-auto mb-[2em]" >
+<div class="swiper-projects w-full flex overflow-hidden">
+    <div class="swiper-wrapper w-full">
+@child
+    </div>
+</div>
+</div>
+</div>
+</layout>
+<face>
+<div class="swiper-slide w-full flex">
+<div class="projectBox group">
+    <a href="@link" alt="@title" title="@title">
+        <div class="imgS">
+            <img class="group-hover:rounded-bl-[72px] w-full duration-700"
+             src="@00363X00444prp" alt="@title" title="@title"> 
+        </div>
+        <div class="title overflow-hidden relative mt-6">
+
+            <h3 class="font-IRANYekan400 text-[28px] leading-48.36 text-blackT duration-500">
+               @title
+            </h3>
+            <span class="font-IRANYekan400 text-[28px] leading-48.36 text-blackT duration-500 absolute -bottom-full">
+                
+               @title
+            </span>
+        </div>
+    </a>
+</div>
+</div>
+</face>
+</basis>

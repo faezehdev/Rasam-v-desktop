@@ -1,3 +1,7 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20"  parentid="209964">
+    <member request="cat" type="tree" name="filter"  size="283x283" postsql="select * from [db.filter] where catid not in (60919,209963)"></member>
+   </basis>
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -275,7 +279,7 @@
                         py-[1em] bg-lightGray toggle">
                             <span class="TXT w-auto mr-[1em] font-IRANYekan400 
                             font-normal text-sm text-black leading-24.18">
-                                برندها
+                          دسته‌بندی‌ها
                             </span>
                             <span class="Icon w-auto ml-[1em]">
                                 <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -294,35 +298,20 @@
                             <div class="parent w-full flex justify-start" id="collapseOne" >
                                 <div class="DropDowns w-full justify-start  duration-[.5s] scale-0 [&.Open]:!scale-[1] !flex
                                 items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
-                                   <div class="Drop-Item w-full flex justify-between items-center group hover:bg-white duration-[.5s]
-                                   py-[1em] bg-lightGray">
-                                       <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                       font-light text-sm leading-24.18 text-liGray">
-                                       برند دسپرا
-                                       </span>
-                                       <span class="Icon w-auto ml-[1em]">
-                                        <img src="/images/Frame 629637.png" alt="">                                 
-                                       </span>
-                                   </div>
-                                   <div class="Drop-Item w-full flex justify-between items-center group hover:bg-white duration-[.5s]
-                                   py-[1em] bg-lightGray">
-                                       <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                       font-light text-sm leading-24.18 text-liGray">
-                                       برند ویوالدی
-                                       </span>
-                                       <span class="Icon w-auto ml-[1em]">
-                                        <img src="/images/Frame 629637 (1).png" alt="">                                 
-                                       </span>
-                                   </div>
+                                <basis core="tree" datamembername="db.filter" idcol="catid" parentidcol="parentid" nullvalue="209963">
+
+                                 
+                                    <face level="1">
+                                       
                                    <div class="Drop-Item w-full flex justify-between items-center group
                                    hover:bg-white duration-[.5s] subtoggle
                                    py-[1em] bg-lightGray" data-bs-toggle="collapse" 
-                                   data-bs-target="#SubcollapseOne" 
+                                   data-bs-target="#Subcollapse@RowNumber" 
                                    aria-expanded="true"  data-parent="#accordion"
-                                   aria-controls="SubcollapseOne">
+                                   aria-controls="Subcollapse@RowNumber">
                                        <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
                                        font-light text-sm leading-24.18 text-liGray">
-                                       برند بوش
+                                      @title
                                        </span>
                                        <span class="Icon w-auto ml-[1em]">
                                         <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -336,194 +325,36 @@
                                     </span>
                                    </div>
                                   
-                                   <div class="parent w-full flex justify-start" id="SubcollapseOne" >
-                                    <div class="DropDowns w-full justify-start duration-[.5s]
-                                     scale-0 [&.Open]:!scale-[1] !flex
+                                   <div class="parent w-full flex justify-start" id="Subcollapse@RowNumber" >
+                                    <div class="DropDowns w-full justify-start duration-[.5s] scale-0 [&.Open]:!scale-[1] !flex
                                     items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
-                                    <div class="Drop-Item w-full flex justify-between items-center
-                                     group hover:bg-white duration-[.5s]
-                                    py-[1em] bg-lightGray">
-                                        <span class="TXT w-auto mr-[1em] font-IRANYekan300
-                                         group-hover:text-black duration-[.5s]
-                                        font-light text-sm leading-24.18 text-liGray">
-                                        برند دسپرا
-                                        </span>
-                                        <span class="Icon w-auto ml-[1em]">
-                                         <img src="/images/Frame 629637.png" alt="">                                 
-                                        </span>
-                                    </div>
+                                   @child
                                     </div>
                                    </div>
-                                   <div class="Drop-Item w-full flex justify-between items-center group
-                                   hover:bg-white duration-[.5s] subtoggle
-                                   py-[1em] bg-lightGray" data-bs-toggle="collapse" 
-                                   data-bs-target="#SubcollapseOne11" 
-                                   aria-expanded="true"  data-parent="#accordion"
-                                   aria-controls="SubcollapseOne11">
-                                       <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                       font-light text-sm leading-24.18 text-liGray">
-                                       برند 11
-                                       </span>
-                                       <span class="Icon w-auto ml-[1em]">
-                                        <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13.4656 6.46565H7.53435V0.534351C7.53435 0.21374 7.32061 0 7 0C6.67939 0 6.46565 0.21374 6.46565 0.534351V6.46565H0.534351C0.21374 6.46565 0 6.67939 0 7C0 7.32061 0.21374 7.53435 0.534351 7.53435H6.46565V13.4656C6.46565 13.7863 6.67939 14 7 14C7.32061 14 7.53435 13.7863 7.53435 13.4656V7.53435H13.4656C13.7863 7.53435 14 7.32061 14 7C14 6.67939 13.7863 6.46565 13.4656 6.46565Z" fill="#A1A3A9"/>
-                                        </svg>  
-                                        
-                                        <svg class="out opacity-0 [&.show]:!opacity-[1] duration-[.5s]" width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1L14 1" stroke="#A1A3A9" stroke-linecap="round"/>
-                                            </svg>
-                                            
-                                    </span>
-                                   </div>
-                                  
-                                   <div class="parent w-full flex justify-start" id="SubcollapseOne11" >
-                                    <div class="DropDowns w-full justify-start duration-[.5s]
-                                     scale-0 [&.Open]:!scale-[1] !flex
-                                    items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
-                                    <div class="Drop-Item w-full flex justify-between items-center
-                                     group hover:bg-white duration-[.5s]
-                                    py-[1em] bg-lightGray">
-                                        <span class="TXT w-auto mr-[1em] font-IRANYekan300
-                                         group-hover:text-black duration-[.5s]
-                                        font-light text-sm leading-24.18 text-liGray">
-                                        برند 1
-                                        </span>
-                                        <span class="Icon w-auto ml-[1em]">
-                                         <img src="/images/Frame 629637.png" alt="">                                 
-                                        </span>
-                                    </div>
-                                    </div>
-                                   </div>
-                                   <div class="Drop-Item w-full flex justify-between items-center group
-                                   hover:bg-white duration-[.5s] subtoggle
-                                   py-[1em] bg-lightGray" data-bs-toggle="collapse" 
-                                   data-bs-target="#SubcollapseOne112" 
-                                   aria-expanded="true"  data-parent="#accordion"
-                                   aria-controls="SubcollapseOne112">
-                                       <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                       font-light text-sm leading-24.18 text-liGray">
-                                       برند 12
-                                       </span>
-                                       <span class="Icon w-auto ml-[1em]">
-                                        <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13.4656 6.46565H7.53435V0.534351C7.53435 0.21374 7.32061 0 7 0C6.67939 0 6.46565 0.21374 6.46565 0.534351V6.46565H0.534351C0.21374 6.46565 0 6.67939 0 7C0 7.32061 0.21374 7.53435 0.534351 7.53435H6.46565V13.4656C6.46565 13.7863 6.67939 14 7 14C7.32061 14 7.53435 13.7863 7.53435 13.4656V7.53435H13.4656C13.7863 7.53435 14 7.32061 14 7C14 6.67939 13.7863 6.46565 13.4656 6.46565Z" fill="#A1A3A9"/>
-                                        </svg>  
-                                        
-                                        <svg class="out opacity-0 [&.show]:!opacity-[1] duration-[.5s]" width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1L14 1" stroke="#A1A3A9" stroke-linecap="round"/>
-                                            </svg>
-                                            
-                                    </span>
-                                   </div>
-                                  
-                                   <div class="parent w-full flex justify-start" id="SubcollapseOne112" >
-                                    <div class="DropDowns w-full justify-start duration-[.5s]
-                                     scale-0 [&.Open]:!scale-[1] !flex
-                                    items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
-                                    <div class="Drop-Item w-full flex justify-between items-center
-                                     group hover:bg-white duration-[.5s]
-                                    py-[1em] bg-lightGray">
-                                        <span class="TXT w-auto mr-[1em] font-IRANYekan300
-                                         group-hover:text-black duration-[.5s]
-                                        font-light text-sm leading-24.18 text-liGray">
-                                        برند 1
-                                        </span>
-                                        <span class="Icon w-auto ml-[1em]">
-                                         <img src="/images/Frame 629637.png" alt="">                                 
-                                        </span>
-                                    </div>
-                                    </div>
-                                   </div>
+                                 
+ 
+                                    </face>
+                                    <face level="2">
+                                        <div class="Drop-Item w-full flex justify-between items-center group hover:bg-white duration-[.5s]
+                                        py-[1em] bg-lightGray">
+                                            <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
+                                            font-light text-sm leading-24.18 text-liGray">
+                                         @title
+                                            </span>
+                                            <span class="Icon w-auto ml-[1em]">
+                                             <img src="/images/Frame 629637.png" alt="">                                 
+                                            </span>
+                                        </div>
+                                    </face>
+                                </basis>
+                                
+
 
                                </div>
                             </div>
                         
                     </div>
-                    <div class="Menu-Item w-full flex justify-start items-start flex-col group hover:cursor-pointer">
-                        <div data-bs-toggle="collapse" 
-                        data-bs-target="#collapseTwo" 
-                        aria-expanded="true"  data-parent="#accordion"
-                        aria-controls="collapseTwo"
-                         class="Text w-full flex justify-between items-center 
-                        py-[1em] bg-lightGray toggle">
-                            <span class="TXT w-auto mr-[1em] font-IRANYekan400 
-                            font-normal text-sm text-black leading-24.18">
-                              دسته بندی ها
-                            </span>
-                            <span class="Icon w-auto ml-[1em]">
-                                <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.4656 6.46565H7.53435V0.534351C7.53435 0.21374 7.32061 0 7 0C6.67939 0 6.46565 0.21374 6.46565 0.534351V6.46565H0.534351C0.21374 6.46565 0 6.67939 0 7C0 7.32061 0.21374 7.53435 0.534351 7.53435H6.46565V13.4656C6.46565 13.7863 6.67939 14 7 14C7.32061 14 7.53435 13.7863 7.53435 13.4656V7.53435H13.4656C13.7863 7.53435 14 7.32061 14 7C14 6.67939 13.7863 6.46565 13.4656 6.46565Z" fill="#A1A3A9"/>
-                                </svg>  
-                                
-                                <svg class="out opacity-0 [&.show]:!opacity-[1] duration-[.5s]" width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L14 1" stroke="#A1A3A9" stroke-linecap="round"/>
-                                    </svg>
-                                    
-                            </span>
-                        </div>
-
-
-                        <div class="parent w-full flex justify-start" id="collapseTwo" >
-                            <div class="DropDowns w-full justify-start  duration-[.5s] scale-0 [&.Open]:!scale-[1] !flex
-                            items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
-                               <div class="Drop-Item w-full flex justify-between items-center group hover:bg-white duration-[.5s]
-                               py-[1em] bg-lightGray">
-                                   <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                   font-light text-sm leading-24.18 text-liGray">
-                                   باکس VSP
-                                   </span>
-                               
-                               </div>
-                               <div class="Drop-Item w-full flex justify-between items-center group hover:bg-white duration-[.5s]
-                               py-[1em] bg-lightGray">
-                                   <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                   font-light text-sm leading-24.18 text-liGray">
-                                   لیفت پروژکتور نوع ۱
-                                   </span>
-                              
-                               </div>
-                               <div class="Drop-Item w-full flex justify-between items-center group
-                               hover:bg-white duration-[.5s] subtoggle
-                               py-[1em] bg-lightGray" data-bs-toggle="collapse" 
-                               data-bs-target="#SubcollapseTwo11" 
-                               aria-expanded="true"  data-parent="#accordion"
-                               aria-controls="SubcollapseTwo11">
-                                   <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                   font-light text-sm leading-24.18 text-liGray">
-                                   لیفت پروژکتور نوع 2
-                                   </span>
-                                   <span class="Icon w-auto ml-[1em]">
-                                    <svg class="in [&.hide]:opacity-0 duration-[.5s]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.4656 6.46565H7.53435V0.534351C7.53435 0.21374 7.32061 0 7 0C6.67939 0 6.46565 0.21374 6.46565 0.534351V6.46565H0.534351C0.21374 6.46565 0 6.67939 0 7C0 7.32061 0.21374 7.53435 0.534351 7.53435H6.46565V13.4656C6.46565 13.7863 6.67939 14 7 14C7.32061 14 7.53435 13.7863 7.53435 13.4656V7.53435H13.4656C13.7863 7.53435 14 7.32061 14 7C14 6.67939 13.7863 6.46565 13.4656 6.46565Z" fill="#A1A3A9"/>
-                                    </svg>  
-                                    
-                                    <svg class="out opacity-0 [&.show]:!opacity-[1] duration-[.5s]" width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L14 1" stroke="#A1A3A9" stroke-linecap="round"/>
-                                        </svg>
-                                        
-                                </span>
-                               </div>
-                              
-                               <div class="parentSub w-full flex justify-start" id="SubcollapseTwo11" >
-                                <div class="DropDowns w-full justify-start  duration-[.5s] scale-0 [&.Open]:!scale-[1] !flex
-                                items-start flex-col gap-[.1em] collapse  hover:cursor-pointer" >
-                                <div class="Drop-Item w-full flex justify-between items-center group hover:bg-white duration-[.5s]
-                                py-[1em] bg-lightGray">
-                                    <span class="TXT w-auto mr-[1em] font-IRANYekan300 group-hover:text-black duration-[.5s]
-                                    font-light text-sm leading-24.18 text-liGray">
-                                    لیفت پروژکتور نوع 2-1
-                                    </span>
-                                 
-                                </div>
-                                </div>
-                               </div>
-                           
-
-                           </div>
-                        </div>
-                    
-                        
-                    </div>
+                
                   </div>
                 </div>
                 <div class="ProductLists w-[70%] grid grid-cols-[1fr,1fr,1fr] gap-[1.8em]

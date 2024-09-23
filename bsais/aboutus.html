@@ -1,0 +1,229 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2360811">
+    <member name="about-us" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2360811">
+    <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2360811">
+    <member name="image-about-us" type="list" format="4"/>
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره‌ما</title>
+    <meta name="description" content="درباره‌ما">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+<body>
+    <main class="aboutUS-C overflow-hidden">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="About-Container w-full flex flex-col">
+            <div class="Section-1 Banner w-full flex justify-center items-center">
+                <basis core="print" datamembername="db.image-about-us">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord=1">
+                        <img src="@largeIMG" alt="Rasam" title="Rasam" class="w-full object-cover">
+                    </face>
+                </basis>
+           
+            </div>
+            <div class="Section-2 w-full flex justify-start items-start flex-col mt-[3em]">
+                <div class="Titles w-[90%] mx-auto flex flex-col mb-[3em]">
+                        <div class="Title-1 w-auto ml-auto flex justify-start items-center
+                        pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+                        before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+                            <h1 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+                                درباره‌ی ما
+                            </h1>
+                        </div>
+                        <div class="Title-2 w-auto ml-auto flex justify-start items-center">
+                            <h2 class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+                                About Us
+                            </h2>
+                    </div>
+                </div>
+
+                <div class="Text w-[90%] mx-auto py-[3em] flex flex-col justify-center items-start gap-2">
+                    <basis core="print" datamembername="db.text">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=1">
+                    <h3 class="font-IRANYekan500 font-medium text-[28px] leading-48.36 text-black mb-[1.2em]">
+                        @text
+                    </h3>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.text">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=1">
+                            <p class="font-IRANYekan400 font-normal text-lg leading-31.03 text-black text-right">
+                            @largetext
+                            </p>
+                        </face>
+                    </basis>
+                  
+                   
+                </div>
+            </div>
+            <div class="Section-3 IMG w-full flex justify-center items-center">
+                <basis core="print" datamembername="db.image-about-us">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord=1">
+                <img src="@largeIMG" alt="Rasam" title="Rasam"  class="w-full object-cover">
+                    </face>
+                </basis>
+              </div>
+              <div class="Section-4 Text w-full py-[3em] flex flex-col justify-center items-start bg-lightGray">
+                <div class="Text w-[90%] mx-auto flex flex-col ">
+                    <basis core="print" datamembername="db.text">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=2">
+                            <p class="font-IRANYekan500 font-medium text-xl leading-34.55 text-black1 text-right">
+                            @largetext
+                            </p>
+                        </face>
+                    </basis>
+                   
+                </div>
+               
+            </div>
+            <div class="Section-5 w-full flex justify-start items-start flex-col
+            py-[4em] mt-[3em] bg-lightGray">
+                <div class="Details-Container w-[90%] mx-auto flex flex-col">
+                    <div class="Title w-full flex justify-center items-center">
+                        <div class="Title-1 w-auto mx-auto flex justify-start items-center
+                        pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+                        before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+                        <basis core="print" datamembername="db.text">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=3">
+                            <h4 class="font-IRANYekan500 font-medium text-[28px] leading-48.36 text-black">
+                               @text
+                            </h4>
+                            </face>
+                        </basis>
+                        </div>
+                    </div>
+                    <div class="Boxes w-full grid grid-cols-[1fr,1fr,1fr] gap-5 mt-[4em]">
+                        <basis core="print" datamembername="db.text">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber in (4,5,6)">
+                                <div class="Box w-full flex flex-col gap-2 bg-f hover:rounded-bl-[72px] duration-700 px-[.5em]">
+                                    <div class="Titles w-[90%] mx-auto flex flex-col mt-[1em] mb-2">
+                                        <div class="Title-1 w-auto mx-auto flex justify-center items-center
+                                        pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+                                        before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+                                            <p class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+                                               @text
+                                            </p>
+                                        </div>
+                                        <div class="Title-2 w-auto mx-auto flex justify-start items-center">
+                                            <p class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+                                                Mission
+                                            </p>
+                                    </div>
+                                </div>
+                                <div class="Text w-[90%] mx-auto flex flex-col justify-start items-center mb-[2em]">
+                                    <p class="font-IRANYekan400 font-normal text-lg leading-31.09 text-black1">
+                                    @largetext
+                                    </p>
+                                </div>
+                
+                                </div>
+                            </face>
+                        </basis>
+                    </div>
+                </div>
+            </div>
+            <div class="Section-6 w-full flex justify-start items-start flex-col
+           mt-[3em]">
+                <div class="Customer-Container w-full flex flex-col">
+                    <div class="Titles w-[90%] mx-auto flex flex-col mt-[1em] mb-2">
+                        <div class="Title-1 w-auto mx-auto flex justify-center items-center
+                        pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+                        before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
+                            <p class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
+                                رضایت مشتریان
+                            </p>
+                        </div>
+                        <div class="Title-2 w-auto mx-auto flex justify-start items-center">
+                            <p class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
+                                Customer satisfaction
+                            </p>
+                    </div>
+                </div>
+                <div class="Gallerys w-full flex flex-col justify-start items-start pb-[4em]"
+                 style="background-image: url('images/pattern3.png');">
+                    <div class="Gallery-Container w-[90%] mx-auto flex justify-center
+                     items-center flex-col mt-[5em]" >
+                
+                      <div class="swiper-gallery w-full mx-auto flex overflow-hidden py-[2em]">
+                          <div class="swiper-wrapper w-full">
+                            <basis core="print" datamembername="db.image-about-us">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="ord=1000">
+                                <div class="swiper-slide w-full flex justify-center items-center relative">
+                                    <div class="IMG w-full flex justify-center items-center">
+                                        <img src="@largeIMG" alt="Rasam" title="Rasam"  class="w-full object-cover">
+                                    </div>
+                                 </div>  
+                                </face>
+                            </basis>                           
+                          </div>
+                      </div>
+                      <div class="paginations w-full flex justify-center items-center gap-[3em] mt-[3em]">
+                          <div class="pagination w-[100px] translate-y-[.4em] flex justify-center items-center gap-3 relative">
+                              <div class="swiper-pagination w-full flex flex-row justify-center items-center"></div>
+                          </div>
+                      </div>
+                     </div>
+              </div>
+                </div>
+            </div>
+            <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+        </div>
+        <div class="temps" style="display: none;">
+            <basis core="print" datamembername="db.text">
+                <layout>
+                    @child
+                </layout>
+                <face filter="RowNumber in (7,8,9)">
+            <span class="item">
+                @text
+            </span>
+                </face>
+            </basis>
+        </div>
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+    <script src="[##cms.cms.cdn##]/js/aboutUs.js"></script>
+    <script>
+        let temps =document.querySelectorAll('.temps span.item')
+        console.log(temps);
+        let boxes = document.querySelectorAll('.Section-5 .Boxes .Title-2 p')
+        for(let i = 0 ; i<3 ; i++){
+            boxes[i].innerHTML =  temps[i].innerHTML
+        }
+        
+    </script>
+</body>
+</html>

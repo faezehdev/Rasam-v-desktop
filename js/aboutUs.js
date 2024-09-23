@@ -15,3 +15,11 @@
       },
  
   })
+  window.addEventListener('scroll',()=>{
+    if(window.pageYOffset>0){
+      document.querySelector('header').classList.add('GoBottom')
+    }
+  else{
+    document.querySelector('header').classList.remove('GoBottom')
+  }
+  })

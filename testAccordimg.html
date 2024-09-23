@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .panel-group .panel-heading + .panel-collapse > .panel-body {
+  border: 1px solid #ddd;
+}
+.panel-group,
+.panel-group .panel,
+.panel-group .panel-heading,
+.panel-group .panel-heading a,
+.panel-group .panel-title,
+.panel-group .panel-title a,
+.panel-group .panel-body,
+.panel-group .panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-radius: 2px;
+  border: 0;
+}
+.panel-group .panel-heading {
+  padding: 0;
+}
+.panel-group .panel-heading a {
+  display: block;
+  background: #668bb1;
+  color: #ffffff;
+  padding: 15px;
+  text-decoration: none;
+  position: relative;
+}
+.panel-group .panel-heading a.collapsed {
+  background: #eeeeee;
+  color: inherit;
+}
+.panel-group .panel-heading a:after {
+  content: '-';
+  position: absolute;
+  right: 20px;
+  top:5px;
+  font-size:30px;
+}
+.panel-group .panel-heading a.collapsed:after {
+  content: '+';
+}
+.panel-group .panel-collapse {
+  margin-top: 5px !important;
+}
+.panel-group .panel-body {
+  background: #ffffff;
+  padding: 15px;
+}
+.panel-group .panel {
+  background-color: transparent;
+}
+.panel-group .panel-body p:last-child,
+.panel-group .panel-body ul:last-child,
+.panel-group .panel-body ol:last-child {
+  margin-bottom: 0;
+}
+
+.current_booking {
+  color:light-blue;
+}
+.new_booking {
+  color:green;
+}
+.cancel_booking {
+  color:red;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Checkout Summary</h4>
+        <div class="panel-group" id="accordion">
+      
+          <!-- FIRST PANEL -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  3 x nights in Moomba (  05-10-2019 ~ 07-10-2019  )
+                </a>
+              </h4>
+            </div><!--/.panel-heading -->
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+      
+                <!-- nested -->
+      
+      
+                <div class="panel-group" id="nested">
+      
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseOne1">
+                          05-10-2019 Camp change from Jackson to Moomba
+                        </a>
+                      </h4>
+                    </div><!--/.panel-heading -->
+                    <div id="nested-collapseOne1" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <!--Table-->
+                        <table id="tablePreview" class="table">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Camp</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <td>Current</td>
+                              <td>05-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                            <tr>
+                              <td class="new_booking">New</td>
+                              <td>05-10-2019</td>
+                              <td>Moomba</td>
+                            </tr>
+                            <tr>
+                              <td class="cancel_booking">Cancel</td>
+                              <td>05-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div><!--/.panel-body -->
+                    </div><!--/.panel-collapse --> 
+                  </div><!-- /.panel --> 
+      
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseTwo2">
+                          06-10-2019 Camp change from Jackson to Moomba
+                        </a>
+                      </h4>
+                    </div><!--/.panel-heading -->
+                    <div id="nested-collapseTwo2" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <!--Table-->
+                        <table id="tablePreview" class="table">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Camp</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <td>Current</td>
+                              <td>06-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                            <tr>
+                              <td class="new_booking">New</td>
+                              <td>06-10-2019</td>
+                              <td>Moomba</td>
+                            </tr>
+                            <tr>
+                              <td class="cancel_booking">Cancel</td>
+                              <td>06-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div><!--/.panel-body -->
+                    </div><!--/.panel-collapse -->
+                  </div><!-- /.panel -->
+      
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseThree3">
+                          07-10-2019 Camp change from Jackson to Moomba
+                        </a>
+                      </h4>
+                    </div><!--/.panel-heading -->
+                    <div id="nested-collapseThree3" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <!--Table-->
+                        <table id="tablePreview" class="table">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Camp</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <td>Current</td>
+                              <td>07-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                            <tr>
+                              <td class="new_booking">New</td>
+                              <td>07-10-2019</td>
+                              <td>Moomba</td>
+                            </tr>
+                            <tr>
+                              <td class="cancel_booking">Cancel</td>
+                              <td>07-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div><!--/.panel-body -->
+                    </div><!--/.panel-collapse -->
+                  </div><!-- /.panel -->
+                </div><!-- /.panel-group -->
+      
+      
+                <!-- nested -->
+      
+      
+              </div><!--/.panel-body -->
+            </div><!--/.panel-collapse -->
+          </div><!-- /.panel -->
+      
+          <!--- end first panel --->
+          
+          <!-- Second PANEL -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo2">
+                  2 x nights in Ballera (  08-10-2019 ~ 09-10-2019  )
+                </a>
+              </h4>
+            </div><!--/.panel-heading -->
+            <div id="collapseTwo2" class="panel-collapse collapse">
+              <div class="panel-body">
+      
+                <!-- nested -->
+      
+      
+                <div class="panel-group" id="nested">
+      
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseOne11">
+                          08-10-2019 Camp change from Jackson to Moomba
+                        </a>
+                      </h4>
+                    </div><!--/.panel-heading -->
+                    <div id="nested-collapseOne11" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <!--Table-->
+                        <table id="tablePreview" class="table">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Camp</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <td>Current</td>
+                              <td>08-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                            <tr>
+                              <td class="new_booking">New</td>
+                              <td>08-10-2019</td>
+                              <td>Ballera</td>
+                            </tr>
+                            <tr>
+                              <td class="cancel_booking">Cancel</td>
+                              <td>08-10-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div><!--/.panel-body -->
+                    </div><!--/.panel-collapse --> 
+                  </div><!-- /.panel --> 
+      
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseTwo22">
+                          09-11-2019 Camp change from Jackson to Ballera
+                        </a>
+                      </h4>
+                    </div><!--/.panel-heading -->
+                    <div id="nested-collapseTwo22" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <!--Table-->
+                        <table id="tablePreview" class="table">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Camp</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <td>Current</td>
+                              <td>09-11-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                            <tr>
+                              <td class="new_booking">New</td>
+                              <td>09-11-2019</td>
+                              <td>Ballera</td>
+                            </tr>
+                            <tr>
+                              <td class="cancel_booking">Cancel</td>
+                              <td>09-11-2019</td>
+                              <td>Jackson</td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div><!--/.panel-body -->
+                    </div><!--/.panel-collapse -->
+                  </div><!-- /.panel -->
+      
+                </div><!-- /.panel-group -->
+      
+      
+                <!-- nested -->
+      
+      
+              </div><!--/.panel-body -->
+            </div><!--/.panel-collapse -->
+          </div><!-- /.panel -->
+      
+          <!--- end first panel --->
+      
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  2 x Flights
+                </a>
+              </h4>
+            </div><!--/.panel-heading -->
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+      
+                <!-- nested -->
+      
+      
+                <div class="panel-group" id="nested">
+      
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseOne">
+                          08-10-2019 Flight QF12344 from Moomba to Ballera
+                        </a>
+                      </h4>
+                    </div><!--/.panel-heading -->
+                    <div id="nested-collapseOne" class="panel-collapse collapse">
+                      <div class="panel-body">
+                         <!--Table-->
+                        <table id="tablePreview" class="table">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Flight</th>
+                              <th>From</th>
+                              <th>To</th>
+                              <th>Departure</th>
+                              <th>Arrival</th>
+                              <th>Checkin</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <td class="new_booking">New</td>
+                              <td>08-11-2019</td>
+                              <td>QF12344</td>
+                              <td>Moomba</td>
+                              <td>Ballera</td>
+                              <td>09:00</td>
+                              <td>10:00</td>
+                              <td>08:30</td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div><!--/.panel-body -->
+                    </div><!--/.panel-collapse --> 
+                  </div><!-- /.panel --> 
+      
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseTwo">
+                          10-10-2019 Flight AZ12345 from Ballera to Adelaide
+                        </a>
+                      </h4>
+                    </div><!--/.panel-heading -->
+                    <div id="nested-collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                         <!--Table-->
+                        <table id="tablePreview" class="table">
+                          <!--Table head-->
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th>Date</th>
+                              <th>Flight</th>
+                              <th>From</th>
+                              <th>To</th>
+                              <th>Departure</th>
+                              <th>Arrival</th>
+                              <th>Checkin</th>
+                            </tr>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr>
+                              <td>Current</td>
+                              <td>10-11-2019</td>
+                              <td>QF76644</td>
+                              <td>Moomba</td>
+                              <td>Adelaide</td>
+                              <td>10:30</td>
+                              <td>13:30</td>
+                              <td>10:00</td>
+                            </tr>
+                            <tr>
+                              <td class="new_booking">New</td>
+                              <td>10-11-2019</td>
+                              <td>QF12344</td>
+                              <td>Ballera</td>
+                              <td>Adelaide</td>
+                              <td>11:00</td>
+                              <td>14:00</td>
+                              <td>10:30</td>
+                            </tr>
+                            <tr>
+                              <td class="cancel_booking">Cancel</td>
+                              <td>10-11-2019</td>
+                              <td>QF76644</td>
+                              <td>Moomba</td>
+                              <td>Adelaide</td>
+                              <td>10:30</td>
+                              <td>13:30</td>
+                              <td>10:00</td>
+                            </tr>
+                          </tbody>
+                          <!--Table body-->
+                        </table>
+                        <!--Table-->
+                      </div><!--/.panel-body -->
+                    </div><!--/.panel-collapse -->
+                  </div><!-- /.panel -->
+      
+                </div><!-- /.panel-group -->
+      
+      
+                <!-- nested -->
+      
+      
+              </div><!--/.panel-body -->
+            </div><!--/.panel-collapse -->
+          </div><!-- /.panel -->
+      
+          <!-- END SECOND PANEL -->
+      
+      
+        </div><!-- /.panel-group -->
+      
+      </div><!-- /.container -->
+</body>
+</html>

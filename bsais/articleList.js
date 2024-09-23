@@ -1,0 +1,1 @@
+$((function(){var a=window.location.search;a.includes("pageno")?$(".Paginations a").each((function(){var i=$(this);let s=a.split("pageno=")[1].substr(0,1);i.attr("id")==s&&(i.addClass("active"),i.siblings().removeClass("active"))})):$("#1").addClass("active")}));

@@ -84,15 +84,30 @@
                 
         </div>
         <div class="right w-full flex flex-col h-full">
-          <div class="Menu w-[95%] mr-auto h-[80%] flex justify-start items-center">
-              <ul class="Menus w-full h-[80%] flex-col flex justify-center items-start gap-5">
-                  <li class="Menu-item w-auto flex justify-start items-start overflow-hidden">
+          <div class="Menu w-[95%] mr-auto h-[80%] flex justify-start items-center relative">
+      
+              <ul class="Menus   w-full h-[80%] flex-col flex justify-center items-start gap-5">
+                  <li class="Menu-item innerPro w-[58%] flex justify-start items-start  relative">
                       <a href="" class="Menu-link font-IranYekan500 translate-x-[100%]
                       hover:text-b2  opacity-0 duration-[.5s]
                      leading-34.55 text-xl font-medium text-black text-right">
                           محصولات
                       </a>
+                      <div class="Innerr w-max flex flex-col gap-2 absolute [&.show]:right-[35%] [&.show]:opacity-[1]
+                      top-[0] right-0 opacity-0 duration-150">
+                         <a href="" class="Menu-link font-IranYekan500 translate-x-[100%]
+                         hover:text-b2  opacity-0 duration-[.5s]
+                        leading-34.55 text-xl font-medium text-black text-right">
+                             محصولات
+                         </a>
+                         <a href="" class="Menu-link font-IranYekan500 translate-x-[100%]
+                         hover:text-b2  opacity-0 duration-[.5s]
+                        leading-34.55 text-xl font-medium text-black text-right">
+                             محصولات
+                         </a>
+                       </div>
                   </li>
+
                   <li class="Menu-item w-auto flex justify-start items-start overflow-hidden">
                       <a href="" class="Menu-link font-IranYekan500 translate-x-[100%]
                       hover:text-b2  opacity-0 duration-[.5s]
@@ -225,7 +240,8 @@
                         توضیحات این دسته‌بندی محصول که باید اینجا نوشته شود
                     </p>
                 </div>
-                <div class="ShowProduct w-[90%] mx-auto flex mb-8">
+                <div class="ShowProduct w-[90%] mx-auto flex mb-8 opacity-0 h-0
+                 group-hover:opacity-[1] group-hover:h-[10%] duration-700">
                     <div class="w-full flex gap-2 justify-start items-center">
                         <span class="font-IranYekan400 leading-30 font-normal text-base text-White">
                             مشاهده‌ی محصولات

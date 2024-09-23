@@ -139,7 +139,7 @@
                                   <div class="myresult img-zoom-result w-full h-full"  style="float: right;
                                   position: absolute;
                                   top: -100px;
-                                  left: 300px;
+                                 ;
                                   width: 300px;
                                   height: 300px;"
                                    onmouseleave="" >
@@ -157,13 +157,20 @@
                             </svg>
                             
                     </span>
-                    <a href="#" class="download tools-item w-auto flex justify-center items-center hover:cursor-pointer">
+                    <basis core="print" datamembername="db.image-product">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="ord=1">
+                    <a href="@largeIMG" download="" class="download tools-item w-auto flex justify-center items-center hover:cursor-pointer">
                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.25 15L4 8.75L5.75 6.9375L9 10.1875V0H11.5V10.1875L14.75 6.9375L16.5 8.75L10.25 15ZM0.25 20V13.75H2.75V17.5H17.75V13.75H20.25V20H0.25Z" fill="#161617"/>
                             </svg>
                             
                             
                         </a>
+                        </face>
+                    </basis>
                 </div>
                 </div>
 
@@ -194,7 +201,7 @@
                         مشخصات و ویژگی‌ها
                       </h3>
                     </div>
-                    <div class="featuresBox flex flex-col justify-start items-start mt-[4em]">
+                    <div class="w-[90%] featuresBox flex flex-col justify-start items-start mt-[4em]">
                         <div class="Title w-[90%] items-start justify-start  mx-auto">
                             <p class="font-IRANYekan500 font-medium text-2xl leading-41.45 text-liGray">
                                 مشخصات
@@ -388,7 +395,7 @@
                                                  </span>
                                               </div>
                                      </span>
-                                        <a  href="#" class="download tools-item w-auto flex justify-center items-center hover:cursor-pointer">
+                                        <a  href="#" download="" class="download tools-item w-auto flex justify-center items-center hover:cursor-pointer">
                                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10.25 15L4 8.75L5.75 6.9375L9 10.1875V0H11.5V10.1875L14.75 6.9375L16.5 8.75L10.25 15ZM0.25 20V13.75H2.75V17.5H17.75V13.75H20.25V20H0.25Z" fill="#161617"/>
                                                 </svg>

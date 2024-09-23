@@ -49,31 +49,60 @@ OpBtn.addEventListener('click',()=>{
             }, 1000);
     }
 })
-// Enable Scroll
-
-const lenis = new Lenis()
-
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-let header = document.querySelector('header')
-lenis.on('scroll',(args)=>{
-    console.log(args);
-    if(args.scroll == 0){
-        header.classList.remove('GoBottom')
-    }
-    else{
-        header.classList.add('GoBottom')
-    }
-    
-})
-let searchIcon = document.querySelector('header .searchIcon')
+let searchIcon = document.querySelector('header .searchIconHeader')
 let input = document.querySelector('.InputBox')
 searchIcon.addEventListener('click',()=>{
     input.classList.toggle('OpenS')
     searchIcon.classList.toggle('OpenS')
+    if(searchIcon.classList.contains('OpenS')){
+        let inputt = document.querySelector('header input#search')
+        console.log('val',inputt.value);
+        if(inputt.value == ''){
+            return
+             }
+           else{
+               console.log('val',input.value);
+               setTimeout(()=>{
+              window.location.href = `/search.bc?q=${input.value}`
+               },1000)}
+    }
+    else{
+        let inputt = document.querySelector('header input#search')
+        console.log('val',inputt.value);
+        if(inputt.value == ''){
+            return
+             }
+           else{
+               console.log('val',inputt.value);
+               setTimeout(()=>{
+              window.location.href = `/search.bc?q=${inputt.value}`
+               },1000)}
+    }
 })
+let pro = document.querySelector('.innerPro')
+let innerPro = document.querySelector('header .Innerr')
+pro.addEventListener('mouseenter',()=>{
+    innerPro.classList.add('show')
+})
+document.querySelector('header ul').addEventListener('mouseleave',()=>{
+    innerPro.classList.remove('show')
+})
+let inputt = document.querySelector('header input#search')
+inputt.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      if(inputt.value != ''){
+        event.preventDefault();
+      console.log('clicked');
+  console.log('val',inputt );
+  console.log('val',input.value);
+    window.location.href = `/search.bc?q=${inputف.value}`
+  setTimeout(() => {
+   
+  }, 1000);
+      }
+  
+  
+    }
+  });

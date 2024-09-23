@@ -1,0 +1,112 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="productCat" parentid="[##cms.query.catid##]" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="title" parentid="[##cms.query.catid##]"
+     postsql="select * from [db.title] where catid=[##cms.query.catid##]" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="cat1"  parentid="[##cms.query.catid##]" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="20" > 
+    <member request="cat" type="tree" name="cat2"  parentid="[##cms.query.catid##]" /> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته‌بندی محصولات</title>
+    <meta name="description" content="دسته‌بندی محصولات">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+<body>
+    <main class="ProductCat-C overflow-hidden">
+     <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+     <div class="ProductCats w-full h-[90vh] relative z-1 mt-[10vh]
+     grid grid-cols-[1fr,1fr,1fr,1fr] grid-rows-[1fr,1fr]">
+     <basis core="print" datamembername="db.productCat">
+         <layout>
+             @child
+         </layout>
+         <face filter="catid=209964">
+            <div class="BannerImg absolute left-0 before:contents-[''] before:w-full before:h-full before:absolute
+            top-0 z-[-1] w-full h-full flex justify-center before:left-0 before:top-0 before:z-0 before:bg-[#00000066]">
+                <img src="@image" alt="@title" title="@title" class="w-full h-full object-cover">
+                
+            </div>
+         </face>
+     </basis>
+     
+        <div class="ProductCat Main flex justify-end items-end
+         flex-col w-full border-[#FFFFFF] border-b-[1px] border-l-[1px]">
+            <div class="Title-1 w-[90%] mx-auto flex justify-start items-start">
+                <h1 class="font-IranYekan400 text-lg leading-31.09 border-b-[1px] border-b-Orange
+                 font-normal text-Gray pb-[.3em]">
+                    دسته‌بندی محصولات [##db.title.title##]
+                </h1>
+            </div>
+            <div class="Title-2 mb-[.5em] w-[90%] mx-auto flex justify-start items-start">
+                <h2 class="font-IranYekan400 text-xl leading-34.55
+                font-normal text-White pb-[.3em]">
+                [##db.cat2.title##] Products Categories
+                </h2>
+            </div>
+        
+        </div>
+        <basis core="print" datamembername="db.productCat">
+            <layout>
+                @child
+            </layout>
+            <face filter="catid not in ([##cms.query.catid##])">
+                <div class="ProductCat GridItem flex flex-col justify-end items-end relative group hover:cursor-pointer
+                w-full border-[#FFFFFF] border-b-[1px] border-l-[1px]" data-IMG="@image">
+                   <div class="Title-2 w-[90%] mx-auto flex justify-start items-start mb-[.5em]">
+                       <h2 class="font-IranYekan500 text-xl leading-34.55
+                       font-medium text-White pb-[.3em]">
+                          @title
+                       </h2>
+                   </div>
+                   <a href="@link" title="@title" alt="@title"
+                    class="Hoverd-Sec w-full absolute left-0 top-0 z-2 h-full opacity-0 pointer-events-none
+                    rounded-bl-[72px] border-[#FFFFFF] border-[1px] duration-[.4s] group-hover:cursor-pointer  group-hover:opacity-[1]
+                    group-hover:pointer-events-auto
+                    bg-Orange flex flex-col justify-end items-center">
+                       <div class="Title w-[90%] mx-auto flex justify-start items-start">
+                           <h3 class="font-IranYekan500 text-xl leading-34.55
+                           font-medium text-White pb-[.3em]">
+                               @title
+                           </h3>
+                       </div>
+                       <div class="Det w-[90%] mx-auto flex justify-start items-start flex-col">
+                           <p class="font-IranYekan400 text-base leading-30
+                           font-normal text-black1 pb-[.3em]">
+                              @urldescription
+                           </p>
+                       </div>
+                       <div class="ShowProduct w-[90%] mx-auto flex mb-8 opacity-0 h-0
+                       group-hover:opacity-[1] group-hover:h-[10%] duration-700">
+                           <div class="w-full flex gap-2 justify-start items-center">
+                               <span class="font-IranYekan400 leading-30 font-normal text-base text-White">
+                                   مشاهده‌ی محصولات
+                               </span>
+                               <span>
+                                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825L17.425 22.6L16 24Z" fill="white"/>
+                                       </svg>
+                                       
+                               </span>
+                           </div>
+                       </div>
+                   </a>
+               </div>
+            </face>
+        </basis>
+     </div>
+     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/js/productCat.js"></script>
+</body>
+</html>
