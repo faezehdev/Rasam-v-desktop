@@ -13,16 +13,16 @@ ClBtn.addEventListener('click',()=>{
         IS = true
     }
     else{
-      
         IS = false
+     
         gsap.to('header .Menu-link',{
-            opacity:0,
-            x:'100%',
-            stagger:.3,
-            })
-            setTimeout(() => {
-                Menu.classList.toggle('Open')
-            }, 1000);
+           opacity:0,
+           x:'100%',
+           stagger:.1,
+           })
+        setTimeout(()=>{
+           Menu.classList.toggle('Open')
+        },1000)
     }
 })
 OpBtn.addEventListener('click',()=>{
@@ -32,21 +32,23 @@ OpBtn.addEventListener('click',()=>{
         gsap.to('header .Menu-link',{
         opacity:1,
         x:0,
-        stagger:.3,
+        stagger:.1,
         })
         IS = true
     }
     else{
       
         IS = false
-        gsap.to('header .Menu-link',{
+     
+         gsap.to('header .Menu-link',{
             opacity:0,
             x:'100%',
-            stagger:.3,
+            stagger:.1,
             })
-            setTimeout(() => {
-                Menu.classList.toggle('Open')
-            }, 1000);
+         setTimeout(()=>{
+            Menu.classList.toggle('Open')
+         },1000)
+       
     }
 })
 let searchIcon = document.querySelector('header .searchIconHeader')
@@ -84,7 +86,7 @@ let innerPro = document.querySelector('header .Innerr')
 pro.addEventListener('mouseenter',()=>{
     innerPro.classList.add('show')
 })
-document.querySelector('header ul').addEventListener('mouseleave',()=>{
+document.querySelector('.innerPro').addEventListener('mouseleave',()=>{
     innerPro.classList.remove('show')
 })
 let inputt = document.querySelector('header input#search')
@@ -96,8 +98,8 @@ inputt.addEventListener("keypress", function(event) {
         event.preventDefault();
       console.log('clicked');
   console.log('val',inputt );
-  console.log('val',input.value);
-    window.location.href = `/search.bc?q=${inputف.value}`
+  console.log('val',inputt.value);
+    window.location.href = `/search.bc?q=${inputt.value}`
   setTimeout(() => {
    
   }, 1000);

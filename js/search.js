@@ -2,58 +2,31 @@
 
        
 // SEARCH
-let searchIcon23 = document.querySelector('.Search-Container .searchIcon2')
+let searchIcon23 = document.querySelector('.Search-Container .InputBoxes .searchIcon2')
+let inputtt = document.querySelector('.InputBoxes input#search2')
 searchIcon23.addEventListener('click',()=>{
   console.log('clicked');
-  let input = document.querySelector('input#search2')
-  if(input.value != ' ' || input.value != ''){
-    console.log('val',input.value);
-  var url = `/load.inc?q=${input.value}`;
-  $(".loaded").load(url);
-  setTimeout(()=>{
-    let RelatedProduct = new Swiper('.swiper-products',{
-      speed: 1000,
-      slidesPerView:3,
-      spaceBetween: 30,
-      grabCursor:true,
-    
-    })
-    let RelatedBlogs = new Swiper('.swiper-Blogs',{
-      speed: 1000,
-      slidesPerView:3,
-      spaceBetween: 30,
-      grabCursor:true,
-    
-    })
-    let RelatedProject = new Swiper('.swiper-projects',{
-      speed: 1000,
-      slidesPerView:3,
-      spaceBetween: 30,
-      grabCursor:true,
-    
-    })
-  },100)
+
+  if(inputtt.value == ''){
+    return
+     }
+   else{
+    console.log('val',inputtt.value);
+    var url = `/load.inc?q=${inputtt.value}`;
+    $(".loaded").load(url);}
+})
+inputtt.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    if(inputtt.value != ''){
+      event.preventDefault();
+      console.log('val',inputtt.value);
+      var url = `/load.inc?q=${inputtt.value}`;
+      $(".loaded").load(url);}
+
+    }
+
+
   }
-
-})
-let RelatedProduct = new Swiper('.swiper-products',{
-  speed: 1000,
-  slidesPerView:3,
-  spaceBetween: 30,
-  grabCursor:true,
-
-})
-let RelatedBlogs = new Swiper('.swiper-Blogs',{
-  speed: 1000,
-  slidesPerView:3,
-  spaceBetween: 30,
-  grabCursor:true,
-
-})
-let RelatedProject = new Swiper('.swiper-projects',{
-  speed: 1000,
-  slidesPerView:3,
-  spaceBetween: 30,
-  grabCursor:true,
-
-})
+)

@@ -5,3 +5,328 @@
     left: 21%;
     top: 30%;
 }
+.projectBox .title span{
+    width: max-content;
+}
+.projectBox{
+width: 100%;
+}
+.Search-Container .products ,
+.Search-Container .articles,
+.Search-Container .projects {
+    width: 90%;
+}
+.Search-Container .Section-1{
+    position: relative;
+    margin-top: 5em;
+}
+.Search-Container .Section-2{
+    position: relative;
+    padding-top: 3em;
+    margin-top: 0;
+}
+.Search-Container .Section-2::after{
+    content: '';
+    width: 90%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background-color: #6D6E73;
+    right: 0;
+    margin: auto;
+}
+.Product-List-C .CatP:last-child{
+    border: none;
+}
+
+
+.aboutUS-C .Section-5 .Box .Text p,
+.aboutUS-C .Section-1 p,
+.aboutUS-C .Section-2 p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 31.09px;
+    color: #161617;
+    font-family: "IRANYekan400";
+    text-align: justify;
+ 
+}
+
+.aboutUS-C .Section-4  p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34.55px;
+    color: #161617;
+    font-family: "IRANYekan500";
+    text-align: justify;
+
+}
+.aboutUS-C .paginations .swiper-pagination-bullet {
+    width: 1px;
+    background-color: #6D6E73;
+    height: 20px;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    margin: auto;
+    opacity: 1 !important;
+    margin: 3px !important;
+  }
+  .aboutUS-C .paginations .swiper-pagination-bullet-active {
+    background-color: #f9920b !important;
+    height: 25px !important;
+    width: 3px !important;
+  }
+
+  .Bottom-S .Drop-Item.active{
+    background-color: #ffff;
+  }
+  .Bottom-S .Drop-Item.active .TXT{
+    color: #000000;
+  }
+  .ProductShow  .Section-0 .Right .Text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #161617;
+    text-align: justify;
+  }
+  .ProductShow .Section-0 .Right {
+    margin-top: 5em;
+    margin-bottom: 3em;
+  }
+  .myimage{
+    width: 100%;
+  }
+  .MainImg{
+    width: 100%;
+  }
+
+  .aboutUS-C .Gallerys .images,
+  .Search-C .images,
+  .Menu-Container .images{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+display: grid;
+z-index: 0;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(2,1fr);
+  }
+  .Search-C .images,
+  .Menu-Container .images{
+    height: 100vh;
+  }
+  .aboutUS-C .Section-6,
+  .Search-C{
+    position: relative;
+  }
+  .aboutUS-C .Section-6 .Titles{
+    position: relative;
+    z-index: 2;
+  }
+  .aboutUS-C .Gallerys .images .items,
+  .Menu-Container .images .items{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .Search-C .images,
+  .Menu-Container .images{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .aboutUS-C .Gallerys::after,
+  .Menu-Container::after{
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(360deg, rgba(250, 250, 250, 0) 0%, #FAFAFA 100%);
+width: 100%;
+height: 100%;
+  }
+  .Search-C .images::after{
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(360deg, rgba(250, 250, 250, 0) 0%, #FAFAFA 100%);
+
+width: 100%;
+height: 100%;
+  }
+  .Search-C{
+    margin: 0 !important;
+    padding-top: 10em !important;
+  }
+  .InputBoxes input{
+    background-color: white;
+  }
+  .loaded{
+    position: relative;
+    z-index: 2;
+  }
+
+  
+.Photo_PopUP {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 12;
+  display: flex;
+  opacity: 0;
+  visibility: visible;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -moz-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -ms-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+.Photo_PopUP.show {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1) translateX(0%);
+  -webkit-transform: scale(1) translateX(0%);
+  -moz-transform: scale(1) translateX(0%);
+  -ms-transform: scale(1) translateX(0%);
+  -o-transform: scale(1) translateX(0%);
+  z-index: 10000;
+}
+
+.popupContainer {
+  width: 100%;
+  margin: auto;
+  height: 80vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-top: 1px solid #F9920B;
+  border-bottom: 1px solid #F9920B;
+}
+.popupContainer .lightBox {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  overflow: hidden;
+}
+.popupContainer .lightBox > img {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -moz-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -ms-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+#next {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin: 0 10vh;
+}
+#next.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+#next:hover {
+  cursor: pointer;
+}
+
+#prev {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin: 0 10vh;
+}
+#prev.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+#prev:hover {
+  cursor: pointer;
+}
+
+.Lightbox-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  transform: translateY(7vh);
+}
+
+.zoomIn {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+.zoomIn img {
+  width: 14px;
+  height: 14px;
+}
+.zoomIn svg {
+  width: 14px;
+  height: 14px;
+}
+.zoomIn:hover {
+  cursor: pointer;
+}
+
+.zoomout {
+
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.zoomout:hover {
+  cursor: pointer;
+}
+.zoomout img {
+  width: 14px;
+  height: 14px;
+}
+.zoomout svg {
+  width: 14px;
+  height: 14px;
+}
+
+.popClose {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  margin-right: 10vh;
+}

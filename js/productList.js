@@ -70,7 +70,19 @@ navBtns.forEach(nav=>{
   btnF.forEach(b=>{
     b.addEventListener('click',(e)=>{
     catid = e.currentTarget.getAttribute('data-catid')
+    btnF.forEach(b=>{
+      b.classList.remove('active')
+    })
+    e.currentTarget.classList.add('active')
     var url = `/load-Product.inc?catid=${catid}`;
     $(".ProductLists").load(url);
     })
+  })
+  window.addEventListener('scroll',()=>{
+    if(window.pageYOffset>0){
+      document.querySelector('header').classList.add('GoBottom')
+    }
+  else{
+    document.querySelector('header').classList.remove('GoBottom')
+  }
   })

@@ -1,7 +1,7 @@
-let ProIMG =document.querySelector('.Gallery-Container img')
-let FullScreenBtn = document.querySelector('.fullScreen')
-let ZoomBtn = document.querySelector('.zoom')
-let DownloadBtn = document.querySelector('.download')
+let ProIMG =document.querySelector('.Section-0 .Left .Gallery-Container img')
+let FullScreenBtn = document.querySelector('.Section-0 .Left .fullScreen')
+let ZoomBtn = document.querySelector('.Section-0 .Left .zoom')
+let DownloadBtn = document.querySelector('.Section-0 .Left .download')
 let url = window.location.href 
 FullScreenBtn.addEventListener('click',()=>{
     fullscreen()
@@ -21,13 +21,13 @@ DownloadBtn.addEventListener('click',()=>{
       function downloadIMG(){
       let fullIMG =ProIMG
       let imgSRC = fullIMG.getAttribute('src')
-      DownloadBtn.setAttribute('href',`${url}${imgSRC}`)
+      DownloadBtn.setAttribute('href',`${imgSRC}`)
       }
       gsap.registerPlugin(ScrollTrigger);
 
       ScrollTrigger.create({
         trigger: '.FixedNav',
-        start: 'top 12%',
+        start: 'top 10%',
         endTrigger: ".contentScroll",
         end: "bottom top",
         pin: true,
@@ -39,16 +39,6 @@ DownloadBtn.addEventListener('click',()=>{
 let btns = document.querySelectorAll('.FixedNav a');
 let btnLink= document.querySelectorAll('.FixedNav a');
 let sections = document.querySelectorAll('.sec')
-// btns.forEach(btn=>{         
-
-//    btn.addEventListener('click',(e)=>{
-//     e.preventDefault();
-//     btn.classList.remove('active');
-//     var target = $(e.currentTarget).attr('href');
-//     window.scrollTo(`${target}`,{offset:-110})
-  
-//   });
-//   })
 
   window.addEventListener('scroll',(args)=>{
     let scrTop = window.pageYOffset
@@ -105,7 +95,7 @@ let GallerySlider = new Swiper('.swiper-gallery',{
           let linkdinIMG = document.querySelector('.swiper-gallery .swiper-slide-active .linkdin a')
           let whatsappIMG = document.querySelector('.swiper-gallery .swiper-slide-active .whatsapp a')
           let instagramIMG = document.querySelector('.swiper-gallery .swiper-slide-active .instagram a')
-          let aparatIMG = document.querySelector('.swiper-gallery .swiper-slide-active .aparat a')
+          // let aparatIMG = document.querySelector('.swiper-gallery .swiper-slide-active .aparat a')
           let pinterestIMG = document.querySelector('.swiper-gallery .swiper-slide-active .pinterest a')
           let IMG
           for(let i = 0 ; i< slidesLength ; i++){
@@ -144,10 +134,10 @@ gallerySlides.forEach(slide=>{
     mainResult = e.currentTarget.querySelector('.img-zoom-result')
     console.log(mainIMG);
     console.log(mainResult);
-    slide.querySelector('.img').addEventListener('mouseenter',(e)=>{
+    slide.querySelector('.img .IMG').addEventListener('mouseenter',(e)=>{
         mainResult.style.opacity =1;
     })
-    var img, lens, result, cx, cy;
+    let img, lens, result, cx, cy;
     img = mainIMG;
     result = mainResult;
     if(IsOnce != "true"){
@@ -228,7 +218,7 @@ gallerySlides.forEach(slide=>{
     slide.addEventListener('mouseleave',(e)=>{
         mainResult = e.currentTarget.querySelector('.img-zoom-result')
     })
-    slide.querySelector('.img').addEventListener('mouseleave',(e)=>{
+    slide.querySelector('.img .IMG').addEventListener('mouseleave',(e)=>{
         mainResult.style.opacity =0;
 
     })
@@ -267,6 +257,12 @@ shares.forEach(a=>{
   e.currentTarget.children[1].classList.toggle('Open')
   })
 })
+let shares1 = document.querySelectorAll('.Section-0 .Share')
+shares1.forEach(a=>{
+  a.addEventListener('click',(e)=>{
+  e.currentTarget.children[1].classList.toggle('Open')
+  })
+})
 let RelatedProduct = new Swiper('.swiper-products',{
     speed: 1000,
     slidesPerView:3,
@@ -293,7 +289,7 @@ let RelatedProduct = new Swiper('.swiper-products',{
   let linkdin = document.querySelector('.Section-0 .linkdin a')
   let whatsapp = document.querySelector('.Section-0 .whatsapp a')
   let instagram = document.querySelector('.Section-0 .instagram a')
-  let aparat = document.querySelector('.Section-0 .aparat a')
+  // let aparat = document.querySelector('.Section-0 .aparat a')
   let pinterest = document.querySelector('.Section-0 .pinterest a')
   let proLink = document.querySelector('.SocialBox').getAttribute('data-link')
  
@@ -304,3 +300,25 @@ let RelatedProduct = new Swiper('.swiper-products',{
 
 
  
+  // share product img1
+  let linkdin1 = document.querySelector('.Section-0 .Left .linkdin a')
+  let whatsapp1 = document.querySelector('.Section-0 .Left .whatsapp a')
+  let instagram1 = document.querySelector('.Section-0 .Left .instagram a')
+  // let aparat1 = document.querySelector('.Section-0 .Left .aparat a')
+  let pinterest1 = document.querySelector('.Section-0 .Left .pinterest a')
+  let proIMGLink1 = document.querySelector('.Section-0 .Left img').getAttribute('src')
+ 
+  linkdin1.setAttribute('href',`https://www.linkedin.com/shareArticle?mini=true&summary=${proIMGLink1}`)
+  whatsapp1.setAttribute('href',`https://api.whatsapp.com/send?text=${url}/${proIMGLink1}`)
+  instagram1.setAttribute('href',`https://www.instagram.com/?url=${url}/${proIMGLink1}`)
+  pinterest1.setAttribute('href',`http://pinterest.com/pinthis?url=${proIMGLink1}`)
+
+
+  window.addEventListener('scroll',()=>{
+    if(window.pageYOffset>0){
+      document.querySelector('header').classList.add('GoBottom')
+    }
+  else{
+    document.querySelector('header').classList.remove('GoBottom')
+  }
+  })

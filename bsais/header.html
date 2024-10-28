@@ -2,9 +2,9 @@
     <member name="contactus" type="view"/> 
 </basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
-    <member request="cat" type="tree" name="productCatinner" parentid="209963"  /> 
+    <member request="cat" type="tree" name="productCatinner" parentid="209963" postsql="select * from [db.productCatinner] where parentid in (209963)" sort="ord asc" /> 
 </basis>
-<header class="DesktopHeader [&.GoBottom]:bg-[#4C515A] group z-[9999] flex w-full fixed top-0 
+<header class="DesktopHeader [&.GoBottom]:bg-[rgba(76, 81, 90, 0.65)] group z-[9999] flex w-full fixed top-0 
 left-0 justify-center items-center py-8 duration-[.5s]"  dir="rtl">
 <div class="Co w-[90%] mr-auto ml-auto grid grid-cols-[1fr,1fr] justify-center items-center">
  
@@ -67,11 +67,18 @@ left-0 justify-center items-center py-8 duration-[.5s]"  dir="rtl">
        </div>
    </div>
 </div>
-<div class="Menu-Container fixed  top-0  pr-[100px] w-[40vw] right-0
-bottom-0 h-screen overflow-hidden z-[999] group-[&.Open]:opacity-[1]
-group-[&.Open]:visible
-flex justify-center opacity-0 invisible duration-[.8s] ">
-<div class="Close absolute right-0 flex justify-center items-center left-[21em] top-[2.5em] hover:cursor-pointer">
+<div class="Menu-Container fixed  top-0  pr-[100px] w-0 group-[&.Open]:w-[40vw]  right-0
+bottom-0 h-screen overflow-hidden z-[999] group-[&.Open]:!opacity-[1]
+group-[&.Open]:!visible
+flex justify-center opacity-0 invisible duration-[.5s] ">
+<div class="images">
+    <div class="items"  style="background-image: url('images/pattern3.png');"></div>
+    <div class="items"  style="background-image: url('images/pattern3.png');"></div>
+    <div class="items"  style="background-image: url('images/pattern3.png');"></div>
+    <div class="items"  style="background-image: url('images/pattern3.png');"></div>
+
+ </div>
+<div class="Close absolute right-0 flex justify-center items-center left-[55%] top-[7%] hover:cursor-pointer">
    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
        <path d="M1.85742 0L0.443359 1.41418L6.80762 7.77844L0.443848 14.1422L1.85791 15.5564L8.22168 9.19263L14.5854 15.5563L15.9995 14.1421L9.63574 7.77844L16 1.41431L14.5859 0L8.22168 6.36426L1.85742 0Z" fill="#161617"/>
        </svg>
@@ -80,25 +87,49 @@ flex justify-center opacity-0 invisible duration-[.8s] ">
 <div class="right w-full flex flex-col h-full">
  <div class="Menu w-[95%] mr-auto h-[80%] flex justify-start items-center">
    
-     <ul class="Menus  w-full h-[80%] flex-col flex justify-center items-start gap-5">
+     <ul class="Menus  w-full h-[80%] flex-col flex justify-center items-start gap-[1.25rem]">
          <li class="Menu-item innerPro  w-[58%] flex justify-start items-start relative">
-             <span class="Menu-link font-IranYekan500 translate-x-[100%]
-             hover:text-b2  opacity-0 duration-[.5s]
-            leading-34.55 text-xl font-medium text-black text-right">
-                 محصولات
-         </span>
-         <div class="Innerr w-max flex flex-col gap-2 absolute [&.show]:right-[35%] [&.show]:opacity-[1]
-         top-[0] right-0 opacity-0 duration-150">
+            <div class="button group/btn inline-block relative opacity-0 !duration-[.5s] Menu-link  translate-x-[100%]
+            h-[40px] text-center">
+                           <span class="!duration-[.5s] hover:cursor-pointer group-hover/btn:text-[#F9920B]
+                            Menu-link label-up text-xl font-medium text-black text-right
+                              hover:text-b2 font-IranYekan500 
+                            group-[&.dark]/header:text-darkgray  leading-[40px]">
+                               محصولات
+                         </span>
+                           <span class=" !duration-[.5s] hover:cursor-pointer 
+                            group-hover/btn:text-[#F9920B] label-up font-IranYekan500 
+                            text-xl font-medium text-black text-right
+                             hover:text-b2 
+                           group-[&.dark]/header:text-darkgray  leading-[40px]">
+                              محصولات
+                            </span>
+                         </div>
+
+         <div class="Innerr w-max flex flex-col gap-2 absolute right-[35%] [&.show]:opacity-[1]
+         top-[0]  opacity-0 duration-150">
          <basis core="print" datamembername="db.productCatinner">
              <layout>
                  @child
              </layout>
-             <face filter="parentid in (209963)">
-                 <a href="@link" alt="@title" title="@link" class=" font-IranYekan500 
-                 hover:text-b2  duration-[.5s]
-                leading-34.55 text-xl font-medium text-black text-right">
-                   @title
-                 </a>
+             <face >
+                <div class="button group/btn inline-block relative  !duration-[.5s]
+                h-[40px] text-center">
+                               <a href="@link" alt="@title" title="@link" class="!duration-[.5s] hover:cursor-pointer group-hover/btn:text-[#F9920B]
+                                Menu-link label-up text-xl font-medium text-black text-right
+                                  hover:text-b2 font-IranYekan500 
+                                group-[&.dark]/header:text-darkgray  leading-[40px]">
+                                @title
+             </a>
+                               <a href="@link" alt="@title" title="@link" class=" !duration-[.5s] hover:cursor-pointer 
+                                group-hover/btn:text-[#F9920B] label-up font-IranYekan500 
+                                text-xl font-medium text-black text-right
+                                 hover:text-b2 
+                               group-[&.dark]/header:text-darkgray  leading-[40px]">
+                               @title
+            </a>
+                             </div>
+            
              </face>
          </basis>
          
@@ -106,39 +137,98 @@ flex justify-center opacity-0 invisible duration-[.8s] ">
           </div>
          </li>
          <li class="Menu-item w-auto flex justify-start items-start overflow-hidden">
-             <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها" class="Menu-link font-IranYekan500 translate-x-[100%]
-             hover:text-b2  opacity-0 duration-[.5s]
-            leading-34.55 text-xl font-medium text-black text-right">
-                 پروژه‌ها
-             </a>
+            <div class="button group/btn inline-block relative opacity-0 duration-[.5s] Menu-link  translate-x-[100%]
+            h-[40px] text-center">
+                           <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها"  class="hover:cursor-pointer group-hover/btn:text-[#F9920B]
+                            Menu-link label-up text-xl font-medium text-black text-right
+                              hover:text-b2 font-IranYekan500 
+                            group-[&.dark]/header:text-darkgray  leading-[40px]">
+                            پروژه‌ها
+                          </a>
+                           <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها"  class="hover:cursor-pointer 
+                            group-hover/btn:text-[#F9920B] label-up font-IranYekan500 
+                            text-xl font-medium text-black text-right
+                             hover:text-b2 
+                           group-[&.dark]/header:text-darkgray  leading-[40px]">
+                           پروژه‌ها
+                              </a>
+                         </div>
+
          </li>
          <li class="Menu-item w-auto flex justify-start items-start overflow-hidden">
-             <a href="مقالات" alt="مقاله‌ها" title="مقاله‌ها" class="Menu-link font-IranYekan500 translate-x-[100%]
-             hover:text-b2  opacity-0 duration-[.5s]
-            leading-34.55 text-xl font-medium text-black text-right">
-                 مقاله‌ها
-             </a>
+            <div class="button group/btn inline-block relative opacity-0 duration-[.5s] Menu-link  translate-x-[100%]
+            h-[40px] text-center">
+                           <a href="مقالات" alt="مقاله‌ها" title="مقاله‌ها" class="hover:cursor-pointer group-hover/btn:text-[#F9920B]
+                            Menu-link label-up text-xl font-medium text-black text-right
+                              hover:text-b2 font-IranYekan500 
+                            group-[&.dark]/header:text-darkgray  leading-[40px]">
+                            مقاله‌ها
+                          </a>
+                           <a href="مقالات" alt="مقاله‌ها" title="مقاله‌ها" class="hover:cursor-pointer 
+                            group-hover/btn:text-[#F9920B] label-up font-IranYekan500 
+                            text-xl font-medium text-black text-right
+                             hover:text-b2 
+                           group-[&.dark]/header:text-darkgray  leading-[40px]">
+                           مقاله‌ها
+                              </a>
+                         </div>
+  
          </li>
          <li class="Menu-item w-auto flex justify-start items-start overflow-hidden">
-             <a href="درباره-ما" alt="درباره‌ی‌ما" title="درباره‌ی‌ما" class="Menu-link font-IranYekan500 translate-x-[100%]
-             hover:text-b2  opacity-0 duration-[.5s]
-            leading-34.55 text-xl font-medium text-black text-right">
-                 درباره‌ی‌ما
-             </a>
+            <div class="button group/btn inline-block relative opacity-0 duration-[.5s] Menu-link  translate-x-[100%]
+            h-[40px] text-center">
+                           <a href="درباره-ما" alt="درباره‌ی‌ما" title="درباره‌ی‌ما" class="hover:cursor-pointer group-hover/btn:text-[#F9920B]
+                            Menu-link label-up text-xl font-medium text-black text-right
+                              hover:text-b2 font-IranYekan500 
+                            group-[&.dark]/header:text-darkgray  leading-[40px]">
+                            درباره‌ی‌ما
+                          </a>
+                           <a href="درباره-ما" alt="درباره‌ی‌ما" title="درباره‌ی‌ما" class="hover:cursor-pointer 
+                            group-hover/btn:text-[#F9920B] label-up font-IranYekan500 
+                            text-xl font-medium text-black text-right
+                             hover:text-b2 
+                           group-[&.dark]/header:text-darkgray  leading-[40px]">
+                           درباره‌ی‌ما
+                              </a>
+                         </div>
+        
          </li>
          <li class="Menu-item w-auto flex justify-start items-start overflow-hidden">
-             <a href="تماس-با-ما" alt=" تماس‌ باما" title=" تماس‌ باما" class="Menu-link font-IranYekan500 translate-x-[100%]
-             hover:text-b2  opacity-0 duration-[.5s]
-            leading-34.55 text-xl font-medium text-black text-right">
-                 تماس‌ باما
-             </a>
+            <div class="button group/btn inline-block relative opacity-0 duration-[.5s] Menu-link  translate-x-[100%]
+            h-[40px] text-center">
+                           <a href="تماس-با-ما" alt=" تماس‌باما " title=" تماس‌باما " class="hover:cursor-pointer group-hover/btn:text-[#F9920B]
+                            Menu-link label-up text-xl font-medium text-black text-right
+                              hover:text-b2 font-IranYekan500 
+                            group-[&.dark]/header:text-darkgray  leading-[40px]">
+                            تماس‌باما
+                          </a>
+                           <a href="تماس-با-ما" alt=" تماس‌باما " title=" تماس‌باما " class="hover:cursor-pointer 
+                            group-hover/btn:text-[#F9920B] label-up font-IranYekan500 
+                            text-xl font-medium text-black text-right
+                             hover:text-b2 
+                           group-[&.dark]/header:text-darkgray  leading-[40px]">
+                           تماس‌باما
+                              </a>
+                         </div>
+          
          </li>
          <li class="Menu-item w-auto flex justify-start items-start overflow-hidden">
-           <a href="خدمات-ما" alt="خدمات" title="خدمات" class="Menu-link font-IranYekan500 translate-x-[100%]
-           hover:text-b2  opacity-0 duration-[.5s]
-          leading-34.55 text-xl font-medium text-black text-right">
-          خدمات 
-           </a>
+            <div class="button group/btn inline-block relative opacity-0 duration-[.5s] Menu-link  translate-x-[100%]
+            h-[40px] text-center">
+                           <a href="خدمات-ما" alt="خدمات" title="خدمات" class="hover:cursor-pointer group-hover/btn:text-[#F9920B]
+                            Menu-link label-up text-xl font-medium text-black text-right
+                              hover:text-b2 font-IranYekan500 
+                            group-[&.dark]/header:text-darkgray  leading-[40px]">
+                            خدمات 
+                          </a>
+                           <a href="خدمات-ما" alt="خدمات" title="خدمات" class="hover:cursor-pointer 
+                            group-hover/btn:text-[#F9920B] label-up font-IranYekan500 
+                            text-xl font-medium text-black text-right
+                             hover:text-b2 
+                           group-[&.dark]/header:text-darkgray  leading-[40px]">
+                           خدمات 
+                              </a>
+                         </div>
        </li>
      </ul>
  </div>
@@ -149,15 +239,15 @@ flex justify-center opacity-0 invisible duration-[.8s] ">
              <layout>
                  @child
              </layout>
-             <face filter="TypeID=244">
-               <a href="tel:@Answer" class="flex justify-center items-center gap-2">
+             <face filter="TypeID=240">
+               <span class="flex justify-center items-center gap-2">
                
                    <span class="link faNum font-IranYekan400 hover:text-b2 duration-[.5s]
                    text-base font-normal leading-30 text-darkGray2">
                    @Answer
                    </span>
                
-               </a>
+               </span>
              </face>
          </basis>
           

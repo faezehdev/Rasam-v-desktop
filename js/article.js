@@ -37,7 +37,7 @@
   let linkdin = document.querySelector('.ShareBox .linkdin a')
   let whatsapp = document.querySelector('.ShareBox .whatsapp a')
   let instagram = document.querySelector('.ShareBox .instagram a')
-  let aparat = document.querySelector('.ShareBox .aparat a')
+  // let aparat = document.querySelector('.ShareBox .aparat a')
   let pinterest = document.querySelector('.ShareBox .pinterest a')
   let ArLink = document.querySelector('.ShareBox').getAttribute('data-link')
  
@@ -45,3 +45,11 @@
   whatsapp.setAttribute('href',`https://api.whatsapp.com/send?text=${url}/${ArLink}`)
   instagram.setAttribute('href',`https://www.instagram.com/?url=${url}/${ArLink}`)
   pinterest.setAttribute('href',`http://pinterest.com/pinthis?url=${ArLink}`)
+  window.addEventListener('scroll',()=>{
+    if(window.pageYOffset>0){
+      document.querySelector('header').classList.add('GoBottom')
+    }
+  else{
+    document.querySelector('header').classList.remove('GoBottom')
+  }
+  })

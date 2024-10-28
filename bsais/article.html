@@ -1,7 +1,9 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/>
 </basis>
-
+<basis core="dbsource" name="db" source="basiscore" lid="2" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="titleEN" type="view" postsql="select * from [db.titleEN] where TypeID=150"/>
+</basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
     <member name="blog" type="view"/> 
 </basis>
@@ -32,6 +34,7 @@
     <meta name="description" content="[##db.title.Answer##]">
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
 </head>
 <body>
     <main class="articleShow overflow-hidden">
@@ -40,7 +43,7 @@
             <div class="Section-1 Titles w-full mx-auto flex flex-col bg-lightGray py-[3em]">
                 <div class="Top w-[90%] mx-auto flex justify-between items-start">
                     <div class="Title-1 w-auto ml-auto flex justify-start items-center
-                    pb-[.5em] relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
+                 relative before:contents-[''] before:w-full before:h-[1px] before:bg-Orange 
                     before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
                         <h1 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
                             [##db.title.Answer##]
@@ -79,7 +82,7 @@
                                     @child
                                 </layout>
                                 <face filter="prpID=7249">
-                            <span class="Text font-IRANYekan400 font-normal text-lg leading-31.09 text-black1">
+                            <span class="faNum Text font-IRANYekan400 font-normal text-lg leading-31.09 text-black1">
                                 @Answer
                             </span>
                                 </face>
@@ -90,7 +93,7 @@
                 <div class="Bottom w-[90%] mx-auto flex justify-between items-center">
                     <div class="Title-2 w-auto ml-auto flex justify-start items-center">
                         <h2 class="font-IRANYekan700 font-bold text-[28px] leading-48.36 text-black1">
-                          
+                            [##db.titleEN.Answer##]
                         </h2>
                     </div>
                <div class="Shares w-[50%] flex justify-end items-center gap-3">
@@ -98,7 +101,7 @@
                     اشتراک گذاری
                 </div>
                 <div class="ShareBox w-auto flex duration-150 
-                gap-3 mx-[.8em]" data-link="[##db.list-blog.link##]">
+                gap-3" data-link="[##db.list-blog.link##]">
                    <span class="item linkdin w-auto flex
                     justify-start items-center">
                        <a href="">
@@ -126,7 +129,7 @@
                                 
                        </a>
                    </span>
-                   <span class="item aparat w-auto 
+                   <!-- <span class="item aparat w-auto 
                     flex justify-start items-center">
                        <a href="">
                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +141,7 @@
                                </svg>
                                
                        </a>
-                   </span>
+                   </span> -->
                    <span class="item pinterest w-auto 
                    flex justify-start items-center">
                        <a href="">
@@ -239,13 +242,13 @@
                 </div>
             </div>
             <div class="Section-5 w-full flex flex-col justify-start items-start">
-                <div class="Title-Top w-full flex justify-start items-center h-[77px] bg-lightGray mt-[2em]">
+                <div class="Title-Top w-full flex justify-start items-center h-[77px] bg-lightGray ">
                     <h5 class="font-IRANYekan500 font-medium text-2xl leading-41.45 text-black1 mr-[5%]">
                         گالری تصاویر
                     </h5>
                 </div>
                 <div class="Gallerys w-full flex flex-col justify-start items-start">
-                      <div class="Gallery-Container w-full flex justify-center items-center flex-col mt-[5em]">
+                      <div class="Gallery-Container w-full flex justify-center items-center flex-col mt-[2em]">
                   
                         <div class="swiper-gallery w-full mx-auto flex overflow-hidden">
 
@@ -267,7 +270,7 @@
                             </div>
                         </div>
                         <div class="paginations w-full flex justify-center items-center gap-[3em] mt-[3em]">
-                            <div class="swiper-button-prev !w-[10px] flex justify-center items-center static before:!contents-[''] after:!contents-['']">
+                            <div class="swiper-button-prev !w-[20px] flex justify-center items-center static before:!contents-[''] after:!contents-['']">
                                 <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.48895 16L16.489 8L8.48895 0L7.06395 1.4L12.664 7H0.488953V9H12.664L7.06395 14.6L8.48895 16Z" fill="#161617"/>
                                     </svg>
@@ -277,7 +280,7 @@
                             <div class="pagination w-[100px] translate-y-[.4em] flex justify-center items-center gap-3 relative">
                                 <div class="swiper-pagination w-full flex flex-row justify-center items-center"></div>
                             </div>
-                            <div class="swiper-button-next !w-[10px] flex justify-center items-center static before:!contents-[''] after:!contents-['']">
+                            <div class="swiper-button-next !w-[20px] flex justify-center items-center static before:!contents-[''] after:!contents-['']">
                                 <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.51111 16L0.511108 8L8.51111 0L9.93611 1.4L4.33611 7H16.5111V9H4.33611L9.93611 14.6L8.51111 16Z" fill="#161617"/>
                                     </svg>
@@ -294,7 +297,7 @@
                     <div class="Related-Products-C w-full flex flex-col mt-[5em]">
                         <div class="Titles w-auto flex flex-col mb-[4em]">
                             <div class="Title-1 w-auto flex justify-start items-center mx-[5%]
-                            pb-[.5em] relative efore:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
+                        relative efore:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
                             before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
                                <h4 class="font-IRANYekan400 font-normal text-[28px] leading-[48.36px] text-Gray">
                                 محصولات مرتبط
@@ -323,7 +326,7 @@
                            <div class="IMG w-full flex justify-center items-center">
                                <img src="@00240X00240prp" alt="@title " title="@title" class="w-auto object-contain">
                            </div>
-                           <div class="Title w-full before:contents-[''] before:w-0 before:h-[1px] before:bg-black1 
+                           <div class="Title w-auto mx-auto before:contents-[''] before:w-0 before:h-[1px] before:bg-black1 
                            before:absolute before:right-0 before:bottom-0 duration-[.4s] group-hover:before:w-full before:duration-[.4s]
                             flex justify-center items-center relative">
                                <h3 class="font-IRANYekan500 font-medium  mx-0 my-0
@@ -347,7 +350,7 @@
             <div class="Related-Projects-C w-full flex flex-col mt-[5em] mb-[5em]">
                 <div class="Titles w-auto flex flex-col mb-[4em]">
                     <div class="Title-1 w-auto flex justify-start items-center mx-[5%]
-                    pb-[.5em] relative efore:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
+                     relative efore:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
                     before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
                        <h4 class="font-IRANYekan400 font-normal text-[28px] leading-[48.36px] text-Gray">
                           پروژه‌های مرتبط

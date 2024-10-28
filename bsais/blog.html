@@ -27,7 +27,7 @@
             <div class="Titles w-[90%] mx-auto flex flex-col ">
                 <div class="Top w-full flex justify-start items-start">
                     <div class="Title-1 w-auto ml-auto flex justify-start items-center
-                    pb-[.5em] relative before:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
+                    relative before:contents-[''] before:w-[10em] before:h-[1px] before:bg-Orange 
                     before:absolute before:right-0 before:bottom-0 duration-[.4s] before:duration-[.4s]">
                         <h1 class="font-IRANYekan400 font-normal text-[28px] leading-48.36 text-Gray">
                             لیست مقالات
@@ -130,13 +130,13 @@
                     </div>
                 </div>
             </div>
-            <div class="ArticleLists w-[90%] mx-auto grid grid-cols-[1fr,1fr,1fr] gap-[3em] mt-[3em] mb-[5em]">
+            <div class="ArticleLists mx-auto w-[90%] flex flex-col gap-[3em] mt-[3em] mb-[5em]">
                 <basis core="print" datamembername="db.list-blog">
                     <layout>
                         @child
                     </layout>
                     <face>
-                        <div class="articleBox group gap-y-7 flex flex-col even:flex-col-reverse">
+                        <div class="articleBox group gap-y-7 flex flex-col ">
                             <div class="artInfo">
         
                                 <a href="@link" title="@title" alt="@title">
